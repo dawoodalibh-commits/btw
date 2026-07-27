@@ -96,6 +96,20 @@ CREATE VIRTUAL TABLE IF NOT EXISTS questions_fts USING fts5(
 CREATE TRIGGER IF NOT EXISTS questions_ai AFTER INSERT ON questions BEGIN
     INSERT INTO questions_fts(rowid, text) VALUES (new.question_id, new.text);
 END;
+
+-- Assembling one question reads all five child tables by question_id, so
+-- without these every returned question costs five full table scans. The
+-- questions/papers lookups are already covered by their UNIQUE constraints.
+CREATE INDEX IF NOT EXISTS idx_images_question ON images(question_id);
+CREATE INDEX IF NOT EXISTS idx_question_images_question ON question_images(question_id);
+CREATE INDEX IF NOT EXISTS idx_formulas_question ON formulas(question_id);
+CREATE INDEX IF NOT EXISTS idx_tables_question ON tables_(question_id);
+CREATE INDEX IF NOT EXISTS idx_options_question ON options(question_id);
+-- question_topics is keyed (question_id, topic_id); topic lookups go the
+-- other way and need their own index.
+CREATE INDEX IF NOT EXISTS idx_question_topics_topic ON question_topics(topic_id);
+-- "a question from subject X, paper 1" filters papers before touching questions.
+CREATE INDEX IF NOT EXISTS idx_papers_subject ON papers(subject, variant, year);
 """
 
 _PAPER_CODE_RE = re.compile(r"^(\d{4})/(\d+)/([A-Z])/([A-Z])/(\d{2})$")
@@ -104,6 +118,11 @@ _SESSION_NAMES = {"F/M": "February/March", "M/J": "May/June", "O/N": "October/No
 
 def init_db(db_path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
+    # WAL lets the tutor and web UI keep reading while a batch is still
+    # loading papers; the default rollback journal blocks readers for the
+    # duration of each write. It's a persistent property of the file, so
+    # setting it once here is enough.
+    conn.execute("PRAGMA journal_mode=WAL")
     conn.executescript(_SCHEMA)
     return conn
 

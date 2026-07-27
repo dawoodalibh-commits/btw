@@ -67,24 +67,31 @@ def _connect(db_path: Path) -> sqlite3.Connection:
     return conn
 
 
-def get_by_topic(db_path: Path, topic: str) -> list[dict[str, Any]]:
+def _row_limit(limit: int | None) -> int:
+    """SQLite reads a negative LIMIT as no limit, so callers passing None keep
+    the original unbounded behaviour without a second query variant."""
+    return -1 if limit is None else limit
+
+
+def get_by_topic(db_path: Path, topic: str, limit: int | None = None) -> list[dict[str, Any]]:
     conn = _connect(db_path)
     rows = conn.execute(
         """SELECT q.* FROM questions q
            JOIN question_topics qt ON qt.question_id = q.question_id
            JOIN topics t ON t.topic_id = qt.topic_id
            WHERE t.name = ? COLLATE NOCASE
-           ORDER BY q.paper_id, q.question_number""",
-        (topic,),
+           ORDER BY q.paper_id, q.question_number
+           LIMIT ?""",
+        (topic, _row_limit(limit)),
     ).fetchall()
     return [_row_to_question(conn, r) for r in rows]
 
 
-def get_by_marks_range(db_path: Path, min_marks: int, max_marks: int) -> list[dict[str, Any]]:
+def get_by_marks_range(db_path: Path, min_marks: int, max_marks: int, limit: int | None = None) -> list[dict[str, Any]]:
     conn = _connect(db_path)
     rows = conn.execute(
-        "SELECT * FROM questions WHERE marks BETWEEN ? AND ? ORDER BY paper_id, question_number",
-        (min_marks, max_marks),
+        "SELECT * FROM questions WHERE marks BETWEEN ? AND ? ORDER BY paper_id, question_number LIMIT ?",
+        (min_marks, max_marks, _row_limit(limit)),
     ).fetchall()
     return [_row_to_question(conn, r) for r in rows]
 
@@ -97,6 +104,55 @@ def get_by_reference(db_path: Path, paper_code: str, question_number: int) -> di
         (paper_code, question_number),
     ).fetchone()
     return _row_to_question(conn, row) if row else None
+
+
+def get_random(
+    db_path: Path,
+    subject: str | None = None,
+    variant: str | None = None,
+    topic: str | None = None,
+    min_marks: int | None = None,
+    max_marks: int | None = None,
+    count: int = 1,
+) -> list[dict[str, Any]]:
+    """Picks `count` random questions matching whichever filters are supplied.
+
+    Built for the tutor's "give me a question" path, where fetching every
+    match just to discard all but one is the dominant cost. ORDER BY RANDOM()
+    scans the *filtered* set, so passing a subject or topic keeps it cheap;
+    unfiltered over a full multi-subject corpus it's a whole-table scan.
+    """
+    conn = _connect(db_path)
+    joins = ["JOIN papers p ON p.paper_id = q.paper_id"]
+    where: list[str] = []
+    params: list[Any] = []
+
+    if subject is not None:
+        where.append("p.subject = ?")
+        params.append(subject)
+    if variant is not None:
+        where.append("p.variant = ?")
+        params.append(variant)
+    if topic is not None:
+        joins.append("JOIN question_topics qt ON qt.question_id = q.question_id")
+        joins.append("JOIN topics t ON t.topic_id = qt.topic_id")
+        where.append("t.name = ? COLLATE NOCASE")
+        params.append(topic)
+    if min_marks is not None:
+        where.append("q.marks >= ?")
+        params.append(min_marks)
+    if max_marks is not None:
+        where.append("q.marks <= ?")
+        params.append(max_marks)
+
+    sql = f"SELECT q.* FROM questions q {' '.join(joins)}"
+    if where:
+        sql += " WHERE " + " AND ".join(where)
+    sql += " ORDER BY RANDOM() LIMIT ?"
+    params.append(count)
+
+    rows = conn.execute(sql, params).fetchall()
+    return [_row_to_question(conn, r) for r in rows]
 
 
 def search_text(db_path: Path, query: str, limit: int = 20) -> list[dict[str, Any]]:
@@ -118,10 +174,12 @@ def main() -> None:
 
     p = sub.add_parser("topic", help='e.g. topic Momentum')
     p.add_argument("name")
+    p.add_argument("--limit", type=int, default=None, help="Cap results (default: all)")
 
     p = sub.add_parser("marks", help="e.g. marks 1 2")
     p.add_argument("min_marks", type=int)
     p.add_argument("max_marks", type=int)
+    p.add_argument("--limit", type=int, default=None, help="Cap results (default: all)")
 
     p = sub.add_parser("ref", help="e.g. ref 9702/12/O/N/25 7")
     p.add_argument("paper_code")
@@ -130,12 +188,30 @@ def main() -> None:
     p = sub.add_parser("search", help='e.g. search differentiation')
     p.add_argument("query")
 
+    p = sub.add_parser("random", help="e.g. random --subject 9702 --variant 12 --topic Momentum")
+    p.add_argument("--subject")
+    p.add_argument("--variant")
+    p.add_argument("--topic")
+    p.add_argument("--min-marks", type=int)
+    p.add_argument("--max-marks", type=int)
+    p.add_argument("--count", type=int, default=1)
+
     args = parser.parse_args()
 
     if args.command == "topic":
-        results = get_by_topic(args.db, args.name)
+        results = get_by_topic(args.db, args.name, args.limit)
     elif args.command == "marks":
-        results = get_by_marks_range(args.db, args.min_marks, args.max_marks)
+        results = get_by_marks_range(args.db, args.min_marks, args.max_marks, args.limit)
+    elif args.command == "random":
+        results = get_random(
+            args.db,
+            subject=args.subject,
+            variant=args.variant,
+            topic=args.topic,
+            min_marks=args.min_marks,
+            max_marks=args.max_marks,
+            count=args.count,
+        )
     elif args.command == "ref":
         result = get_by_reference(args.db, args.paper_code, args.question_number)
         results = [result] if result else []

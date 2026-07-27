@@ -1,9 +1,24 @@
 # Phase 1 — PDF extraction
 pymupdf>=1.24
 
-# Phase 2 — layout detection, "ppstructure" backend
-paddlepaddle>=3.0
+# Phase 2 — layout detection, "ppstructure" backend; also phase 7 (tables),
+# which uses PaddleOCR regardless of which layout backend is selected.
+#
+# Paddle itself is deliberately NOT listed here: paddlepaddle and
+# paddlepaddle-gpu are different distributions that install the same paddle/
+# directory, and pip flags no conflict, so listing the CPU build means a later
+# `pip install -r requirements.txt` silently overwrites a GPU install. Pick one
+# explicitly, and uninstall the other first:
+#
+#   CPU:  pip install "paddlepaddle>=3.0"
+#   CUDA: pip install paddlepaddle-gpu -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
 paddleocr>=3.0
+
+# Phase 5 — formula OCR to LaTeX (pulls in torch; munch is used directly to
+# build the argument bundle LatexOCR expects)
+pix2tex>=0.1.2
+munch>=4.0
+pillow>=10.0
 
 # Phase 2 — layout detection, "doclayout_yolo" backend (only needed if you
 # select --backend doclayout_yolo; pulls in torch/torchvision)
