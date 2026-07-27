@@ -1,0 +1,1496 @@
+{
+  "page": 13,
+  "width": 595.0,
+  "height": 842.0,
+  "spans": [
+    {
+      "text": "13   ",
+      "bbox": {
+        "x0": 291.48,
+        "y0": 36.09,
+        "x1": 303.73,
+        "y1": 48.41
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "© UCLES 2025 ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 796.12,
+        "x1": 106.61,
+        "y1": 805.1
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "9702/12/O/N/25 ",
+      "bbox": {
+        "x0": 269.37,
+        "y0": 796.12,
+        "x1": 328.05,
+        "y1": 805.1
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "[Turn over ",
+      "bbox": {
+        "x0": 491.28,
+        "y0": 793.41,
+        "x1": 545.54,
+        "y1": 805.73
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "33",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 63.33,
+        "x1": 61.81,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " A piece of wire X has resistivity ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 63.33,
+        "x1": 248.8,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ",
+      "bbox": {
+        "x0": 252.13,
+        "y0": 62.22,
+        "x1": 262.8,
+        "y1": 75.74
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": ", length ",
+      "bbox": {
+        "x0": 258.84,
+        "y0": 63.33,
+        "x1": 302.06,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "L",
+      "bbox": {
+        "x0": 306.0,
+        "y0": 63.33,
+        "x1": 312.13,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " and cross-sectional area ",
+      "bbox": {
+        "x0": 312.12,
+        "y0": 63.33,
+        "x1": 449.92,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A",
+      "bbox": {
+        "x0": 453.84,
+        "y0": 63.33,
+        "x1": 461.2,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ". Wire X has a  ",
+      "bbox": {
+        "x0": 461.16,
+        "y0": 63.33,
+        "x1": 551.73,
+        "y1": 75.65
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "resistance ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 76.05,
+        "x1": 124.12,
+        "y1": 88.37
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 124.2,
+        "y0": 76.05,
+        "x1": 132.17,
+        "y1": 88.37
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ".  ",
+      "bbox": {
+        "x0": 132.12,
+        "y0": 76.05,
+        "x1": 138.17,
+        "y1": 88.37
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A second piece of wire Y is made of a different metal. It has the same resistance as X but has ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 101.37,
+        "x1": 548.71,
+        "y1": 113.69
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "twice the length of X.  ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 113.97,
+        "x1": 175.96,
+        "y1": 126.29
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Which row gives possible values for the resistivity and the cross-sectional area of Y?   ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 139.29,
+        "x1": 484.67,
+        "y1": 151.61
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "resistivity ",
+      "bbox": {
+        "x0": 126.11,
+        "y0": 175.77,
+        "x1": 174.4,
+        "y1": 188.09
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cross-sectional ",
+      "bbox": {
+        "x0": 211.2,
+        "y0": 169.41,
+        "x1": 287.59,
+        "y1": 181.73
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "area ",
+      "bbox": {
+        "x0": 236.88,
+        "y0": 182.13,
+        "x1": 261.89,
+        "y1": 194.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 206.13,
+        "x1": 92.09,
+        "y1": 218.45
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ",
+      "bbox": {
+        "x0": 147.73,
+        "y0": 205.06,
+        "x1": 158.39,
+        "y1": 218.53
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 143.04,
+        "y0": 213.5,
+        "x1": 146.94,
+        "y1": 221.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹ ",
+      "bbox": {
+        "x0": 143.28,
+        "y0": 205.46,
+        "x1": 147.18,
+        "y1": 213.28
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A",
+      "bbox": {
+        "x0": 247.44,
+        "y0": 206.16,
+        "x1": 254.79,
+        "y1": 218.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 242.16,
+        "y0": 213.02,
+        "x1": 246.06,
+        "y1": 220.84
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹ ",
+      "bbox": {
+        "x0": 242.4,
+        "y0": 205.94,
+        "x1": 246.3,
+        "y1": 213.76
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 227.13,
+        "x1": 92.09,
+        "y1": 239.45
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ",
+      "bbox": {
+        "x0": 147.73,
+        "y0": 226.06,
+        "x1": 158.39,
+        "y1": 239.53
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 143.04,
+        "y0": 234.5,
+        "x1": 146.94,
+        "y1": 242.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹ ",
+      "bbox": {
+        "x0": 143.28,
+        "y0": 226.46,
+        "x1": 147.18,
+        "y1": 234.28
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 244.2,
+        "y0": 227.16,
+        "x1": 251.55,
+        "y1": 239.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 248.13,
+        "x1": 92.09,
+        "y1": 260.45
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ ",
+      "bbox": {
+        "x0": 144.97,
+        "y0": 247.06,
+        "x1": 155.63,
+        "y1": 260.53
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A",
+      "bbox": {
+        "x0": 247.44,
+        "y0": 248.16,
+        "x1": 254.79,
+        "y1": 260.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 242.16,
+        "y0": 255.02,
+        "x1": 246.06,
+        "y1": 262.84
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹ ",
+      "bbox": {
+        "x0": 242.4,
+        "y0": 247.94,
+        "x1": 246.3,
+        "y1": 255.76
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 269.13,
+        "x1": 92.09,
+        "y1": 281.45
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "2",
+      "bbox": {
+        "x0": 142.68,
+        "y0": 269.13,
+        "x1": 148.81,
+        "y1": 281.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ ",
+      "bbox": {
+        "x0": 147.97,
+        "y0": 268.07,
+        "x1": 158.63,
+        "y1": 281.53
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A   ",
+      "bbox": {
+        "x0": 244.2,
+        "y0": 269.16,
+        "x1": 251.55,
+        "y1": 281.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "34",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 309.21,
+        "x1": 61.81,
+        "y1": 321.53
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " A cell of electromotive force (e.m.f.) ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 309.21,
+        "x1": 246.97,
+        "y1": 321.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "E",
+      "bbox": {
+        "x0": 247.2,
+        "y0": 309.24,
+        "x1": 254.55,
+        "y1": 321.52
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " delivers a charge ",
+      "bbox": {
+        "x0": 254.4,
+        "y0": 309.21,
+        "x1": 344.3,
+        "y1": 321.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Q",
+      "bbox": {
+        "x0": 344.28,
+        "y0": 309.24,
+        "x1": 352.85,
+        "y1": 321.52
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " to an external circuit.  ",
+      "bbox": {
+        "x0": 352.92,
+        "y0": 309.21,
+        "x1": 460.36,
+        "y1": 321.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Which statement is correct? ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 334.65,
+        "x1": 209.48,
+        "y1": 346.97
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 358.17,
+        "x1": 78.77,
+        "y1": 370.49
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "The energy dissipated in the external circuit is ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 358.17,
+        "x1": 318.26,
+        "y1": 370.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "EQ",
+      "bbox": {
+        "x0": 318.48,
+        "y0": 358.2,
+        "x1": 334.25,
+        "y1": 370.48
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ". ",
+      "bbox": {
+        "x0": 334.2,
+        "y0": 358.17,
+        "x1": 340.25,
+        "y1": 370.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 379.89,
+        "x1": 78.77,
+        "y1": 392.21
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "The energy dissipated within the cell is ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 379.89,
+        "x1": 283.34,
+        "y1": 392.21
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "EQ",
+      "bbox": {
+        "x0": 283.56,
+        "y0": 379.92,
+        "x1": 299.33,
+        "y1": 392.2
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ". ",
+      "bbox": {
+        "x0": 299.4,
+        "y0": 379.89,
+        "x1": 305.45,
+        "y1": 392.21
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 401.49,
+        "x1": 78.77,
+        "y1": 413.81
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "The external resistance is ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 401.49,
+        "x1": 220.41,
+        "y1": 413.81
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "EQ",
+      "bbox": {
+        "x0": 220.56,
+        "y0": 401.52,
+        "x1": 236.45,
+        "y1": 413.8
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ". ",
+      "bbox": {
+        "x0": 236.4,
+        "y0": 401.49,
+        "x1": 242.45,
+        "y1": 413.81
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 423.21,
+        "x1": 78.89,
+        "y1": 435.53
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "The total energy dissipated in the cell and the external circuit is ",
+      "bbox": {
+        "x0": 92.15,
+        "y0": 423.21,
+        "x1": 401.71,
+        "y1": 435.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "EQ",
+      "bbox": {
+        "x0": 401.76,
+        "y0": 423.24,
+        "x1": 417.53,
+        "y1": 435.52
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ".   ",
+      "bbox": {
+        "x0": 417.6,
+        "y0": 423.21,
+        "x1": 423.65,
+        "y1": 435.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "35",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 461.13,
+        "x1": 61.81,
+        "y1": 473.45
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " The diagram shows a circuit with a battery of electromotive force (e.m.f.) 60 ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 461.13,
+        "x1": 462.09,
+        "y1": 473.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V and negligible ",
+      "bbox": {
+        "x0": 463.68,
+        "y0": 461.13,
+        "x1": 548.76,
+        "y1": 473.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "internal resistance, a 20 ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 474.69,
+        "x1": 199.59,
+        "y1": 487.01
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "k",
+      "bbox": {
+        "x0": 201.24,
+        "y0": 474.69,
+        "x1": 206.76,
+        "y1": 487.01
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Ω",
+      "bbox": {
+        "x0": 206.76,
+        "y0": 473.58,
+        "x1": 215.23,
+        "y1": 487.1
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " resistor, a thermistor and a voltmeter. The resistance of the ",
+      "bbox": {
+        "x0": 215.28,
+        "y0": 474.69,
+        "x1": 548.56,
+        "y1": 487.01
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "thermistor is 20 ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 488.13,
+        "x1": 146.25,
+        "y1": 500.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "k",
+      "bbox": {
+        "x0": 147.6,
+        "y0": 488.13,
+        "x1": 153.12,
+        "y1": 500.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Ω",
+      "bbox": {
+        "x0": 153.12,
+        "y0": 487.02,
+        "x1": 161.59,
+        "y1": 500.54
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": ".  ",
+      "bbox": {
+        "x0": 161.64,
+        "y0": 488.13,
+        "x1": 167.69,
+        "y1": 500.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V",
+      "bbox": {
+        "x0": 370.7,
+        "y0": 541.19,
+        "x1": 378.03,
+        "y1": 552.19
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 11.0,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "60 ",
+      "bbox": {
+        "x0": 209.16,
+        "y0": 572.7,
+        "x1": 221.39,
+        "y1": 583.69
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 11.0,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V  ",
+      "bbox": {
+        "x0": 222.92,
+        "y0": 572.7,
+        "x1": 230.26,
+        "y1": 583.69
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 11.0,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "The temperature of the thermistor decreases, and this causes its resistance to change by 50%.  ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 651.09,
+        "x1": 535.49,
+        "y1": 663.41
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "After this change, what is the reading on the voltmeter? ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 676.41,
+        "x1": 342.64,
+        "y1": 688.73
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 699.93,
+        "x1": 78.89,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "20 ",
+      "bbox": {
+        "x0": 92.15,
+        "y0": 699.93,
+        "x1": 104.4,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V ",
+      "bbox": {
+        "x0": 105.96,
+        "y0": 699.93,
+        "x1": 116.32,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 170.04,
+        "y0": 699.93,
+        "x1": 178.01,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "24 ",
+      "bbox": {
+        "x0": 191.27,
+        "y0": 699.93,
+        "x1": 203.52,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V ",
+      "bbox": {
+        "x0": 205.08,
+        "y0": 699.93,
+        "x1": 215.44,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 269.28,
+        "y0": 699.93,
+        "x1": 277.25,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "36 ",
+      "bbox": {
+        "x0": 290.51,
+        "y0": 699.93,
+        "x1": 302.76,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V ",
+      "bbox": {
+        "x0": 304.32,
+        "y0": 699.93,
+        "x1": 314.68,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 368.52,
+        "y0": 699.93,
+        "x1": 376.49,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "40 ",
+      "bbox": {
+        "x0": 389.75,
+        "y0": 699.93,
+        "x1": 402.0,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "V   ",
+      "bbox": {
+        "x0": 403.56,
+        "y0": 699.93,
+        "x1": 413.92,
+        "y1": 712.25
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    }
+  ],
+  "images": []
+}

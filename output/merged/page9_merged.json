@@ -1,0 +1,1781 @@
+{
+  "page": 9,
+  "width": 595.0,
+  "height": 842.0,
+  "blocks": [
+    {
+      "id": "p9_r14",
+      "type": "other",
+      "bbox": {
+        "x0": 293.23,
+        "y0": 36.22,
+        "x1": 302.65,
+        "y1": 47.7
+      },
+      "score": 0.4842,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "9   ",
+          "bbox": {
+            "x0": 294.6,
+            "y0": 36.09,
+            "x1": 300.73,
+            "y1": 48.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r3",
+      "type": "text",
+      "bbox": {
+        "x0": 47.2,
+        "y0": 61.24,
+        "x1": 548.43,
+        "y1": 88.88
+      },
+      "score": 0.9466,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "21",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 62.49,
+            "x1": 61.81,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " A platform is supported by a spring. A box is placed onto the platform. The diagram shows the ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 62.49,
+            "x1": 548.74,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "spring before and after the box is placed onto it.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 75.21,
+            "x1": 306.11,
+            "y1": 87.53
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r2",
+      "type": "image",
+      "bbox": {
+        "x0": 177.32,
+        "y0": 99.32,
+        "x1": 419.5,
+        "y1": 211.0
+      },
+      "score": 0.9469,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "x",
+          "bbox": {
+            "x0": 290.12,
+            "y0": 138.59,
+            "x1": 295.62,
+            "y1": 149.58
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "before",
+          "bbox": {
+            "x0": 220.84,
+            "y0": 102.05,
+            "x1": 252.0,
+            "y1": 113.04
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "spring",
+          "bbox": {
+            "x0": 178.68,
+            "y0": 162.01,
+            "x1": 208.61,
+            "y1": 173.0
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "after",
+          "bbox": {
+            "x0": 354.05,
+            "y0": 102.05,
+            "x1": 376.05,
+            "y1": 113.04
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "box  ",
+          "bbox": {
+            "x0": 398.66,
+            "y0": 136.2,
+            "x1": 416.38,
+            "y1": 147.19
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r6",
+      "type": "text",
+      "bbox": {
+        "x0": 68.76,
+        "y0": 220.34,
+        "x1": 297.79,
+        "y1": 234.69
+      },
+      "score": 0.9193,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "What is the term for the quantity marked as ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 221.13,
+            "x1": 284.04,
+            "y1": 233.45
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "x",
+          "bbox": {
+            "x0": 284.28,
+            "y0": 221.13,
+            "x1": 289.8,
+            "y1": 233.45
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "? ",
+          "bbox": {
+            "x0": 289.8,
+            "y0": 221.13,
+            "x1": 298.86,
+            "y1": 233.45
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r1",
+      "type": "text",
+      "bbox": {
+        "x0": 69.08,
+        "y0": 244.23,
+        "x1": 156.23,
+        "y1": 322.64
+      },
+      "score": 0.9543,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 244.65,
+            "x1": 78.77,
+            "y1": 256.97
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "compression ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 244.65,
+            "x1": 157.48,
+            "y1": 256.97
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 266.37,
+            "x1": 78.77,
+            "y1": 278.69
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "load ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 266.37,
+            "x1": 115.84,
+            "y1": 278.69
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 287.97,
+            "x1": 78.77,
+            "y1": 300.29
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "strain ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 287.97,
+            "x1": 121.95,
+            "y1": 300.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 309.69,
+            "x1": 78.89,
+            "y1": 322.01
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "stress   ",
+          "bbox": {
+            "x0": 92.15,
+            "y0": 309.69,
+            "x1": 124.48,
+            "y1": 322.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r13",
+      "type": "text",
+      "bbox": {
+        "x0": 46.99,
+        "y0": 345.8,
+        "x1": 377.71,
+        "y1": 412.76
+      },
+      "score": 0.5061,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "What is the spring constant of the wire? ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 399.09,
+            "x1": 266.29,
+            "y1": 411.41
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r12",
+      "type": "text",
+      "bbox": {
+        "x0": 48.07,
+        "y0": 346.56,
+        "x1": 377.06,
+        "y1": 361.48
+      },
+      "score": 0.5272,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "22",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 347.61,
+            "x1": 61.81,
+            "y1": 359.93
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " A copper wire has length 1.7 ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 347.61,
+            "x1": 210.36,
+            "y1": 359.93
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "m and uniform diameter 0.64 ",
+          "bbox": {
+            "x0": 211.92,
+            "y0": 347.61,
+            "x1": 352.61,
+            "y1": 359.93
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "mm.  ",
+          "bbox": {
+            "x0": 354.12,
+            "y0": 347.61,
+            "x1": 378.53,
+            "y1": 359.93
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r16",
+      "type": "text",
+      "bbox": {
+        "x0": 70.1,
+        "y0": 372.04,
+        "x1": 299.84,
+        "y1": 387.53
+      },
+      "score": 0.2734,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "The Young modulus of copper is 1.2 ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 373.89,
+            "x1": 250.75,
+            "y1": 386.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "×",
+          "bbox": {
+            "x0": 250.8,
+            "y0": 372.79,
+            "x1": 256.85,
+            "y1": 386.3
+          },
+          "font": {
+            "name": "Symbol",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " 10",
+          "bbox": {
+            "x0": 256.8,
+            "y0": 373.89,
+            "x1": 272.16,
+            "y1": 386.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "¹¹ ",
+          "bbox": {
+            "x0": 272.16,
+            "y0": 372.54,
+            "x1": 279.87,
+            "y1": 380.31
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "Pa.  ",
+          "bbox": {
+            "x0": 281.4,
+            "y0": 373.89,
+            "x1": 300.86,
+            "y1": 386.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r0",
+      "type": "text",
+      "bbox": {
+        "x0": 68.93,
+        "y0": 421.26,
+        "x1": 166.42,
+        "y1": 504.18
+      },
+      "score": 0.9604,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 423.45,
+            "x1": 78.77,
+            "y1": 435.77
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "2.3 ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 423.45,
+            "x1": 110.43,
+            "y1": 435.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "×",
+          "bbox": {
+            "x0": 110.4,
+            "y0": 422.34,
+            "x1": 116.45,
+            "y1": 435.86
+          },
+          "font": {
+            "name": "Symbol",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " 10",
+          "bbox": {
+            "x0": 116.52,
+            "y0": 423.45,
+            "x1": 131.88,
+            "y1": 435.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁴ ",
+          "bbox": {
+            "x0": 131.88,
+            "y0": 422.1,
+            "x1": 135.75,
+            "y1": 429.87
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 137.28,
+            "y0": 423.45,
+            "x1": 145.25,
+            "y1": 435.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "m",
+          "bbox": {
+            "x0": 146.64,
+            "y0": 423.45,
+            "x1": 155.83,
+            "y1": 435.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁻¹ ",
+          "bbox": {
+            "x0": 155.88,
+            "y0": 422.1,
+            "x1": 163.59,
+            "y1": 429.87
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 446.01,
+            "x1": 78.77,
+            "y1": 458.33
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "9.1 ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 446.01,
+            "x1": 110.43,
+            "y1": 458.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "×",
+          "bbox": {
+            "x0": 110.4,
+            "y0": 444.9,
+            "x1": 116.45,
+            "y1": 458.42
+          },
+          "font": {
+            "name": "Symbol",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " 10",
+          "bbox": {
+            "x0": 116.52,
+            "y0": 446.01,
+            "x1": 131.88,
+            "y1": 458.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁴ ",
+          "bbox": {
+            "x0": 131.88,
+            "y0": 444.66,
+            "x1": 135.75,
+            "y1": 452.43
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 137.28,
+            "y0": 446.01,
+            "x1": 145.25,
+            "y1": 458.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "m",
+          "bbox": {
+            "x0": 146.64,
+            "y0": 446.01,
+            "x1": 155.83,
+            "y1": 458.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁻¹ ",
+          "bbox": {
+            "x0": 155.88,
+            "y0": 444.66,
+            "x1": 163.59,
+            "y1": 452.43
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 468.45,
+            "x1": 78.77,
+            "y1": 480.77
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "4.5 ",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 468.45,
+            "x1": 110.43,
+            "y1": 480.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "×",
+          "bbox": {
+            "x0": 110.4,
+            "y0": 467.34,
+            "x1": 116.45,
+            "y1": 480.86
+          },
+          "font": {
+            "name": "Symbol",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " 10",
+          "bbox": {
+            "x0": 116.52,
+            "y0": 468.45,
+            "x1": 131.88,
+            "y1": 480.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁷ ",
+          "bbox": {
+            "x0": 131.88,
+            "y0": 467.1,
+            "x1": 135.75,
+            "y1": 474.87
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 137.28,
+            "y0": 468.45,
+            "x1": 145.25,
+            "y1": 480.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "m",
+          "bbox": {
+            "x0": 146.64,
+            "y0": 468.45,
+            "x1": 155.83,
+            "y1": 480.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁻¹ ",
+          "bbox": {
+            "x0": 155.88,
+            "y0": 467.1,
+            "x1": 163.59,
+            "y1": 474.87
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 490.89,
+            "x1": 78.89,
+            "y1": 503.21
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "7.1 ",
+          "bbox": {
+            "x0": 92.15,
+            "y0": 490.89,
+            "x1": 110.55,
+            "y1": 503.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "×",
+          "bbox": {
+            "x0": 110.52,
+            "y0": 489.78,
+            "x1": 116.57,
+            "y1": 503.3
+          },
+          "font": {
+            "name": "Symbol",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " 10",
+          "bbox": {
+            "x0": 116.64,
+            "y0": 490.89,
+            "x1": 132.0,
+            "y1": 503.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁷ ",
+          "bbox": {
+            "x0": 132.0,
+            "y0": 489.54,
+            "x1": 135.87,
+            "y1": 497.31
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 137.4,
+            "y0": 490.89,
+            "x1": 145.37,
+            "y1": 503.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "m",
+          "bbox": {
+            "x0": 146.76,
+            "y0": 490.89,
+            "x1": 155.95,
+            "y1": 503.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "⁻¹   ",
+          "bbox": {
+            "x0": 156.0,
+            "y0": 489.54,
+            "x1": 163.71,
+            "y1": 497.31
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r10",
+      "type": "text",
+      "bbox": {
+        "x0": 47.7,
+        "y0": 527.97,
+        "x1": 490.77,
+        "y1": 542.91
+      },
+      "score": 0.8927,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "23",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 528.81,
+            "x1": 61.81,
+            "y1": 541.13
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " The graph shows how the extension of a spring varies with the force used to stretch it.  ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 528.81,
+            "x1": 492.16,
+            "y1": 541.13
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r11",
+      "type": "image",
+      "bbox": {
+        "x0": 175.25,
+        "y0": 552.11,
+        "x1": 420.39,
+        "y1": 681.29
+      },
+      "score": 0.8789,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "extension ",
+          "bbox": {
+            "x0": 178.08,
+            "y0": 574.17,
+            "x1": 225.14,
+            "y1": 585.17
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r17",
+      "type": "image",
+      "bbox": {
+        "x0": 201.81,
+        "y0": 552.15,
+        "x1": 420.29,
+        "y1": 673.3
+      },
+      "score": 0.265,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "10",
+          "bbox": {
+            "x0": 311.83,
+            "y0": 654.1,
+            "x1": 324.06,
+            "y1": 665.1
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "20",
+          "bbox": {
+            "x0": 357.81,
+            "y0": 654.1,
+            "x1": 370.04,
+            "y1": 665.1
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "30",
+          "bbox": {
+            "x0": 403.79,
+            "y0": 654.1,
+            "x1": 416.02,
+            "y1": 665.1
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "2.0",
+          "bbox": {
+            "x0": 249.5,
+            "y0": 598.73,
+            "x1": 264.78,
+            "y1": 609.73
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "4.0",
+          "bbox": {
+            "x0": 249.5,
+            "y0": 555.35,
+            "x1": 264.78,
+            "y1": 566.34
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "/ ",
+          "bbox": {
+            "x0": 226.68,
+            "y0": 574.17,
+            "x1": 229.74,
+            "y1": 585.16
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "cm",
+          "bbox": {
+            "x0": 231.26,
+            "y0": 574.17,
+            "x1": 245.92,
+            "y1": 585.16
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "0",
+          "bbox": {
+            "x0": 258.73,
+            "y0": 643.04,
+            "x1": 264.84,
+            "y1": 654.03
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "0  ",
+          "bbox": {
+            "x0": 268.91,
+            "y0": 654.1,
+            "x1": 275.03,
+            "y1": 665.09
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r15",
+      "type": "caption",
+      "bbox": {
+        "x0": 357.14,
+        "y0": 669.33,
+        "x1": 404.46,
+        "y1": 681.99
+      },
+      "score": 0.274,
+      "raw_label": "figure_caption",
+      "content": [
+        {
+          "text": "force ",
+          "bbox": {
+            "x0": 358.5,
+            "y0": 670.85,
+            "x1": 382.94,
+            "y1": 681.85
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "/ ",
+          "bbox": {
+            "x0": 384.47,
+            "y0": 670.85,
+            "x1": 387.53,
+            "y1": 681.85
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "kN",
+          "bbox": {
+            "x0": 389.06,
+            "y0": 670.85,
+            "x1": 402.49,
+            "y1": 681.85
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r8",
+      "type": "text",
+      "bbox": {
+        "x0": 68.56,
+        "y0": 695.15,
+        "x1": 456.81,
+        "y1": 710.17
+      },
+      "score": 0.9039,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "What is the elastic potential energy of the spring when the extension is 4.0 ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 695.97,
+            "x1": 432.18,
+            "y1": 708.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "cm? ",
+          "bbox": {
+            "x0": 433.8,
+            "y0": 695.97,
+            "x1": 457.61,
+            "y1": 708.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r4",
+      "type": "text",
+      "bbox": {
+        "x0": 69.01,
+        "y0": 716.71,
+        "x1": 424.58,
+        "y1": 733.42
+      },
+      "score": 0.9307,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 719.49,
+            "x1": 81.77,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "60 ",
+          "bbox": {
+            "x0": 92.04,
+            "y0": 719.49,
+            "x1": 104.29,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J ",
+          "bbox": {
+            "x0": 105.84,
+            "y0": 719.49,
+            "x1": 114.42,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 170.04,
+            "y0": 719.49,
+            "x1": 178.01,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "120 ",
+          "bbox": {
+            "x0": 191.27,
+            "y0": 719.49,
+            "x1": 209.64,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J ",
+          "bbox": {
+            "x0": 211.2,
+            "y0": 719.49,
+            "x1": 219.78,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 269.28,
+            "y0": 719.49,
+            "x1": 277.25,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "600 ",
+          "bbox": {
+            "x0": 290.51,
+            "y0": 719.49,
+            "x1": 308.88,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J ",
+          "bbox": {
+            "x0": 310.44,
+            "y0": 719.49,
+            "x1": 319.02,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 368.52,
+            "y0": 719.49,
+            "x1": 376.49,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "1200 ",
+          "bbox": {
+            "x0": 389.75,
+            "y0": 719.49,
+            "x1": 414.24,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J   ",
+          "bbox": {
+            "x0": 415.8,
+            "y0": 719.49,
+            "x1": 424.38,
+            "y1": 731.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r9",
+      "type": "other",
+      "bbox": {
+        "x0": 490.05,
+        "y0": 793.56,
+        "x1": 547.29,
+        "y1": 806.67
+      },
+      "score": 0.9006,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "[Turn over ",
+          "bbox": {
+            "x0": 491.28,
+            "y0": 793.41,
+            "x1": 545.54,
+            "y1": 805.73
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r7",
+      "type": "other",
+      "bbox": {
+        "x0": 268.08,
+        "y0": 795.09,
+        "x1": 327.51,
+        "y1": 806.02
+      },
+      "score": 0.9173,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "9702/12/O/N/25 ",
+          "bbox": {
+            "x0": 269.37,
+            "y0": 796.12,
+            "x1": 328.05,
+            "y1": 805.1
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p9_r5",
+      "type": "other",
+      "bbox": {
+        "x0": 47.82,
+        "y0": 795.24,
+        "x1": 106.02,
+        "y1": 805.85
+      },
+      "score": 0.9273,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "© UCLES 2025 ",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 796.12,
+            "x1": 106.61,
+            "y1": 805.1
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    }
+  ]
+}

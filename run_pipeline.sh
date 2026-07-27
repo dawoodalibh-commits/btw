@@ -10,11 +10,11 @@
 #              the same shared database at --output-dir/questions.db.
 #
 # Usage:
-#   ./run_pipeline.sh <pdf-or-folder> [--output-dir DIR] [--paper CODE] [--backend BACKEND] [--dpi N]
+#   ./run_pipeline.sh <pdf-or-folder> [--output-dir DIR] [--paper CODE] [--backend BACKEND] [--dpi N] [--device DEV]
 set -eo pipefail
 
 usage() {
-    echo "Usage: $0 <pdf-or-folder> [--output-dir DIR] [--paper CODE] [--backend BACKEND] [--dpi N]" >&2
+    echo "Usage: $0 <pdf-or-folder> [--output-dir DIR] [--paper CODE] [--backend BACKEND] [--dpi N] [--device DEV]" >&2
     exit 1
 }
 
@@ -25,6 +25,7 @@ shift
 OUTPUT_DIR="output"
 PAPER="unknown"
 BACKEND="ppstructure"
+DEVICE="auto"
 DPI_ARGS=()
 
 while [ $# -gt 0 ]; do
@@ -33,6 +34,7 @@ while [ $# -gt 0 ]; do
         --paper) [ $# -ge 2 ] || usage; PAPER="$2"; shift 2 ;;
         --backend) [ $# -ge 2 ] || usage; BACKEND="$2"; shift 2 ;;
         --dpi) [ $# -ge 2 ] || usage; DPI_ARGS=(--dpi "$2"); shift 2 ;;
+        --device) [ $# -ge 2 ] || usage; DEVICE="$2"; shift 2 ;;
         *) usage ;;
     esac
 done
@@ -66,7 +68,7 @@ run() {
 run_one() {
     local pdf="$1" out="$2" paper="$3" db="$4"
     run extract_pdf.py "$pdf" --output-dir "$out/extracted" &&
-    run layout_detection.py "$pdf" --output-dir "$out/layout" --backend "$BACKEND" "${DPI_ARGS[@]}" &&
+    run layout_detection.py "$pdf" --output-dir "$out/layout" --backend "$BACKEND" --device "$DEVICE" "${DPI_ARGS[@]}" &&
     run merge_layout.py --extracted "$out/extracted" --layout "$out/layout" --output-dir "$out/merged" &&
     run question_parser.py --merged "$out/merged" --output-dir "$out/questions" &&
     run formula_extractor.py "$pdf" --merged "$out/merged" --output-dir "$out/formulas" "${DPI_ARGS[@]}" &&

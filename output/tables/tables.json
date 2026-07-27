@@ -1,0 +1,318 @@
+[
+  {
+    "id": "p6_r0",
+    "page": 6,
+    "bbox": {
+      "x0": 70.56,
+      "y0": 230.99,
+      "x1": 350.22,
+      "y1": 338.46
+    },
+    "image": "p6_r0.png",
+    "headers": [
+      "velocity of P",
+      "velocity of Q"
+    ],
+    "rows": [
+      [
+        "A",
+        "10 cm s−1 to the right",
+        "60 cm s−1 to the left"
+      ],
+      [
+        "B",
+        "50 cm s−1 to the right",
+        "zero"
+      ],
+      [
+        "C",
+        "20 cm s−1 to the left",
+        "70 cm s−1 to the right"
+      ],
+      [
+        "D",
+        "60 cm s−1 to the right",
+        "30 cm s−1 to the left"
+      ]
+    ]
+  },
+  {
+    "id": "p7_r1",
+    "page": 7,
+    "bbox": {
+      "x0": 70.09,
+      "y0": 342.73,
+      "x1": 260.6,
+      "y1": 449.48
+    },
+    "image": "p7_r1.png",
+    "headers": [
+      "mass",
+      "volume"
+    ],
+    "rows": [
+      [
+        "A",
+        "decrease",
+        "decrease"
+      ],
+      [
+        "B",
+        "decrease",
+        "increase"
+      ],
+      [
+        "C",
+        "increase",
+        "decrease"
+      ],
+      [
+        "D",
+        "increase",
+        "increase"
+      ]
+    ]
+  },
+  {
+    "id": "p10_r0",
+    "page": 10,
+    "bbox": {
+      "x0": 70.03,
+      "y0": 86.29,
+      "x1": 418.22,
+      "y1": 222.48
+    },
+    "image": "p10_r0.png",
+    "headers": [
+      "a direction parallel",
+      "transfers energy in",
+      "to the oscillations",
+      "to travel through",
+      "requires a medium",
+      "the same speed",
+      "always travels at"
+    ],
+    "rows": [
+      [
+        "A",
+        "false",
+        "false",
+        "true"
+      ],
+      [
+        "B",
+        "false",
+        "true",
+        "true"
+      ],
+      [
+        "C",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "D",
+        "true",
+        "true",
+        "false"
+      ]
+    ]
+  },
+  {
+    "id": "p11_r1",
+    "page": 11,
+    "bbox": {
+      "x0": 70.11,
+      "y0": 289.04,
+      "x1": 257.66,
+      "y1": 396.14
+    },
+    "image": "p11_r1.png",
+    "headers": [
+      "frequency",
+      "speed"
+    ],
+    "rows": [
+      [
+        "A",
+        "decreases",
+        "increases"
+      ],
+      [
+        "B",
+        "increases",
+        "decreases"
+      ],
+      [
+        "C",
+        "no change",
+        "decreases"
+      ],
+      [
+        "D",
+        "no change",
+        "no change"
+      ]
+    ]
+  },
+  {
+    "id": "p11_r0",
+    "page": 11,
+    "bbox": {
+      "x0": 69.98,
+      "y0": 483.64,
+      "x1": 373.8,
+      "y1": 591.11
+    },
+    "image": "p11_r0.png",
+    "headers": [
+      "symbol",
+      "quantity"
+    ],
+    "rows": [
+      [
+        "A",
+        "d",
+        "distance from grating to screen"
+      ],
+      [
+        "B",
+        "λ",
+        "wavelength of light"
+      ],
+      [
+        "C",
+        "n",
+        "order of intensity maximum"
+      ],
+      [
+        "D",
+        "θ",
+        "diffraction angle of intensity maximum"
+      ]
+    ]
+  },
+  {
+    "id": "p13_r1",
+    "page": 13,
+    "bbox": {
+      "x0": 70.08,
+      "y0": 163.54,
+      "x1": 298.22,
+      "y1": 285.29
+    },
+    "image": "p13_r1.png",
+    "headers": [
+      "cross-sectional"
+    ],
+    "rows": [
+      [
+        "resistivity",
+        "area"
+      ],
+      [
+        "A",
+        "2",
+        "1",
+        "ρ",
+        "2",
+        "1",
+        "A"
+      ],
+      [
+        "B",
+        "2",
+        "1",
+        "ρ",
+        "A"
+      ],
+      [
+        "C",
+        "ρ",
+        "2",
+        "1",
+        "A"
+      ],
+      [
+        "D",
+        "2ρ",
+        "A"
+      ]
+    ]
+  },
+  {
+    "id": "p14_r0",
+    "page": 14,
+    "bbox": {
+      "x0": 70.18,
+      "y0": 629.44,
+      "x1": 264.52,
+      "y1": 737.92
+    },
+    "image": "p14_r0.png",
+    "headers": [
+      "first law",
+      "second law"
+    ],
+    "rows": [
+      [
+        "A",
+        "charge",
+        "energy"
+      ],
+      [
+        "B",
+        "charge",
+        "voltage"
+      ],
+      [
+        "C",
+        "energy",
+        "charge"
+      ],
+      [
+        "D",
+        "voltage",
+        "charge"
+      ]
+    ]
+  },
+  {
+    "id": "p15_r0",
+    "page": 15,
+    "bbox": {
+      "x0": 70.36,
+      "y0": 420.48,
+      "x1": 262.3,
+      "y1": 526.92
+    },
+    "image": "p15_r0.png",
+    "headers": [
+      "α-particles",
+      "βparticles"
+    ],
+    "rows": [
+      [
+        "A",
+        "8",
+        "6"
+      ],
+      [
+        "B",
+        "8",
+        "10"
+      ],
+      [
+        "C",
+        "16",
+        "6"
+      ],
+      [
+        "D",
+        "16",
+        "22"
+      ]
+    ]
+  }
+]

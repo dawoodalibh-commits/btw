@@ -1,0 +1,1340 @@
+{
+  "page": 14,
+  "width": 595.0,
+  "height": 842.0,
+  "blocks": [
+    {
+      "id": "p14_r9",
+      "type": "other",
+      "bbox": {
+        "x0": 291.22,
+        "y0": 36.09,
+        "x1": 305.36,
+        "y1": 47.84
+      },
+      "score": 0.5527,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "14 ",
+          "bbox": {
+            "x0": 291.48,
+            "y0": 36.09,
+            "x1": 303.73,
+            "y1": 48.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r2",
+      "type": "text",
+      "bbox": {
+        "x0": 49.59,
+        "y0": 61.54,
+        "x1": 548.63,
+        "y1": 101.65
+      },
+      "score": 0.9296,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "36",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 62.49,
+            "x1": 61.81,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " A potentiometer circuit is used to determine the electromotive force (e.m.f.) ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 62.49,
+            "x1": 457.91,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 459.96,
+            "y0": 62.49,
+            "x1": 467.32,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 467.28,
+            "y0": 67.74,
+            "x1": 471.91,
+            "y1": 75.51
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " of a cell. The ",
+          "bbox": {
+            "x0": 471.72,
+            "y0": 62.49,
+            "x1": 548.74,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "circuit includes a second cell of known e.m.f. ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 75.21,
+            "x1": 294.16,
+            "y1": 87.53
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 294.72,
+            "y0": 75.21,
+            "x1": 302.08,
+            "y1": 87.53
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 302.04,
+            "y0": 80.46,
+            "x1": 305.91,
+            "y1": 88.23
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " and negligible internal resistance, and a uniform ",
+          "bbox": {
+            "x0": 305.88,
+            "y0": 75.21,
+            "x1": 548.67,
+            "y1": 87.53
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "resistance wire PQ of known length.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 87.81,
+            "x1": 249.4,
+            "y1": 100.13
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r5",
+      "type": "text",
+      "bbox": {
+        "x0": 69.84,
+        "y0": 112.41,
+        "x1": 159.44,
+        "y1": 126.53
+      },
+      "score": 0.7774,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 113.13,
+            "x1": 78.28,
+            "y1": 125.45
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 78.36,
+            "y0": 118.38,
+            "x1": 82.99,
+            "y1": 126.15
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " is less than ",
+          "bbox": {
+            "x0": 82.8,
+            "y0": 113.13,
+            "x1": 144.14,
+            "y1": 125.45
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 144.24,
+            "y0": 113.13,
+            "x1": 151.6,
+            "y1": 125.45
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 151.56,
+            "y0": 118.38,
+            "x1": 155.43,
+            "y1": 126.15
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": ".  ",
+          "bbox": {
+            "x0": 155.4,
+            "y0": 113.13,
+            "x1": 161.45,
+            "y1": 125.45
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r6",
+      "type": "text",
+      "bbox": {
+        "x0": 69.69,
+        "y0": 137.54,
+        "x1": 531.07,
+        "y1": 152.1
+      },
+      "score": 0.7473,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "The movable connection J can be positioned anywhere along the length of the resistance wire.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 138.45,
+            "x1": 533.81,
+            "y1": 150.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r8",
+      "type": "text",
+      "bbox": {
+        "x0": 69.37,
+        "y0": 163.28,
+        "x1": 284.38,
+        "y1": 177.28
+      },
+      "score": 0.575,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "Which circuit is suitable for determining ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 163.77,
+            "x1": 264.64,
+            "y1": 176.09
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 264.84,
+            "y0": 163.77,
+            "x1": 272.2,
+            "y1": 176.09
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 272.28,
+            "y0": 169.02,
+            "x1": 276.91,
+            "y1": 176.79
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "?  ",
+          "bbox": {
+            "x0": 276.72,
+            "y0": 163.77,
+            "x1": 285.89,
+            "y1": 176.09
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r1",
+      "type": "image",
+      "bbox": {
+        "x0": 63.21,
+        "y0": 187.53,
+        "x1": 531.59,
+        "y1": 567.32
+      },
+      "score": 0.9407,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 68.16,
+            "y0": 280.38,
+            "x1": 75.5,
+            "y1": 291.38
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 160.51,
+            "y0": 210.3,
+            "x1": 167.84,
+            "y1": 221.29
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 167.84,
+            "y0": 216.68,
+            "x1": 171.73,
+            "y1": 223.68
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 107.65,
+            "y0": 348.25,
+            "x1": 114.99,
+            "y1": 359.24
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 114.99,
+            "y0": 354.63,
+            "x1": 119.65,
+            "y1": 361.63
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "A",
+          "bbox": {
+            "x0": 162.15,
+            "y0": 189.67,
+            "x1": 170.09,
+            "y1": 200.67
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "Q",
+          "bbox": {
+            "x0": 257.51,
+            "y0": 280.38,
+            "x1": 266.07,
+            "y1": 291.38
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J",
+          "bbox": {
+            "x0": 192.1,
+            "y0": 286.49,
+            "x1": 197.6,
+            "y1": 297.49
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 327.51,
+            "y0": 280.38,
+            "x1": 334.84,
+            "y1": 291.38
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 472.32,
+            "y0": 348.25,
+            "x1": 479.66,
+            "y1": 359.24
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 479.66,
+            "y0": 354.63,
+            "x1": 483.55,
+            "y1": 361.63
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 420.23,
+            "y0": 210.3,
+            "x1": 427.57,
+            "y1": 221.29
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 427.57,
+            "y0": 216.68,
+            "x1": 432.23,
+            "y1": 223.68
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "Q",
+          "bbox": {
+            "x0": 516.86,
+            "y0": 280.38,
+            "x1": 525.41,
+            "y1": 291.38
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J",
+          "bbox": {
+            "x0": 394.6,
+            "y0": 286.49,
+            "x1": 400.1,
+            "y1": 297.49
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 68.16,
+            "y0": 483.41,
+            "x1": 75.5,
+            "y1": 494.41
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 190.5,
+            "y0": 413.33,
+            "x1": 197.84,
+            "y1": 424.32
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 197.84,
+            "y0": 419.71,
+            "x1": 201.73,
+            "y1": 426.71
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 127.65,
+            "y0": 551.28,
+            "x1": 134.98,
+            "y1": 562.27
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 134.98,
+            "y0": 557.66,
+            "x1": 139.65,
+            "y1": 564.66
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C",
+          "bbox": {
+            "x0": 162.15,
+            "y0": 392.7,
+            "x1": 170.09,
+            "y1": 403.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "Q",
+          "bbox": {
+            "x0": 257.51,
+            "y0": 483.41,
+            "x1": 266.07,
+            "y1": 494.41
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J",
+          "bbox": {
+            "x0": 192.1,
+            "y0": 489.52,
+            "x1": 197.6,
+            "y1": 500.52
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D",
+          "bbox": {
+            "x0": 421.88,
+            "y0": 392.7,
+            "x1": 429.82,
+            "y1": 403.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 328.27,
+            "y0": 483.41,
+            "x1": 335.61,
+            "y1": 494.41
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 420.62,
+            "y0": 551.28,
+            "x1": 427.95,
+            "y1": 562.27
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₀",
+          "bbox": {
+            "x0": 427.95,
+            "y0": 557.66,
+            "x1": 431.84,
+            "y1": 564.66
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "E",
+          "bbox": {
+            "x0": 367.76,
+            "y0": 413.33,
+            "x1": 375.1,
+            "y1": 424.32
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "X",
+          "bbox": {
+            "x0": 375.1,
+            "y0": 419.71,
+            "x1": 379.77,
+            "y1": 426.71
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B",
+          "bbox": {
+            "x0": 422.26,
+            "y0": 189.67,
+            "x1": 430.2,
+            "y1": 200.67
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "Q",
+          "bbox": {
+            "x0": 517.62,
+            "y0": 483.41,
+            "x1": 526.18,
+            "y1": 494.41
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "J   ",
+          "bbox": {
+            "x0": 435.86,
+            "y0": 476.69,
+            "x1": 441.36,
+            "y1": 487.69
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r7",
+      "type": "text",
+      "bbox": {
+        "x0": 47.96,
+        "y0": 591.27,
+        "x1": 547.85,
+        "y1": 617.93
+      },
+      "score": 0.635,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "37",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 592.17,
+            "x1": 61.81,
+            "y1": 604.49
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "second laws?   ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 605.01,
+            "x1": 140.43,
+            "y1": 617.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r10",
+      "type": "text",
+      "bbox": {
+        "x0": 146.61,
+        "y0": 592.15,
+        "x1": 540.9,
+        "y1": 617.66
+      },
+      "score": 0.2189,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": " The principles of conservation of which two quantities are associated with Kirchhoff’s first and ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 592.17,
+            "x1": 548.62,
+            "y1": 604.49
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r0",
+      "type": "table",
+      "bbox": {
+        "x0": 70.18,
+        "y0": 629.44,
+        "x1": 264.52,
+        "y1": 737.92
+      },
+      "score": 0.9524,
+      "raw_label": "table",
+      "content": [
+        {
+          "text": "first law ",
+          "bbox": {
+            "x0": 121.56,
+            "y0": 634.41,
+            "x1": 161.95,
+            "y1": 646.73
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "second law ",
+          "bbox": {
+            "x0": 194.65,
+            "y0": 634.41,
+            "x1": 252.65,
+            "y1": 646.73
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 81.12,
+            "y0": 657.69,
+            "x1": 92.09,
+            "y1": 670.01
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "charge ",
+          "bbox": {
+            "x0": 123.36,
+            "y0": 657.69,
+            "x1": 160.0,
+            "y1": 670.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "energy ",
+          "bbox": {
+            "x0": 205.29,
+            "y0": 657.69,
+            "x1": 241.94,
+            "y1": 670.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 81.12,
+            "y0": 678.69,
+            "x1": 92.09,
+            "y1": 691.01
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "charge ",
+          "bbox": {
+            "x0": 123.36,
+            "y0": 678.69,
+            "x1": 159.98,
+            "y1": 691.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "voltage ",
+          "bbox": {
+            "x0": 204.32,
+            "y0": 678.69,
+            "x1": 242.9,
+            "y1": 691.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 81.12,
+            "y0": 699.69,
+            "x1": 92.09,
+            "y1": 712.01
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "energy ",
+          "bbox": {
+            "x0": 123.36,
+            "y0": 699.69,
+            "x1": 160.01,
+            "y1": 712.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "charge ",
+          "bbox": {
+            "x0": 205.3,
+            "y0": 699.69,
+            "x1": 241.95,
+            "y1": 712.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 81.12,
+            "y0": 721.53,
+            "x1": 92.09,
+            "y1": 733.85
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "voltage ",
+          "bbox": {
+            "x0": 122.4,
+            "y0": 721.53,
+            "x1": 160.98,
+            "y1": 733.85
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "charge   ",
+          "bbox": {
+            "x0": 205.31,
+            "y0": 721.53,
+            "x1": 241.93,
+            "y1": 733.85
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r3",
+      "type": "other",
+      "bbox": {
+        "x0": 47.97,
+        "y0": 796.0,
+        "x1": 105.84,
+        "y1": 806.47
+      },
+      "score": 0.9097,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "© UCLES 2025 ",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 796.84,
+            "x1": 106.61,
+            "y1": 805.82
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p14_r4",
+      "type": "other",
+      "bbox": {
+        "x0": 268.31,
+        "y0": 796.22,
+        "x1": 327.43,
+        "y1": 806.46
+      },
+      "score": 0.8884,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "9702/12/O/N/25  ",
+          "bbox": {
+            "x0": 269.37,
+            "y0": 796.84,
+            "x1": 328.05,
+            "y1": 805.82
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    }
+  ]
+}

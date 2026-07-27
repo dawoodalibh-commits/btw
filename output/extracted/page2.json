@@ -1,0 +1,3128 @@
+{
+  "page": 2,
+  "width": 595.0,
+  "height": 842.0,
+  "spans": [
+    {
+      "text": "2 ",
+      "bbox": {
+        "x0": 294.6,
+        "y0": 36.09,
+        "x1": 300.73,
+        "y1": 48.41
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "© UCLES 2025 ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 796.84,
+        "x1": 106.61,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "9702/12/O/N/25  ",
+      "bbox": {
+        "x0": 269.37,
+        "y0": 796.84,
+        "x1": 328.05,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Data ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 62.49,
+        "x1": 76.49,
+        "y1": 74.81
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "acceleration of free fall ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 86.61,
+        "x1": 163.12,
+        "y1": 98.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "g",
+      "bbox": {
+        "x0": 273.12,
+        "y0": 86.61,
+        "x1": 279.25,
+        "y1": 98.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 9.81 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 86.61,
+        "x1": 314.85,
+        "y1": 98.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m ",
+      "bbox": {
+        "x0": 316.44,
+        "y0": 86.61,
+        "x1": 325.63,
+        "y1": 98.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 327.12,
+        "y0": 86.61,
+        "x1": 332.64,
+        "y1": 98.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻² ",
+      "bbox": {
+        "x0": 332.64,
+        "y0": 85.26,
+        "x1": 342.24,
+        "y1": 93.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "speed of light in free space ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 113.61,
+        "x1": 184.02,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "c ",
+      "bbox": {
+        "x0": 273.72,
+        "y0": 113.61,
+        "x1": 282.31,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "= 3.00 ",
+      "bbox": {
+        "x0": 283.44,
+        "y0": 113.61,
+        "x1": 317.91,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 112.5,
+        "x1": 323.93,
+        "y1": 126.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 113.61,
+        "x1": 339.36,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁸ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 112.26,
+        "x1": 343.23,
+        "y1": 120.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m ",
+      "bbox": {
+        "x0": 344.64,
+        "y0": 113.61,
+        "x1": 353.83,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 355.44,
+        "y0": 113.61,
+        "x1": 360.96,
+        "y1": 125.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹ ",
+      "bbox": {
+        "x0": 360.96,
+        "y0": 112.26,
+        "x1": 368.67,
+        "y1": 120.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "elementary charge ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 140.61,
+        "x1": 143.66,
+        "y1": 152.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "e",
+      "bbox": {
+        "x0": 273.12,
+        "y0": 140.61,
+        "x1": 279.25,
+        "y1": 152.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 1.60 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 140.61,
+        "x1": 317.89,
+        "y1": 152.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 139.51,
+        "x1": 323.93,
+        "y1": 153.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 140.61,
+        "x1": 339.36,
+        "y1": 152.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹⁹ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 139.26,
+        "x1": 350.91,
+        "y1": 147.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 140.61,
+        "x1": 363.41,
+        "y1": 152.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "unified atomic mass unit ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 167.61,
+        "x1": 170.46,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "1 ",
+      "bbox": {
+        "x0": 265.32,
+        "y0": 167.61,
+        "x1": 271.45,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "u ",
+      "bbox": {
+        "x0": 273.12,
+        "y0": 167.61,
+        "x1": 279.25,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "= 1.66 ",
+      "bbox": {
+        "x0": 283.44,
+        "y0": 167.61,
+        "x1": 317.91,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 166.5,
+        "x1": 323.93,
+        "y1": 180.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 167.61,
+        "x1": 339.36,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻²⁷ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 166.26,
+        "x1": 350.91,
+        "y1": 174.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "kg ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 167.61,
+        "x1": 367.13,
+        "y1": 179.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "rest mass of proton ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 194.61,
+        "x1": 146.75,
+        "y1": 206.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m",
+      "bbox": {
+        "x0": 266.16,
+        "y0": 194.61,
+        "x1": 275.35,
+        "y1": 206.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "p",
+      "bbox": {
+        "x0": 275.4,
+        "y0": 199.86,
+        "x1": 279.27,
+        "y1": 207.63
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = 1.67 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 194.61,
+        "x1": 317.89,
+        "y1": 206.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 193.5,
+        "x1": 323.93,
+        "y1": 207.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 194.61,
+        "x1": 339.36,
+        "y1": 206.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻²⁷ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 193.26,
+        "x1": 350.91,
+        "y1": 201.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "kg ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 194.61,
+        "x1": 367.13,
+        "y1": 206.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "rest mass of electron ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 221.61,
+        "x1": 154.65,
+        "y1": 233.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m",
+      "bbox": {
+        "x0": 266.16,
+        "y0": 221.61,
+        "x1": 275.35,
+        "y1": 233.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "e ",
+      "bbox": {
+        "x0": 275.4,
+        "y0": 226.86,
+        "x1": 281.17,
+        "y1": 234.63
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "= 9.11 ",
+      "bbox": {
+        "x0": 283.44,
+        "y0": 221.61,
+        "x1": 317.91,
+        "y1": 233.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 220.5,
+        "x1": 323.93,
+        "y1": 234.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 221.61,
+        "x1": 339.36,
+        "y1": 233.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻³¹ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 220.26,
+        "x1": 350.91,
+        "y1": 228.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "kg ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 221.61,
+        "x1": 367.13,
+        "y1": 233.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Avogadro constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 248.61,
+        "x1": 144.22,
+        "y1": 260.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "N",
+      "bbox": {
+        "x0": 266.64,
+        "y0": 248.61,
+        "x1": 274.61,
+        "y1": 260.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "A",
+      "bbox": {
+        "x0": 274.56,
+        "y0": 253.86,
+        "x1": 279.19,
+        "y1": 261.63
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = 6.02 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 248.61,
+        "x1": 317.89,
+        "y1": 260.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 247.5,
+        "x1": 323.93,
+        "y1": 261.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 248.61,
+        "x1": 339.36,
+        "y1": 260.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "²³ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 247.26,
+        "x1": 347.07,
+        "y1": 255.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "mol",
+      "bbox": {
+        "x0": 348.6,
+        "y0": 248.61,
+        "x1": 366.41,
+        "y1": 260.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹ ",
+      "bbox": {
+        "x0": 366.36,
+        "y0": 247.26,
+        "x1": 374.07,
+        "y1": 255.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "molar gas constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 275.61,
+        "x1": 145.57,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 271.32,
+        "y0": 275.61,
+        "x1": 279.29,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 8.31 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 275.61,
+        "x1": 314.85,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "J ",
+      "bbox": {
+        "x0": 316.44,
+        "y0": 275.61,
+        "x1": 321.96,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "K",
+      "bbox": {
+        "x0": 323.52,
+        "y0": 275.61,
+        "x1": 330.87,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹ ",
+      "bbox": {
+        "x0": 330.84,
+        "y0": 274.26,
+        "x1": 338.55,
+        "y1": 282.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "mol",
+      "bbox": {
+        "x0": 340.08,
+        "y0": 275.61,
+        "x1": 357.89,
+        "y1": 287.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹ ",
+      "bbox": {
+        "x0": 357.84,
+        "y0": 274.26,
+        "x1": 365.55,
+        "y1": 282.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Boltzmann constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 302.61,
+        "x1": 149.12,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "k",
+      "bbox": {
+        "x0": 273.72,
+        "y0": 302.61,
+        "x1": 279.24,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 1.38 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 302.61,
+        "x1": 317.89,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 301.51,
+        "x1": 323.93,
+        "y1": 315.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 302.61,
+        "x1": 339.36,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻²³ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 301.26,
+        "x1": 350.91,
+        "y1": 309.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "J ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 302.61,
+        "x1": 357.96,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "K",
+      "bbox": {
+        "x0": 359.52,
+        "y0": 302.61,
+        "x1": 366.87,
+        "y1": 314.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹ ",
+      "bbox": {
+        "x0": 366.84,
+        "y0": 301.26,
+        "x1": 374.55,
+        "y1": 309.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "gravitational constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 329.61,
+        "x1": 156.45,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "G",
+      "bbox": {
+        "x0": 270.72,
+        "y0": 329.61,
+        "x1": 279.3,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 6.67 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 329.61,
+        "x1": 317.89,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 328.51,
+        "x1": 323.93,
+        "y1": 342.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 329.61,
+        "x1": 339.36,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹¹ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 328.26,
+        "x1": 350.91,
+        "y1": 336.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "N ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 329.61,
+        "x1": 360.41,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m",
+      "bbox": {
+        "x0": 361.92,
+        "y0": 329.61,
+        "x1": 371.11,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "² ",
+      "bbox": {
+        "x0": 371.16,
+        "y0": 328.26,
+        "x1": 375.03,
+        "y1": 336.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "kg",
+      "bbox": {
+        "x0": 376.44,
+        "y0": 329.61,
+        "x1": 388.09,
+        "y1": 341.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻² ",
+      "bbox": {
+        "x0": 388.2,
+        "y0": 328.26,
+        "x1": 395.91,
+        "y1": 336.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "permittivity of free space ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 356.61,
+        "x1": 171.74,
+        "y1": 368.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ε",
+      "bbox": {
+        "x0": 268.45,
+        "y0": 355.5,
+        "x1": 277.9,
+        "y1": 369.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₀ ",
+      "bbox": {
+        "x0": 274.08,
+        "y0": 364.86,
+        "x1": 279.97,
+        "y1": 372.63
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = 8.85 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 356.61,
+        "x1": 317.89,
+        "y1": 368.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 355.5,
+        "x1": 323.93,
+        "y1": 369.02
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 356.61,
+        "x1": 339.36,
+        "y1": 368.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹² ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 355.26,
+        "x1": 350.91,
+        "y1": 363.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "F ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 356.61,
+        "x1": 359.17,
+        "y1": 368.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m",
+      "bbox": {
+        "x0": 360.72,
+        "y0": 356.61,
+        "x1": 369.91,
+        "y1": 368.93
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹  ",
+      "bbox": {
+        "x0": 369.96,
+        "y0": 355.26,
+        "x1": 379.56,
+        "y1": 363.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "(",
+      "bbox": {
+        "x0": 246.48,
+        "y0": 380.01,
+        "x1": 250.15,
+        "y1": 392.33
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₀",
+      "bbox": {
+        "x0": 270.72,
+        "y0": 395.66,
+        "x1": 274.62,
+        "y1": 403.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "4",
+      "bbox": {
+        "x0": 253.08,
+        "y0": 388.68,
+        "x1": 259.2,
+        "y1": 400.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "1",
+      "bbox": {
+        "x0": 261.6,
+        "y0": 373.09,
+        "x1": 267.72,
+        "y1": 385.36
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ε",
+      "bbox": {
+        "x0": 264.5,
+        "y0": 387.59,
+        "x1": 273.93,
+        "y1": 401.05
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "π",
+      "bbox": {
+        "x0": 259.44,
+        "y0": 387.59,
+        "x1": 265.47,
+        "y1": 401.05
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = 8.99 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 380.04,
+        "x1": 317.89,
+        "y1": 392.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 378.94,
+        "x1": 323.91,
+        "y1": 392.41
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 380.04,
+        "x1": 339.35,
+        "y1": 392.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁹ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 378.66,
+        "x1": 343.23,
+        "y1": 386.43
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m ",
+      "bbox": {
+        "x0": 344.64,
+        "y0": 380.04,
+        "x1": 353.81,
+        "y1": 392.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 355.44,
+        "y0": 380.04,
+        "x1": 362.16,
+        "y1": 392.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 362.16,
+        "y0": 378.66,
+        "x1": 369.87,
+        "y1": 386.43
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": ") ",
+      "bbox": {
+        "x0": 369.84,
+        "y0": 380.04,
+        "x1": 373.51,
+        "y1": 392.32
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Planck constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 416.64,
+        "x1": 130.2,
+        "y1": 428.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "h",
+      "bbox": {
+        "x0": 273.12,
+        "y0": 416.61,
+        "x1": 279.25,
+        "y1": 428.93
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = 6.63 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 416.64,
+        "x1": 317.89,
+        "y1": 428.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 415.55,
+        "x1": 323.91,
+        "y1": 429.01
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 416.64,
+        "x1": 339.35,
+        "y1": 428.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻³⁴ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 415.26,
+        "x1": 350.91,
+        "y1": 423.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "J ",
+      "bbox": {
+        "x0": 352.44,
+        "y0": 416.64,
+        "x1": 357.94,
+        "y1": 428.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s ",
+      "bbox": {
+        "x0": 359.52,
+        "y0": 416.64,
+        "x1": 367.97,
+        "y1": 428.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Stefan–Boltzmann constant ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 443.64,
+        "x1": 187.03,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "σ",
+      "bbox": {
+        "x0": 271.82,
+        "y0": 442.55,
+        "x1": 283.06,
+        "y1": 456.01
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = 5.67 ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 443.64,
+        "x1": 317.89,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "×",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 442.55,
+        "x1": 323.91,
+        "y1": 456.01
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " 10",
+      "bbox": {
+        "x0": 324.0,
+        "y0": 443.64,
+        "x1": 339.35,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻⁸ ",
+      "bbox": {
+        "x0": 339.36,
+        "y0": 442.26,
+        "x1": 347.07,
+        "y1": 450.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "W ",
+      "bbox": {
+        "x0": 348.36,
+        "y0": 443.64,
+        "x1": 358.74,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "m",
+      "bbox": {
+        "x0": 360.6,
+        "y0": 443.64,
+        "x1": 369.77,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻² ",
+      "bbox": {
+        "x0": 369.72,
+        "y0": 442.26,
+        "x1": 377.43,
+        "y1": 450.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "K",
+      "bbox": {
+        "x0": 378.96,
+        "y0": 443.64,
+        "x1": 386.29,
+        "y1": 455.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻⁴    ",
+      "bbox": {
+        "x0": 386.28,
+        "y0": 442.26,
+        "x1": 393.99,
+        "y1": 450.03
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Formulae ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 493.53,
+        "x1": 102.13,
+        "y1": 505.85
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "uniformly accelerated motion ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 517.8,
+        "x1": 193.16,
+        "y1": 530.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 273.72,
+        "y0": 517.77,
+        "x1": 279.24,
+        "y1": 530.09
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 517.8,
+        "x1": 292.95,
+        "y1": 530.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ut",
+      "bbox": {
+        "x0": 293.4,
+        "y0": 517.77,
+        "x1": 302.59,
+        "y1": 530.09
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " + ",
+      "bbox": {
+        "x0": 302.64,
+        "y0": 517.8,
+        "x1": 315.15,
+        "y1": 530.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "²",
+      "bbox": {
+        "x0": 334.32,
+        "y0": 517.94,
+        "x1": 338.2,
+        "y1": 525.76
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 525.26,
+        "x1": 321.76,
+        "y1": 533.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹",
+      "bbox": {
+        "x0": 318.0,
+        "y0": 517.46,
+        "x1": 321.88,
+        "y1": 525.28
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " at  ",
+      "bbox": {
+        "x0": 321.88,
+        "y0": 513.84,
+        "x1": 333.03,
+        "y1": 530.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "v ",
+      "bbox": {
+        "x0": 268.44,
+        "y0": 535.2,
+        "x1": 273.93,
+        "y1": 547.48
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "²",
+      "bbox": {
+        "x0": 275.4,
+        "y0": 533.82,
+        "x1": 279.27,
+        "y1": 541.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 535.2,
+        "x1": 292.95,
+        "y1": 547.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "u ",
+      "bbox": {
+        "x0": 293.4,
+        "y0": 535.2,
+        "x1": 299.5,
+        "y1": 547.48
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "²",
+      "bbox": {
+        "x0": 300.96,
+        "y0": 533.82,
+        "x1": 304.83,
+        "y1": 541.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " + 2",
+      "bbox": {
+        "x0": 304.8,
+        "y0": 535.2,
+        "x1": 323.49,
+        "y1": 547.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "as ",
+      "bbox": {
+        "x0": 323.52,
+        "y0": 535.2,
+        "x1": 335.13,
+        "y1": 547.48
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "hydrostatic pressure ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 559.8,
+        "x1": 151.57,
+        "y1": 572.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Δ",
+      "bbox": {
+        "x0": 266.4,
+        "y0": 558.7,
+        "x1": 273.13,
+        "y1": 572.17
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "p",
+      "bbox": {
+        "x0": 273.12,
+        "y0": 559.8,
+        "x1": 279.22,
+        "y1": 572.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 559.8,
+        "x1": 292.95,
+        "y1": 572.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ ",
+      "bbox": {
+        "x0": 292.58,
+        "y0": 558.7,
+        "x1": 303.22,
+        "y1": 572.17
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "g",
+      "bbox": {
+        "x0": 300.72,
+        "y0": 559.8,
+        "x1": 306.82,
+        "y1": 572.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "Δ",
+      "bbox": {
+        "x0": 306.84,
+        "y0": 558.7,
+        "x1": 313.57,
+        "y1": 572.17
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "h ",
+      "bbox": {
+        "x0": 313.56,
+        "y0": 559.8,
+        "x1": 322.85,
+        "y1": 572.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "upthrust ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 586.8,
+        "x1": 92.31,
+        "y1": 599.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 272.52,
+        "y0": 586.8,
+        "x1": 279.23,
+        "y1": 599.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 586.8,
+        "x1": 292.95,
+        "y1": 599.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "ρ ",
+      "bbox": {
+        "x0": 292.58,
+        "y0": 585.71,
+        "x1": 303.22,
+        "y1": 599.17
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "gV ",
+      "bbox": {
+        "x0": 300.72,
+        "y0": 586.8,
+        "x1": 314.16,
+        "y1": 599.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "Doppler effect for sound waves ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 613.8,
+        "x1": 204.2,
+        "y1": 626.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "o",
+      "bbox": {
+        "x0": 272.76,
+        "y0": 621.97,
+        "x1": 276.66,
+        "y1": 629.8
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.02,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "f",
+      "bbox": {
+        "x0": 269.76,
+        "y0": 615.34,
+        "x1": 272.83,
+        "y1": 627.65
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.03,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 613.8,
+        "x1": 292.95,
+        "y1": 626.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 317.52,
+        "y0": 629.79,
+        "x1": 321.01,
+        "y1": 637.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 305.04,
+        "y0": 612.15,
+        "x1": 308.53,
+        "y1": 619.95
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "v",
+      "bbox": {
+        "x0": 312.0,
+        "y0": 623.18,
+        "x1": 317.49,
+        "y1": 635.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "v",
+      "bbox": {
+        "x0": 295.56,
+        "y0": 623.18,
+        "x1": 301.05,
+        "y1": 635.44
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "v",
+      "bbox": {
+        "x0": 308.52,
+        "y0": 606.26,
+        "x1": 314.01,
+        "y1": 618.52
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "f",
+      "bbox": {
+        "x0": 301.92,
+        "y0": 606.26,
+        "x1": 304.97,
+        "y1": 618.52
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "± ",
+      "bbox": {
+        "x0": 304.32,
+        "y0": 622.08,
+        "x1": 310.34,
+        "y1": 635.53
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "electric current ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 645.61,
+        "x1": 124.69,
+        "y1": 657.88
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "I",
+      "bbox": {
+        "x0": 274.56,
+        "y0": 644.46,
+        "x1": 279.21,
+        "y1": 657.87
+      },
+      "font": {
+        "name": "Verdana,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "  = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 645.6,
+        "x1": 292.94,
+        "y1": 657.88
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Anvq ",
+      "bbox": {
+        "x0": 293.04,
+        "y0": 645.62,
+        "x1": 318.11,
+        "y1": 657.88
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "resistors in series ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 670.8,
+        "x1": 138.11,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 271.32,
+        "y0": 670.82,
+        "x1": 279.25,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " = ",
+      "bbox": {
+        "x0": 279.24,
+        "y0": 670.8,
+        "x1": 292.95,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 293.4,
+        "y0": 670.82,
+        "x1": 301.33,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₁",
+      "bbox": {
+        "x0": 301.32,
+        "y0": 676.02,
+        "x1": 305.19,
+        "y1": 683.79
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " + ",
+      "bbox": {
+        "x0": 305.16,
+        "y0": 670.8,
+        "x1": 317.79,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 317.88,
+        "y0": 670.82,
+        "x1": 325.81,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.98,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₂",
+      "bbox": {
+        "x0": 325.8,
+        "y0": 676.02,
+        "x1": 329.67,
+        "y1": 683.79
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " + ... ",
+      "bbox": {
+        "x0": 329.64,
+        "y0": 670.8,
+        "x1": 354.35,
+        "y1": 683.08
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "resistors in parallel ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 695.16,
+        "x1": 144.22,
+        "y1": 707.44
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 267.84,
+        "y0": 704.54,
+        "x1": 275.73,
+        "y1": 716.8
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.96,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "1 = ",
+      "bbox": {
+        "x0": 269.4,
+        "y0": 689.66,
+        "x1": 292.93,
+        "y1": 707.44
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "1",
+      "bbox": {
+        "x0": 304.2,
+        "y0": 710.66,
+        "x1": 308.1,
+        "y1": 718.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "1",
+      "bbox": {
+        "x0": 298.92,
+        "y0": 689.65,
+        "x1": 305.05,
+        "y1": 701.92
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 295.92,
+        "y0": 704.53,
+        "x1": 303.88,
+        "y1": 716.8
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " + ",
+      "bbox": {
+        "x0": 310.44,
+        "y0": 695.17,
+        "x1": 322.95,
+        "y1": 707.44
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "2",
+      "bbox": {
+        "x0": 334.2,
+        "y0": 711.03,
+        "x1": 338.09,
+        "y1": 718.83
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "1",
+      "bbox": {
+        "x0": 329.16,
+        "y0": 689.54,
+        "x1": 335.27,
+        "y1": 701.8
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "R",
+      "bbox": {
+        "x0": 325.44,
+        "y0": 704.66,
+        "x1": 333.38,
+        "y1": 716.92
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": " + ...  ",
+      "bbox": {
+        "x0": 340.92,
+        "y0": 695.18,
+        "x1": 365.63,
+        "y1": 707.44
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    }
+  ],
+  "images": []
+}

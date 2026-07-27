@@ -1,0 +1,223 @@
+{
+  "page": 11,
+  "width": 595.0,
+  "height": 842.0,
+  "regions": [
+    {
+      "id": "p11_r0",
+      "type": "table",
+      "bbox": {
+        "x0": 69.98,
+        "y0": 483.64,
+        "x1": 373.8,
+        "y1": 591.11
+      },
+      "score": 0.9701,
+      "raw_label": "table"
+    },
+    {
+      "id": "p11_r1",
+      "type": "table",
+      "bbox": {
+        "x0": 70.11,
+        "y0": 289.04,
+        "x1": 257.66,
+        "y1": 396.14
+      },
+      "score": 0.9677,
+      "raw_label": "table"
+    },
+    {
+      "id": "p11_r2",
+      "type": "text",
+      "bbox": {
+        "x0": 68.96,
+        "y0": 676.05,
+        "x1": 468.15,
+        "y1": 756.62
+      },
+      "score": 0.9642,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r3",
+      "type": "text",
+      "bbox": {
+        "x0": 68.5,
+        "y0": 135.12,
+        "x1": 288.73,
+        "y1": 215.35
+      },
+      "score": 0.9632,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r4",
+      "type": "text",
+      "bbox": {
+        "x0": 48.31,
+        "y0": 614.73,
+        "x1": 548.34,
+        "y1": 642.3
+      },
+      "score": 0.9371,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r5",
+      "type": "other",
+      "bbox": {
+        "x0": 47.87,
+        "y0": 795.32,
+        "x1": 105.94,
+        "y1": 805.79
+      },
+      "score": 0.9349,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p11_r6",
+      "type": "other",
+      "bbox": {
+        "x0": 268.11,
+        "y0": 795.13,
+        "x1": 327.41,
+        "y1": 806.08
+      },
+      "score": 0.9182,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p11_r7",
+      "type": "other",
+      "bbox": {
+        "x0": 490.16,
+        "y0": 793.6,
+        "x1": 547.23,
+        "y1": 806.89
+      },
+      "score": 0.9152,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p11_r8",
+      "type": "text",
+      "bbox": {
+        "x0": 48.49,
+        "y0": 420.58,
+        "x1": 547.38,
+        "y1": 448.25
+      },
+      "score": 0.9129,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r9",
+      "type": "text",
+      "bbox": {
+        "x0": 68.66,
+        "y0": 652.53,
+        "x1": 383.33,
+        "y1": 667.12
+      },
+      "score": 0.9085,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r10",
+      "type": "text",
+      "bbox": {
+        "x0": 48.18,
+        "y0": 61.18,
+        "x1": 325.97,
+        "y1": 76.14
+      },
+      "score": 0.8855,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r11",
+      "type": "text",
+      "bbox": {
+        "x0": 69.46,
+        "y0": 458.69,
+        "x1": 332.9,
+        "y1": 473.01
+      },
+      "score": 0.8809,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r12",
+      "type": "text",
+      "bbox": {
+        "x0": 68.4,
+        "y0": 264.32,
+        "x1": 460.82,
+        "y1": 278.59
+      },
+      "score": 0.8051,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r13",
+      "type": "text",
+      "bbox": {
+        "x0": 47.64,
+        "y0": 238.6,
+        "x1": 419.69,
+        "y1": 253.24
+      },
+      "score": 0.7928,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r14",
+      "type": "text",
+      "bbox": {
+        "x0": 67.63,
+        "y0": 86.41,
+        "x1": 524.09,
+        "y1": 126.35
+      },
+      "score": 0.5651,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r15",
+      "type": "text",
+      "bbox": {
+        "x0": 290.94,
+        "y0": 36.03,
+        "x1": 304.85,
+        "y1": 48.07
+      },
+      "score": 0.3592,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p11_r16",
+      "type": "other",
+      "bbox": {
+        "x0": 290.94,
+        "y0": 36.03,
+        "x1": 304.85,
+        "y1": 48.07
+      },
+      "score": 0.3122,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p11_r17",
+      "type": "text",
+      "bbox": {
+        "x0": 70.03,
+        "y0": 86.48,
+        "x1": 522.21,
+        "y1": 101.97
+      },
+      "score": 0.2626,
+      "raw_label": "plain text"
+    }
+  ]
+}

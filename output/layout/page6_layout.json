@@ -1,0 +1,139 @@
+{
+  "page": 6,
+  "width": 595.0,
+  "height": 842.0,
+  "regions": [
+    {
+      "id": "p6_r0",
+      "type": "table",
+      "bbox": {
+        "x0": 70.56,
+        "y0": 230.99,
+        "x1": 350.22,
+        "y1": 338.46
+      },
+      "score": 0.9565,
+      "raw_label": "table"
+    },
+    {
+      "id": "p6_r1",
+      "type": "text",
+      "bbox": {
+        "x0": 48.6,
+        "y0": 61.43,
+        "x1": 548.12,
+        "y1": 88.87
+      },
+      "score": 0.9415,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p6_r2",
+      "type": "image",
+      "bbox": {
+        "x0": 80.28,
+        "y0": 385.98,
+        "x1": 512.77,
+        "y1": 624.08
+      },
+      "score": 0.9209,
+      "raw_label": "figure"
+    },
+    {
+      "id": "p6_r3",
+      "type": "other",
+      "bbox": {
+        "x0": 47.98,
+        "y0": 796.24,
+        "x1": 105.7,
+        "y1": 806.19
+      },
+      "score": 0.9015,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p6_r4",
+      "type": "other",
+      "bbox": {
+        "x0": 268.21,
+        "y0": 796.15,
+        "x1": 327.43,
+        "y1": 806.39
+      },
+      "score": 0.8941,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p6_r5",
+      "type": "text",
+      "bbox": {
+        "x0": 48.81,
+        "y0": 361.65,
+        "x1": 231.22,
+        "y1": 375.62
+      },
+      "score": 0.8795,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p6_r6",
+      "type": "text",
+      "bbox": {
+        "x0": 69.36,
+        "y0": 99.56,
+        "x1": 461.85,
+        "y1": 114.05
+      },
+      "score": 0.8608,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p6_r7",
+      "type": "text",
+      "bbox": {
+        "x0": 93.86,
+        "y0": 205.44,
+        "x1": 488.28,
+        "y1": 219.91
+      },
+      "score": 0.8086,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p6_r8",
+      "type": "image",
+      "bbox": {
+        "x0": 193.9,
+        "y0": 127.14,
+        "x1": 401.44,
+        "y1": 194.07
+      },
+      "score": 0.7725,
+      "raw_label": "figure"
+    },
+    {
+      "id": "p6_r9",
+      "type": "other",
+      "bbox": {
+        "x0": 293.41,
+        "y0": 36.38,
+        "x1": 302.66,
+        "y1": 47.56
+      },
+      "score": 0.6974,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p6_r10",
+      "type": "image",
+      "bbox": {
+        "x0": 353.43,
+        "y0": 386.97,
+        "x1": 512.21,
+        "y1": 454.6
+      },
+      "score": 0.2185,
+      "raw_label": "figure"
+    }
+  ]
+}

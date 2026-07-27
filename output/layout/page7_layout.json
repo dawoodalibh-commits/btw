@@ -1,0 +1,259 @@
+{
+  "page": 7,
+  "width": 595.0,
+  "height": 842.0,
+  "regions": [
+    {
+      "id": "p7_r0",
+      "type": "text",
+      "bbox": {
+        "x0": 48.84,
+        "y0": 663.84,
+        "x1": 547.98,
+        "y1": 716.57
+      },
+      "score": 0.965,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r1",
+      "type": "table",
+      "bbox": {
+        "x0": 70.09,
+        "y0": 342.73,
+        "x1": 260.6,
+        "y1": 449.48
+      },
+      "score": 0.9642,
+      "raw_label": "table"
+    },
+    {
+      "id": "p7_r2",
+      "type": "text",
+      "bbox": {
+        "x0": 48.09,
+        "y0": 61.28,
+        "x1": 547.89,
+        "y1": 89.07
+      },
+      "score": 0.9426,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r3",
+      "type": "image",
+      "bbox": {
+        "x0": 166.49,
+        "y0": 100.21,
+        "x1": 428.51,
+        "y1": 168.26
+      },
+      "score": 0.9365,
+      "raw_label": "figure"
+    },
+    {
+      "id": "p7_r4",
+      "type": "other",
+      "bbox": {
+        "x0": 47.84,
+        "y0": 795.18,
+        "x1": 106.05,
+        "y1": 806.05
+      },
+      "score": 0.9347,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p7_r5",
+      "type": "other",
+      "bbox": {
+        "x0": 268.05,
+        "y0": 795.1,
+        "x1": 327.55,
+        "y1": 806.12
+      },
+      "score": 0.9269,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p7_r6",
+      "type": "text",
+      "bbox": {
+        "x0": 69.28,
+        "y0": 178.31,
+        "x1": 546.74,
+        "y1": 205.8
+      },
+      "score": 0.9268,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r7",
+      "type": "other",
+      "bbox": {
+        "x0": 490.19,
+        "y0": 793.47,
+        "x1": 547.23,
+        "y1": 807.05
+      },
+      "score": 0.9107,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p7_r8",
+      "type": "text",
+      "bbox": {
+        "x0": 68.8,
+        "y0": 238.75,
+        "x1": 457.84,
+        "y1": 267.48
+      },
+      "score": 0.8967,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r9",
+      "type": "text",
+      "bbox": {
+        "x0": 69.69,
+        "y0": 624.71,
+        "x1": 407.53,
+        "y1": 640.79
+      },
+      "score": 0.8948,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r10",
+      "type": "text",
+      "bbox": {
+        "x0": 68.38,
+        "y0": 727.28,
+        "x1": 461.01,
+        "y1": 741.9
+      },
+      "score": 0.8915,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r11",
+      "type": "text",
+      "bbox": {
+        "x0": 68.66,
+        "y0": 751.23,
+        "x1": 457.84,
+        "y1": 768.5
+      },
+      "score": 0.8785,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r12",
+      "type": "text",
+      "bbox": {
+        "x0": 69.29,
+        "y0": 317.68,
+        "x1": 476.43,
+        "y1": 332.0
+      },
+      "score": 0.8737,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r13",
+      "type": "text",
+      "bbox": {
+        "x0": 48.67,
+        "y0": 291.83,
+        "x1": 295.37,
+        "y1": 306.13
+      },
+      "score": 0.8563,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r14",
+      "type": "text",
+      "bbox": {
+        "x0": 68.97,
+        "y0": 216.33,
+        "x1": 211.86,
+        "y1": 230.43
+      },
+      "score": 0.8129,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r15",
+      "type": "text",
+      "bbox": {
+        "x0": 68.45,
+        "y0": 549.24,
+        "x1": 547.17,
+        "y1": 576.87
+      },
+      "score": 0.7952,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r16",
+      "type": "text",
+      "bbox": {
+        "x0": 69.1,
+        "y0": 589.68,
+        "x1": 177.96,
+        "y1": 616.6
+      },
+      "score": 0.7344,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r17",
+      "type": "other",
+      "bbox": {
+        "x0": 293.62,
+        "y0": 36.12,
+        "x1": 302.41,
+        "y1": 47.44
+      },
+      "score": 0.666,
+      "raw_label": "abandon"
+    },
+    {
+      "id": "p7_r18",
+      "type": "text",
+      "bbox": {
+        "x0": 49.16,
+        "y0": 472.97,
+        "x1": 488.67,
+        "y1": 488.21
+      },
+      "score": 0.3687,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r19",
+      "type": "text",
+      "bbox": {
+        "x0": 47.97,
+        "y0": 472.49,
+        "x1": 515.15,
+        "y1": 538.67
+      },
+      "score": 0.3667,
+      "raw_label": "plain text"
+    },
+    {
+      "id": "p7_r20",
+      "type": "text",
+      "bbox": {
+        "x0": 70.24,
+        "y0": 523.25,
+        "x1": 305.04,
+        "y1": 538.5
+      },
+      "score": 0.3009,
+      "raw_label": "plain text"
+    }
+  ]
+}

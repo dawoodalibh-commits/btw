@@ -12,7 +12,7 @@ point space. Nothing outside this file needs to know which backend ran.
 
 Usage:
     python layout_detection.py 9709_s24_qp_12.pdf --backend ppstructure
-    python layout_detection.py 9709_s24_qp_12.pdf --backend doclayout_yolo
+    python layout_detection.py 9709_s24_qp_12.pdf --backend doclayout_yolo --device mps
 """
 from __future__ import annotations
 
@@ -32,9 +32,31 @@ from schemas import BBox, LayoutRegion, LayoutType, PageLayout, write_json
 DEFAULT_DPI = 200
 _POINTS_PER_INCH = 72.0
 
+# Accepted --device values. "auto" asks the backend to pick the best
+# accelerator it can actually use; the rest force a specific one.
+DEVICES = ("auto", "cpu", "cuda", "mps")
+
+
+def _best_torch_device() -> str:
+    """Best torch device available here: CUDA > Apple MPS > CPU."""
+    import torch
+
+    if torch.cuda.is_available():
+        return "cuda"
+    if torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
 
 class LayoutDetector(ABC):
-    """Common interface every layout-detection backend must implement."""
+    """Common interface every layout-detection backend must implement.
+
+    Subclasses set `self.device` to the accelerator they actually ended up
+    running on, which is not always what was requested — a backend that
+    can't use the requested device falls back rather than failing.
+    """
+
+    device: str = "cpu"
 
     @abstractmethod
     def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
@@ -75,10 +97,15 @@ class PPStructureLayoutDetector(LayoutDetector):
         "number": LayoutType.OTHER,
     }
 
-    def __init__(self) -> None:
+    def __init__(self, device: str = "auto") -> None:
         from paddleocr import LayoutDetection  # local import: keep paddle out of the base module
 
-        self._model = LayoutDetection()
+        # Paddle has no Metal backend, so "mps" (and "auto" on a Mac) can only
+        # mean CPU here; it spells CUDA "gpu". "auto" is left to paddle itself,
+        # which picks a GPU when its GPU build is installed.
+        self.device = "cpu" if device == "mps" else device
+        paddle_device = {"auto": None, "cpu": "cpu", "cuda": "gpu", "mps": "cpu"}[device]
+        self._model = LayoutDetection() if paddle_device is None else LayoutDetection(device=paddle_device)
 
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
@@ -108,7 +135,7 @@ class DocLayoutYOLODetector(LayoutDetector):
     _HF_REPO = "juliozhao/DocLayout-YOLO-DocStructBench"
     _HF_FILENAME = "doclayout_yolo_docstructbench_imgsz1024.pt"
 
-    def __init__(self, confidence: float = 0.2, imgsz: int = 1024, device: str = "cpu") -> None:
+    def __init__(self, device: str = "auto", confidence: float = 0.2, imgsz: int = 1024) -> None:
         from doclayout_yolo import YOLOv10
         from huggingface_hub import hf_hub_download
 
@@ -116,14 +143,14 @@ class DocLayoutYOLODetector(LayoutDetector):
         self._model = YOLOv10(weights_path)
         self._confidence = confidence
         self._imgsz = imgsz
-        self._device = device
+        self.device = _best_torch_device() if device == "auto" else device
 
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
 
     def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
         results = self._model.predict(
-            str(image_path), imgsz=self._imgsz, conf=self._confidence, device=self._device, verbose=False
+            str(image_path), imgsz=self._imgsz, conf=self._confidence, device=self.device, verbose=False
         )
         result = results[0]
         out = []
@@ -141,15 +168,24 @@ _BACKENDS = {
 }
 
 
-def build_detector(backend: str) -> LayoutDetector:
+def build_detector(backend: str, device: str = "auto") -> LayoutDetector:
+    if device not in DEVICES:
+        raise ValueError(f"Unknown device {device!r}. Choose from {list(DEVICES)}")
     try:
-        return _BACKENDS[backend]()
+        return _BACKENDS[backend](device=device)
     except KeyError:
         raise ValueError(f"Unknown backend {backend!r}. Choose from {list(_BACKENDS)}")
 
 
-def detect_layout(pdf_path: Path, output_dir: Path, backend: str = "ppstructure", dpi: int = DEFAULT_DPI) -> list[PageLayout]:
-    detector = build_detector(backend)
+def detect_layout(
+    pdf_path: Path,
+    output_dir: Path,
+    backend: str = "ppstructure",
+    dpi: int = DEFAULT_DPI,
+    device: str = "auto",
+) -> list[PageLayout]:
+    detector = build_detector(backend, device)
+    print(f"[layout] backend={backend} device={detector.device}")
     render_dir = output_dir / "page_renders"
     render_dir.mkdir(parents=True, exist_ok=True)
     scale = _POINTS_PER_INCH / dpi  # converts pixel coords at `dpi` back to PDF points
@@ -194,9 +230,15 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=Path("output/layout"), help="Directory for JSON + page renders")
     parser.add_argument("--backend", choices=list(_BACKENDS), default="ppstructure")
     parser.add_argument("--dpi", type=int, default=DEFAULT_DPI, help="Rasterization DPI fed to the layout model")
+    parser.add_argument(
+        "--device",
+        choices=list(DEVICES),
+        default="auto",
+        help="Accelerator for the detector. 'auto' picks the best one the backend supports.",
+    )
     args = parser.parse_args()
 
-    pages = detect_layout(args.pdf, args.output_dir, backend=args.backend, dpi=args.dpi)
+    pages = detect_layout(args.pdf, args.output_dir, backend=args.backend, dpi=args.dpi, device=args.device)
     n_regions = sum(len(p.regions) for p in pages)
     print(f"Detected layout on {len(pages)} pages, {n_regions} regions (backend={args.backend}) -> {args.output_dir}")
 

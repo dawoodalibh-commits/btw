@@ -1,0 +1,1192 @@
+{
+  "page": 5,
+  "width": 595.0,
+  "height": 842.0,
+  "blocks": [
+    {
+      "id": "p5_r14",
+      "type": "other",
+      "bbox": {
+        "x0": 293.58,
+        "y0": 36.33,
+        "x1": 302.79,
+        "y1": 47.54
+      },
+      "score": 0.6524,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "5   ",
+          "bbox": {
+            "x0": 294.6,
+            "y0": 36.09,
+            "x1": 300.73,
+            "y1": 48.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r2",
+      "type": "text",
+      "bbox": {
+        "x0": 48.74,
+        "y0": 61.39,
+        "x1": 548.4,
+        "y1": 88.94
+      },
+      "score": 0.95,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "10",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 62.49,
+            "x1": 61.81,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " The diagram shows the view from above of two balls moving along a horizontal frictionless ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 62.49,
+            "x1": 548.75,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "surface before they collide. The momentum of each ball is also shown.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 75.21,
+            "x1": 416.93,
+            "y1": 87.53
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r1",
+      "type": "image",
+      "bbox": {
+        "x0": 218.99,
+        "y0": 99.38,
+        "x1": 376.77,
+        "y1": 206.98
+      },
+      "score": 0.9549,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "4.0 ",
+          "bbox": {
+            "x0": 238.88,
+            "y0": 101.52,
+            "x1": 254.17,
+            "y1": 112.52
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 255.7,
+            "y0": 101.52,
+            "x1": 263.64,
+            "y1": 112.52
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "s",
+          "bbox": {
+            "x0": 265.17,
+            "y0": 101.52,
+            "x1": 270.67,
+            "y1": 112.52
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "8.0 ",
+          "bbox": {
+            "x0": 340.86,
+            "y0": 159.34,
+            "x1": 356.16,
+            "y1": 170.34
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "N ",
+          "bbox": {
+            "x0": 357.69,
+            "y0": 159.34,
+            "x1": 365.63,
+            "y1": 170.34
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "s  ",
+          "bbox": {
+            "x0": 367.16,
+            "y0": 159.34,
+            "x1": 372.66,
+            "y1": 170.34
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 11.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r12",
+      "type": "text",
+      "bbox": {
+        "x0": 69.9,
+        "y0": 216.36,
+        "x1": 282.06,
+        "y1": 230.6
+      },
+      "score": 0.7831,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "The balls stick together during the collision.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 217.17,
+            "x1": 284.2,
+            "y1": 229.49
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r9",
+      "type": "text",
+      "bbox": {
+        "x0": 69.39,
+        "y0": 241.4,
+        "x1": 510.62,
+        "y1": 256.2
+      },
+      "score": 0.9133,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "Which vector diagram represents the combined momentum of the balls after the collision?  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 242.49,
+            "x1": 510.5,
+            "y1": 254.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r3",
+      "type": "image",
+      "bbox": {
+        "x0": 92.98,
+        "y0": 265.84,
+        "x1": 505.94,
+        "y1": 351.53
+      },
+      "score": 0.942,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "A",
+          "bbox": {
+            "x0": 141.24,
+            "y0": 268.73,
+            "x1": 149.18,
+            "y1": 279.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 10.98,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "C",
+          "bbox": {
+            "x0": 371.75,
+            "y0": 268.73,
+            "x1": 379.69,
+            "y1": 279.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 10.98,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "B",
+          "bbox": {
+            "x0": 254.89,
+            "y0": 268.73,
+            "x1": 262.83,
+            "y1": 279.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 10.98,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "D   ",
+          "bbox": {
+            "x0": 487.31,
+            "y0": 268.73,
+            "x1": 495.25,
+            "y1": 279.7
+          },
+          "font": {
+            "name": "Arial-BoldMT",
+            "size": 10.98,
+            "color": 2301728,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r4",
+      "type": "text",
+      "bbox": {
+        "x0": 48.24,
+        "y0": 372.79,
+        "x1": 548.1,
+        "y1": 400.41
+      },
+      "score": 0.9417,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "11",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 373.89,
+            "x1": 61.81,
+            "y1": 386.21
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " A skydiver is falling at constant velocity. She then opens her parachute. The graph shows the ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 373.89,
+            "x1": 548.7,
+            "y1": 386.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "variation with time of her velocity.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 386.73,
+            "x1": 235.84,
+            "y1": 399.05
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r0",
+      "type": "image",
+      "bbox": {
+        "x0": 175.76,
+        "y0": 411.7,
+        "x1": 418.51,
+        "y1": 548.7
+      },
+      "score": 0.9579,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "0",
+          "bbox": {
+            "x0": 210.67,
+            "y0": 526.46,
+            "x1": 216.78,
+            "y1": 537.45
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "0",
+          "bbox": {
+            "x0": 220.29,
+            "y0": 538.22,
+            "x1": 226.41,
+            "y1": 549.21
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 246.46,
+            "y0": 532.65,
+            "x1": 249.52,
+            "y1": 543.65
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₁",
+          "bbox": {
+            "x0": 249.52,
+            "y0": 539.04,
+            "x1": 253.41,
+            "y1": 546.03
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 267.86,
+            "y0": 532.65,
+            "x1": 270.91,
+            "y1": 543.65
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₂",
+          "bbox": {
+            "x0": 270.91,
+            "y0": 539.04,
+            "x1": 274.8,
+            "y1": 546.03
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 373.28,
+            "y0": 532.65,
+            "x1": 376.34,
+            "y1": 543.65
+          },
+          "font": {
+            "name": "Arial-ItalicMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₃",
+          "bbox": {
+            "x0": 376.33,
+            "y0": 539.04,
+            "x1": 380.22,
+            "y1": 546.03
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 7.0,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "velocity  ",
+          "bbox": {
+            "x0": 177.6,
+            "y0": 441.3,
+            "x1": 214.26,
+            "y1": 452.29
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r13",
+      "type": "caption",
+      "bbox": {
+        "x0": 353.91,
+        "y0": 551.84,
+        "x1": 377.2,
+        "y1": 563.68
+      },
+      "score": 0.744,
+      "raw_label": "figure_caption",
+      "content": [
+        {
+          "text": "time",
+          "bbox": {
+            "x0": 355.14,
+            "y0": 552.65,
+            "x1": 375.91,
+            "y1": 563.65
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r7",
+      "type": "text",
+      "bbox": {
+        "x0": 69.2,
+        "y0": 576.7,
+        "x1": 381.3,
+        "y1": 591.32
+      },
+      "score": 0.9196,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "Which statements about the motion of the skydiver are correct?  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 577.65,
+            "x1": 381.91,
+            "y1": 589.97
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r10",
+      "type": "text",
+      "bbox": {
+        "x0": 111.39,
+        "y0": 602.01,
+        "x1": 548.89,
+        "y1": 673.02
+      },
+      "score": 0.9124,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "1 ",
+          "bbox": {
+            "x0": 113.4,
+            "y0": 602.97,
+            "x1": 122.56,
+            "y1": 615.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "The magnitude of the acceleration is maximum at time ",
+          "bbox": {
+            "x0": 134.62,
+            "y0": 602.97,
+            "x1": 401.72,
+            "y1": 615.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 402.0,
+            "y0": 602.97,
+            "x1": 405.07,
+            "y1": 615.29
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₂",
+          "bbox": {
+            "x0": 405.12,
+            "y0": 608.22,
+            "x1": 408.99,
+            "y1": 615.99
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": ". ",
+          "bbox": {
+            "x0": 408.96,
+            "y0": 602.97,
+            "x1": 415.01,
+            "y1": 615.29
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "2 ",
+          "bbox": {
+            "x0": 113.4,
+            "y0": 624.57,
+            "x1": 122.57,
+            "y1": 636.89
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "The magnitude of the drag force at time ",
+          "bbox": {
+            "x0": 134.63,
+            "y0": 624.57,
+            "x1": 332.26,
+            "y1": 636.89
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 332.76,
+            "y0": 624.57,
+            "x1": 335.83,
+            "y1": 636.89
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₁",
+          "bbox": {
+            "x0": 335.88,
+            "y0": 629.82,
+            "x1": 339.75,
+            "y1": 637.59
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": " equals the magnitude of the drag force at ",
+          "bbox": {
+            "x0": 339.72,
+            "y0": 624.57,
+            "x1": 548.64,
+            "y1": 636.89
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "time ",
+          "bbox": {
+            "x0": 134.64,
+            "y0": 637.29,
+            "x1": 158.56,
+            "y1": 649.61
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 158.52,
+            "y0": 637.29,
+            "x1": 161.59,
+            "y1": 649.61
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₃",
+          "bbox": {
+            "x0": 161.64,
+            "y0": 642.54,
+            "x1": 165.51,
+            "y1": 650.31
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": ". ",
+          "bbox": {
+            "x0": 165.48,
+            "y0": 637.29,
+            "x1": 171.53,
+            "y1": 649.61
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "3 ",
+          "bbox": {
+            "x0": 113.4,
+            "y0": 658.89,
+            "x1": 122.56,
+            "y1": 671.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "The magnitude of the drag force is maximum at time ",
+          "bbox": {
+            "x0": 134.61,
+            "y0": 658.89,
+            "x1": 391.91,
+            "y1": 671.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "t",
+          "bbox": {
+            "x0": 392.04,
+            "y0": 658.89,
+            "x1": 395.11,
+            "y1": 671.21
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "₁",
+          "bbox": {
+            "x0": 395.16,
+            "y0": 664.14,
+            "x1": 399.03,
+            "y1": 671.91
+          },
+          "font": {
+            "name": "Arial",
+            "size": 6.96,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": ".  ",
+          "bbox": {
+            "x0": 399.0,
+            "y0": 658.89,
+            "x1": 405.05,
+            "y1": 671.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r5",
+      "type": "text",
+      "bbox": {
+        "x0": 68.9,
+        "y0": 682.26,
+        "x1": 421.87,
+        "y1": 698.61
+      },
+      "score": 0.9263,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 684.09,
+            "x1": 78.89,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "1 and 2 ",
+          "bbox": {
+            "x0": 92.15,
+            "y0": 684.09,
+            "x1": 131.9,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 170.04,
+            "y0": 684.09,
+            "x1": 178.01,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "1 and 3 ",
+          "bbox": {
+            "x0": 191.27,
+            "y0": 684.09,
+            "x1": 231.02,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 269.28,
+            "y0": 684.09,
+            "x1": 277.25,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "2 only ",
+          "bbox": {
+            "x0": 290.51,
+            "y0": 684.09,
+            "x1": 322.97,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 368.52,
+            "y0": 684.09,
+            "x1": 376.49,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "3 only   ",
+          "bbox": {
+            "x0": 389.75,
+            "y0": 684.09,
+            "x1": 422.21,
+            "y1": 696.41
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r11",
+      "type": "other",
+      "bbox": {
+        "x0": 490.14,
+        "y0": 793.71,
+        "x1": 547.21,
+        "y1": 806.46
+      },
+      "score": 0.8965,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "[Turn over ",
+          "bbox": {
+            "x0": 491.28,
+            "y0": 793.41,
+            "x1": 545.54,
+            "y1": 805.73
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r8",
+      "type": "other",
+      "bbox": {
+        "x0": 268.08,
+        "y0": 795.1,
+        "x1": 327.46,
+        "y1": 805.85
+      },
+      "score": 0.9139,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "9702/12/O/N/25 ",
+          "bbox": {
+            "x0": 269.37,
+            "y0": 796.12,
+            "x1": 328.05,
+            "y1": 805.1
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p5_r6",
+      "type": "other",
+      "bbox": {
+        "x0": 47.85,
+        "y0": 795.26,
+        "x1": 105.94,
+        "y1": 805.62
+      },
+      "score": 0.9252,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "© UCLES 2025 ",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 796.12,
+            "x1": 106.61,
+            "y1": 805.1
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    }
+  ]
+}

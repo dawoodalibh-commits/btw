@@ -1,0 +1,2038 @@
+[
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 1,
+    "marks": 1,
+    "text": "1 What is a reasonable estimate of the weight of an adult human? A 7 × 10 ⁰ N B 7 × 10 ² N C 7 × 10 ⁴ N D 7 × 10 ⁶ N",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q1_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 105.38
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "7 × 10 ⁰ N",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "7 × 10 ² N",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "7 × 10 ⁴ N",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "7 × 10 ⁶ N",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 2,
+    "marks": 1,
+    "text": "2 What describes a set of data with a high precision? A data measured using equipment with small scale divisions B data that is close to the accepted value C data with each value having a low uncertainty D data with repeats that are close to each other",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q2_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 118.89,
+          "x1": 595.0,
+          "y1": 231.77
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "data measured using equipment with small scale divisions",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "data that is close to the accepted value",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "data with each value having a low uncertainty",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "data with repeats that are close to each other",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 3,
+    "marks": 1,
+    "text": "3 Which physical quantity could have units of N s ² m ⁻¹ ? A acceleration B force C mass D momentum",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q3_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 244.02,
+          "x1": 595.0,
+          "y1": 358.37
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "acceleration",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "force",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "mass",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "momentum",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 4,
+    "marks": 1,
+    "text": "4 A ball is released from rest. The distance the ball falls and the time the ball takes to fall that distance are both measured. The percentage uncertainty in the measured distance is negligible. The percentage uncertainty in the measured time is 4%. The distance and the time are then used to calculate the acceleration of free fall. Air resistance is negligible. What is the percentage uncertainty in the calculated value of the acceleration of free fall? A 2% B 4% C 8% D 16%",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q4_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 371.97,
+          "x1": 595.0,
+          "y1": 546.41
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "2%",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "4%",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "8%",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "16%",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 5,
+    "marks": 1,
+    "text": "5 A car has an initial velocity u . The car then moves with constant acceleration a in a straight line through a displacement d . The car reaches a final velocity v . Which expression gives the initial velocity u of the car? A v – ad B v ² – 2 ad C v + ad D v – ₂ ¹ ad ²",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q5_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 560.01,
+          "x1": 595.0,
+          "y1": 652.12
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "v – ad",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "v ² – 2 ad",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "v + ad",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "v – ₂ ¹ ad ²",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 3,
+    "question": 6,
+    "marks": 1,
+    "text": "6 A bicycle brakes so that it undergoes uniform deceleration from a speed of 8 m s ⁻¹ to 6 m s ⁻¹ over a distance of 7 m. The deceleration of the bicycle remains constant. Which further distance will the bicycle travel before coming to rest? A 7 m B 9 m C 16 m D 21 m",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 3,
+        "file": "q6_p3.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 665.58,
+          "x1": 595.0,
+          "y1": 778.13
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "7 m",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "9 m",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "16 m",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "21 m",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 4,
+    "question": 7,
+    "marks": 1,
+    "text": "7 The velocity–time graph for an object is shown. Which expression gives the total displacement of the object? A area 1 – area 2 B ( area 1 + 2 area 2 ) C area 1 + area 2 D area 2 – area 1",
+    "images": [
+      {
+        "file": "p4_r0.png",
+        "bbox": {
+          "x0": 142.35,
+          "y0": 86.4,
+          "x1": 453.71,
+          "y1": 201.93
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 4,
+        "file": "q7_p4.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 329.69
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "area 1 – area 2",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "( area 1 + 2 area 2 )",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "area 1 + area 2",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "area 2 – area 1",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 4,
+    "question": 8,
+    "marks": 1,
+    "text": "8 Which statement describes the weight of an object? A It is equal to the mass of the object multiplied by its acceleration. B It is equal to the resultant force when the object falls at terminal (constant) velocity. C It is the force acting on the object due to a gravitational field. D It is the property of the object that resists change in motion.",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 4,
+        "file": "q8_p4.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 343.29,
+          "x1": 595.0,
+          "y1": 456.17
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "It is equal to the mass of the object multiplied by its acceleration.",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "It is equal to the resultant force when the object falls at terminal (constant) velocity.",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "It is the force acting on the object due to a gravitational field.",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "It is the property of the object that resists change in motion.",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 4,
+    "question": 9,
+    "marks": 1,
+    "text": "9 What is a statement of the principle of conservation of momentum? A In an elastic collision, momentum is constant. B Momentum is the product of mass and velocity. C The force acting on a body is proportional to its rate of change of momentum. D The momentum of an isolated system is constant.",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 4,
+        "file": "q9_p4.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 469.77,
+          "x1": 595.0,
+          "y1": 582.77
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "In an elastic collision, momentum is constant.",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "Momentum is the product of mass and velocity.",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "The force acting on a body is proportional to its rate of change of momentum.",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "The momentum of an isolated system is constant.",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 5,
+    "question": 10,
+    "marks": 1,
+    "text": "10 The diagram shows the view from above of two balls moving along a horizontal frictionless surface before they collide. The momentum of each ball is also shown. The balls stick together during the collision. Which vector diagram represents the combined momentum of the balls after the collision?",
+    "images": [
+      {
+        "file": "p5_r1.png",
+        "bbox": {
+          "x0": 218.99,
+          "y0": 99.38,
+          "x1": 376.77,
+          "y1": 206.98
+        }
+      },
+      {
+        "file": "p5_r3.png",
+        "bbox": {
+          "x0": 92.98,
+          "y0": 265.84,
+          "x1": 505.94,
+          "y1": 351.53
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 5,
+        "file": "q10_p5.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 357.53
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 5,
+    "question": 11,
+    "marks": 1,
+    "text": "11 A skydiver is falling at constant velocity. She then opens her parachute. The graph shows the variation with time of her velocity. time Which statements about the motion of the skydiver are correct? 1 The magnitude of the acceleration is maximum at time t ₂ . 2 The magnitude of the drag force at time time t ₃ . t ₁ equals the magnitude of the drag force at 3 The magnitude of the drag force is maximum at time t ₁ . A 1 and 2 B 1 and 3 C 2 only D 3 only",
+    "images": [
+      {
+        "file": "p5_r0.png",
+        "bbox": {
+          "x0": 175.76,
+          "y0": 411.7,
+          "x1": 418.51,
+          "y1": 548.7
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 5,
+        "file": "q11_p5.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 367.89,
+          "x1": 595.0,
+          "y1": 702.41
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "1 and 2",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "1 and 3",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "2 only",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "3 only",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 6,
+    "question": 12,
+    "marks": 1,
+    "text": "12 Two different blocks, P and Q, slide towards each other on a horizontal frictionless surface. The blocks have an elastic collision. The diagram shows the velocities of the two blocks immediately after the collision. Which row gives possible velocities of the two blocks immediately before the collision?",
+    "images": [
+      {
+        "file": "p6_r8.png",
+        "bbox": {
+          "x0": 193.9,
+          "y0": 127.14,
+          "x1": 401.44,
+          "y1": 194.07
+        }
+      }
+    ],
+    "tables": [
+      {
+        "headers": [
+          "velocity of P",
+          "velocity of Q"
+        ],
+        "rows": [
+          [
+            "A",
+            "10 cm s−1 to the right",
+            "60 cm s−1 to the left"
+          ],
+          [
+            "B",
+            "50 cm s−1 to the right",
+            "zero"
+          ],
+          [
+            "C",
+            "20 cm s−1 to the left",
+            "70 cm s−1 to the right"
+          ],
+          [
+            "D",
+            "60 cm s−1 to the right",
+            "30 cm s−1 to the left"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.56,
+          "y0": 230.99,
+          "x1": 350.22,
+          "y1": 338.46
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 6,
+        "file": "q12_p6.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 344.46
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 6,
+    "question": 13,
+    "marks": 1,
+    "text": "13 Which diagram shows a couple?",
+    "images": [
+      {
+        "file": "p6_r2.png",
+        "bbox": {
+          "x0": 80.28,
+          "y0": 385.98,
+          "x1": 512.77,
+          "y1": 624.08
+        }
+      },
+      {
+        "file": "p6_r10.png",
+        "bbox": {
+          "x0": 353.43,
+          "y0": 386.97,
+          "x1": 512.21,
+          "y1": 454.6
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 6,
+        "file": "q13_p6.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 356.25,
+          "x1": 595.0,
+          "y1": 630.08
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 7,
+    "question": 14,
+    "marks": 1,
+    "text": "14 The diagram shows a uniform bar of mass M and length L resting on a pivot at a distance x from end X. An object of mass m is placed on the bar at distance y from the pivot so that the bar is in equilibrium. What is an expression for y ? A xM m B M m ( L – x ) C 2 M m ( L – 2 x ) D m 1 ( Lm – xM )",
+    "images": [
+      {
+        "file": "p7_r3.png",
+        "bbox": {
+          "x0": 166.49,
+          "y0": 100.21,
+          "x1": 428.51,
+          "y1": 168.26
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 7,
+        "file": "q14_p7.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 273.04
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "xM m",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "M m ( L – x )",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "2 M m ( L – 2 x )",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "m 1 ( Lm – xM )",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 7,
+    "question": 15,
+    "marks": 1,
+    "text": "15 The mass and volume of an object are varied. Which two changes, when made together, must increase the density of the object?",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "mass",
+          "volume"
+        ],
+        "rows": [
+          [
+            "A",
+            "decrease",
+            "decrease"
+          ],
+          [
+            "B",
+            "decrease",
+            "increase"
+          ],
+          [
+            "C",
+            "increase",
+            "decrease"
+          ],
+          [
+            "D",
+            "increase",
+            "increase"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.09,
+          "y0": 342.73,
+          "x1": 260.6,
+          "y1": 449.48
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 7,
+        "file": "q15_p7.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 286.89,
+          "x1": 595.0,
+          "y1": 455.48
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 7,
+    "question": 16,
+    "marks": 1,
+    "text": "16 On Earth, a solid object that is fully submerged in a liquid experiences an upthrust U E . On Mars, the same object, fully submerged in the same liquid, experiences an upthrust U M . The acceleration of free fall on Mars is 3.7 m s ⁻² . Assume that the liquid’s density and the object’s volume have the same values on Earth and Mars. What is the ratio U U M E ? A 0.38 B 1.0 C 2.7 D 3.6",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 7,
+        "file": "q16_p7.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 468.21,
+          "x1": 595.0,
+          "y1": 645.29
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "0.38",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "1.0",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "2.7",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "3.6",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 7,
+    "question": 17,
+    "marks": 1,
+    "text": "17 A student attempts to derive the formula for kinetic energy object of mass m that is initially at rest. A constant force F applied to the object causes it to E K . She begins by considering an accelerate to final velocity v in displacement s . The kinetic energy gained by the object is equal to the work done on the object by the force F . Which equation does the student not need in order to derive the formula for E K ? A F = ma B W = Fs C E = ₂ ¹ Fs D v ² = u ² + 2 as",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 7,
+        "file": "q17_p7.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 658.89,
+          "x1": 595.0,
+          "y1": 774.76
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "F = ma",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "W = Fs",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "E = ₂ ¹ Fs",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "v ² = u ² + 2 as",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 8,
+    "question": 18,
+    "marks": 1,
+    "text": "18 A ball falls towards the ground from point X. Point X is 2.4 m above the ground. The ball rebounds from the ground and rises to point Y. Point Y is 1.8 m above the ground. A single value of the change in height Δ h is used to calculate the change in gravitational potential energy of the ball from X to Y. What is the magnitude of Δ h ? A 0.6 m B 1.8 m C 2.4 m D 4.2 m",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 8,
+        "file": "q18_p8.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 194.57
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "0.6 m",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "1.8 m",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "2.4 m",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "4.2 m",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 8,
+    "question": 19,
+    "marks": 1,
+    "text": "19 The diagram shows a block on a slope. A constant force of 1.8 N in a direction parallel to the slope is exerted on the block. This causes the block to move along the slope at a constant speed. The block moves a distance of 8.0 m along the slope and gains height h . The work done against the frictional force acting on the block is 4.8 J. The weight of the block is 4.0 N. What is the value of h ? A 1.2 m B 2.4 m C 3.6 m D 4.8 m",
+    "images": [
+      {
+        "file": "p8_r0.png",
+        "bbox": {
+          "x0": 191.68,
+          "y0": 238.14,
+          "x1": 403.78,
+          "y1": 387.97
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 8,
+        "file": "q19_p8.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 208.29,
+          "x1": 595.0,
+          "y1": 542.33
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "1.2 m",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "2.4 m",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "3.6 m",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "4.8 m",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 8,
+    "question": 20,
+    "marks": 1,
+    "text": "20 The motor of a crane lifts a load of mass 600 kg. The load rises vertically at a constant speed of 12 m per minute. What is the useful power output of the motor? A 0.12 kW B 1.2 kW C 7.2 kW D 71 kW",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 8,
+        "file": "q20_p8.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 555.93,
+          "x1": 595.0,
+          "y1": 641.93
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "0.12 kW",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "1.2 kW",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "7.2 kW",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "71 kW",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 9,
+    "question": 21,
+    "marks": 1,
+    "text": "21 A platform is supported by a spring. A box is placed onto the platform. The diagram shows the spring before and after the box is placed onto it. What is the term for the quantity marked as x ? A compression B load C strain D stress",
+    "images": [
+      {
+        "file": "p9_r2.png",
+        "bbox": {
+          "x0": 177.32,
+          "y0": 99.32,
+          "x1": 419.5,
+          "y1": 211.0
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 9,
+        "file": "q21_p9.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 328.01
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "compression",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "load",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "strain",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "stress",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 9,
+    "question": 22,
+    "marks": 1,
+    "text": "22 A copper wire has length 1.7 m and uniform diameter 0.64 mm. The Young modulus of copper is 1.2 × 10 ¹¹ Pa. What is the spring constant of the wire? A 2.3 × 10 ⁴ N m ⁻¹ B 9.1 × 10 ⁴ N m ⁻¹ C 4.5 × 10 ⁷ N m ⁻¹ D 7.1 × 10 ⁷ N m ⁻¹",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 9,
+        "file": "q22_p9.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 341.61,
+          "x1": 595.0,
+          "y1": 509.3
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "2.3 × 10 ⁴ N m ⁻¹",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "9.1 × 10 ⁴ N m ⁻¹",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "4.5 × 10 ⁷ N m ⁻¹",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "7.1 × 10 ⁷ N m ⁻¹",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 9,
+    "question": 23,
+    "marks": 1,
+    "text": "23 The graph shows how the extension of a spring varies with the force used to stretch it. force / kN What is the elastic potential energy of the spring when the extension is 4.0 cm? A 60 J B 120 J C 600 J D 1200 J 10",
+    "images": [
+      {
+        "file": "p9_r11.png",
+        "bbox": {
+          "x0": 175.25,
+          "y0": 552.11,
+          "x1": 420.39,
+          "y1": 681.29
+        }
+      },
+      {
+        "file": "p9_r17.png",
+        "bbox": {
+          "x0": 201.81,
+          "y0": 552.15,
+          "x1": 420.29,
+          "y1": 673.3
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 9,
+        "file": "q23_p9.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 522.81,
+          "x1": 595.0,
+          "y1": 737.81
+        }
+      },
+      {
+        "page": 10,
+        "file": "q23_p10.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 30.090000000000003,
+          "x1": 595.0,
+          "y1": 54.41
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "60 J",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "120 J",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "600 J",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "1200 J 10",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 10,
+    "question": 24,
+    "marks": 1,
+    "text": "24 Which row describes a progressive longitudinal wave?",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "a direction parallel",
+          "transfers energy in",
+          "to the oscillations",
+          "to travel through",
+          "requires a medium",
+          "the same speed",
+          "always travels at"
+        ],
+        "rows": [
+          [
+            "A",
+            "false",
+            "false",
+            "true"
+          ],
+          [
+            "B",
+            "false",
+            "true",
+            "true"
+          ],
+          [
+            "C",
+            "true",
+            "false",
+            "false"
+          ],
+          [
+            "D",
+            "true",
+            "true",
+            "false"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.03,
+          "y0": 86.29,
+          "x1": 418.22,
+          "y1": 222.48
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 10,
+        "file": "q24_p10.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 228.48
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 10,
+    "question": 25,
+    "marks": 1,
+    "text": "25 What is the phase difference between points P and Q on the progressive wave shown in the diagram? A 180° B 450° C 540° D 720°",
+    "images": [
+      {
+        "file": "p10_r2.png",
+        "bbox": {
+          "x0": 201.28,
+          "y0": 284.12,
+          "x1": 399.83,
+          "y1": 364.63
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 10,
+        "file": "q25_p10.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 240.69,
+          "x1": 595.0,
+          "y1": 392.69
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "180°",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "450°",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "540°",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "720°",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 10,
+    "question": 26,
+    "marks": 1,
+    "text": "26 The graph shows the variation of displacement with distance for two progressive waves X and Y of the same type in the same medium. The intensity of wave X is I . What is the intensity of wave Y? A 0.28 I B 0.53 I C 1.9 I D 3.5 I 11",
+    "images": [
+      {
+        "file": "p10_r5.png",
+        "bbox": {
+          "x0": 52.06,
+          "y0": 449.63,
+          "x1": 536.98,
+          "y1": 688.44
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 10,
+        "file": "q26_p10.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 406.29,
+          "x1": 595.0,
+          "y1": 771.65
+        }
+      },
+      {
+        "page": 11,
+        "file": "q26_p11.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 30.090000000000003,
+          "x1": 595.0,
+          "y1": 54.41
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "0.28 I",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "0.53 I",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "1.9 I",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "3.5 I 11",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 11,
+    "question": 27,
+    "marks": 1,
+    "text": "27 A moving source emits sound of frequency 1200 Hz. A stationary observer hears sound of frequency 960 Hz. The speed of the sound is 340 m s ⁻¹ . What could be the velocity of the source? A 68 m s ⁻¹ directly away from the observer B 68 m s ⁻¹ directly towards the observer C 85 m s ⁻¹ directly away from the observer D 85 m s ⁻¹ directly towards the observer",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 11,
+        "file": "q27_p11.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 220.01
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "68 m s ⁻¹ directly away from the observer",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "68 m s ⁻¹ directly towards the observer",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "85 m s ⁻¹ directly away from the observer",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "85 m s ⁻¹ directly towards the observer",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 11,
+    "question": 28,
+    "marks": 1,
+    "text": "28 A light wave passes through a single slit and a diffraction pattern forms. What happens to the frequency and the speed of the wave when it is diffracted?",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "frequency",
+          "speed"
+        ],
+        "rows": [
+          [
+            "A",
+            "decreases",
+            "increases"
+          ],
+          [
+            "B",
+            "increases",
+            "decreases"
+          ],
+          [
+            "C",
+            "no change",
+            "decreases"
+          ],
+          [
+            "D",
+            "no change",
+            "no change"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.11,
+          "y0": 289.04,
+          "x1": 257.66,
+          "y1": 396.14
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 11,
+        "file": "q28_p11.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 233.61,
+          "x1": 595.0,
+          "y1": 402.14
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 11,
+    "question": 29,
+    "marks": 1,
+    "text": "29 The equation n λ = d sin θ can be used with a diffraction grating to find the wavelength of visible light. Which quantity is not correct for use in this equation?",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "symbol",
+          "quantity"
+        ],
+        "rows": [
+          [
+            "A",
+            "d",
+            "distance from grating to screen"
+          ],
+          [
+            "B",
+            "λ",
+            "wavelength of light"
+          ],
+          [
+            "C",
+            "n",
+            "order of intensity maximum"
+          ],
+          [
+            "D",
+            "θ",
+            "diffraction angle of intensity maximum"
+          ]
+        ],
+        "bbox": {
+          "x0": 69.98,
+          "y0": 483.64,
+          "x1": 373.8,
+          "y1": 591.11
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 11,
+        "file": "q29_p11.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 414.54,
+          "x1": 595.0,
+          "y1": 597.11
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 11,
+    "question": 30,
+    "marks": 1,
+    "text": "30 Two progressive sound waves move in opposite directions and superpose to form a stationary wave. Which statement describes an antinode of this stationary wave? A a position where the phase difference between the two waves is always 0° B a position where the phase difference between the two waves is always 180° C a position where the stationary wave has maximum amplitude D a position where the stationary wave has minimum amplitude",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 11,
+        "file": "q30_p11.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 609.57,
+          "x1": 595.0,
+          "y1": 760.37
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "a position where the phase difference between the two waves is always 0°",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "a position where the phase difference between the two waves is always 180°",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "a position where the stationary wave has maximum amplitude",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "a position where the stationary wave has minimum amplitude",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 12,
+    "question": 31,
+    "marks": 1,
+    "text": "31 A student connects two loudspeakers to a signal generator. P As the student walks from P to Q, he notices that the loudness of the sound rises and falls repeatedly. What causes the loudness of the sound to vary? A diffraction of the sound waves B Doppler shift of the sound waves C interference of the sound waves D reflection of the sound waves",
+    "images": [
+      {
+        "file": "p12_r1.png",
+        "bbox": {
+          "x0": 181.2,
+          "y0": 86.01,
+          "x1": 414.0,
+          "y1": 261.44
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 12,
+        "file": "q31_p12.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 421.25
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "diffraction of the sound waves",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "Doppler shift of the sound waves",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "interference of the sound waves",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "reflection of the sound waves",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 12,
+    "question": 32,
+    "marks": 1,
+    "text": "32 The current in a resistor of constant resistance is 8.0 mA. The power dissipated by the resistor is P . The current in the resistor is increased to 12.0 mA. What is the new power dissipated by the resistor? A 0.44 P B 0.67 P C 1.5 P D 2.3 P",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 12,
+        "file": "q32_p12.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 434.85,
+          "x1": 595.0,
+          "y1": 546.05
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "0.44 P",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "0.67 P",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "1.5 P",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "2.3 P",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 13,
+    "question": 33,
+    "marks": 1,
+    "text": "33 A piece of wire X has resistivity ρ , length L and cross-sectional area A . Wire X has a resistance R . A second piece of wire Y is made of a different metal. It has the same resistance as X but has twice the length of X. Which row gives possible values for the resistivity and the cross-sectional area of Y?",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "cross-sectional"
+        ],
+        "rows": [
+          [
+            "resistivity",
+            "area"
+          ],
+          [
+            "A",
+            "2",
+            "1",
+            "ρ",
+            "2",
+            "1",
+            "A"
+          ],
+          [
+            "B",
+            "2",
+            "1",
+            "ρ",
+            "A"
+          ],
+          [
+            "C",
+            "ρ",
+            "2",
+            "1",
+            "A"
+          ],
+          [
+            "D",
+            "2ρ",
+            "A"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.08,
+          "y0": 163.54,
+          "x1": 298.22,
+          "y1": 285.29
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 13,
+        "file": "q33_p13.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.22,
+          "x1": 595.0,
+          "y1": 291.29
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 13,
+    "question": 34,
+    "marks": 1,
+    "text": "34 A cell of electromotive force (e.m.f.) E delivers a charge Q to an external circuit. Which statement is correct? A The energy dissipated in the external circuit is EQ . B The energy dissipated within the cell is EQ . C The external resistance is EQ . D The total energy dissipated in the cell and the external circuit is EQ .",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 13,
+        "file": "q34_p13.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 303.21,
+          "x1": 595.0,
+          "y1": 441.53
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "The energy dissipated in the external circuit is EQ .",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "The energy dissipated within the cell is EQ .",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "The external resistance is EQ .",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "The total energy dissipated in the cell and the external circuit is EQ .",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 13,
+    "question": 35,
+    "marks": 1,
+    "text": "35 The diagram shows a circuit with a battery of electromotive force (e.m.f.) 60 V and negligible internal resistance, a 20 k Ω resistor, a thermistor and a voltmeter. The resistance of the thermistor is 20 k Ω . The temperature of the thermistor decreases, and this causes its resistance to change by 50%. After this change, what is the reading on the voltmeter? A 20 V B 24 V C 36 V D 40 V",
+    "images": [
+      {
+        "file": "p13_r0.png",
+        "bbox": {
+          "x0": 206.83,
+          "y0": 511.52,
+          "x1": 388.88,
+          "y1": 640.01
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 13,
+        "file": "q35_p13.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 455.13,
+          "x1": 595.0,
+          "y1": 718.25
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "20 V",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "24 V",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "36 V",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "40 V",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 14,
+    "question": 36,
+    "marks": 1,
+    "text": "36 A potentiometer circuit is used to determine the electromotive force (e.m.f.) circuit includes a second cell of known e.m.f. resistance wire PQ of known length. E ₀ and negligible internal resistance, and a uniform E X of a cell. The E X is less than E ₀ . The movable connection J can be positioned anywhere along the length of the resistance wire. Which circuit is suitable for determining E X ?",
+    "images": [
+      {
+        "file": "p14_r1.png",
+        "bbox": {
+          "x0": 63.21,
+          "y0": 187.53,
+          "x1": 531.59,
+          "y1": 567.32
+        }
+      }
+    ],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 14,
+        "file": "q36_p14.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 573.32
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 14,
+    "question": 37,
+    "marks": 1,
+    "text": "37 The principles of conservation of which two quantities are associated with Kirchhoff’s first and second laws? 15",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "first law",
+          "second law"
+        ],
+        "rows": [
+          [
+            "A",
+            "charge",
+            "energy"
+          ],
+          [
+            "B",
+            "charge",
+            "voltage"
+          ],
+          [
+            "C",
+            "energy",
+            "charge"
+          ],
+          [
+            "D",
+            "voltage",
+            "charge"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.18,
+          "y0": 629.44,
+          "x1": 264.52,
+          "y1": 737.92
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 14,
+        "file": "q37_p14.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 586.17,
+          "x1": 595.0,
+          "y1": 743.92
+        }
+      },
+      {
+        "page": 15,
+        "file": "q37_p15.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 30.090000000000003,
+          "x1": 595.0,
+          "y1": 54.41
+        }
+      }
+    ],
+    "options": []
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 15,
+    "question": 38,
+    "marks": 1,
+    "text": "38 An up quark in a hadron changes to a down quark. The elementary charge is e . What is the magnitude of the change in the charge of the hadron? A ₃ ¹ e B ₃ ² e C e D zero",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 15,
+        "file": "q38_p15.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 159.28
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "₃ ¹ e",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "₃ ² e",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "e",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "zero",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 15,
+    "question": 39,
+    "marks": 1,
+    "text": "39 A nucleus of magnesium-23 decays to form a nucleus of sodium-23, emitting a β ⁺ particle and particle X. What is particle X? A an antineutrino B an electron C a neutron D a neutrino",
+    "images": [],
+    "tables": [],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 15,
+        "file": "q39_p15.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 173.46,
+          "x1": 595.0,
+          "y1": 325.73
+        }
+      }
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "an antineutrino",
+        "formulas": []
+      },
+      {
+        "label": "B",
+        "text": "an electron",
+        "formulas": []
+      },
+      {
+        "label": "C",
+        "text": "a neutron",
+        "formulas": []
+      },
+      {
+        "label": "D",
+        "text": "a neutrino",
+        "formulas": []
+      }
+    ]
+  },
+  {
+    "paper": "9702/12/O/N/25",
+    "page": 15,
+    "question": 40,
+    "marks": 1,
+    "text": "40 A nucleus of ²³⁸ ₉₂ U decays in stages by emitting α -particles and β ⁻ particles, eventually forming a nucleus of ²⁰⁶ ₈₂ Pb. How many α -particles and how many β ⁻ particles are emitted during the decay chain? BLANK PAGE",
+    "images": [],
+    "tables": [
+      {
+        "headers": [
+          "α-particles",
+          "βparticles"
+        ],
+        "rows": [
+          [
+            "A",
+            "8",
+            "6"
+          ],
+          [
+            "B",
+            "8",
+            "10"
+          ],
+          [
+            "C",
+            "16",
+            "6"
+          ],
+          [
+            "D",
+            "16",
+            "22"
+          ]
+        ],
+        "bbox": {
+          "x0": 70.36,
+          "y0": 420.48,
+          "x1": 262.3,
+          "y1": 526.92
+        }
+      }
+    ],
+    "formulas": [],
+    "question_images": [
+      {
+        "page": 15,
+        "file": "q40_p15.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 340.48,
+          "x1": 595.0,
+          "y1": 532.92
+        }
+      },
+      {
+        "page": 16,
+        "file": "q40_p16.png",
+        "bbox": {
+          "x0": 0.0,
+          "y0": 56.49,
+          "x1": 595.0,
+          "y1": 80.81
+        }
+      }
+    ],
+    "options": []
+  }
+]

@@ -1,0 +1,886 @@
+{
+  "page": 12,
+  "width": 595.0,
+  "height": 842.0,
+  "blocks": [
+    {
+      "id": "p12_r9",
+      "type": "other",
+      "bbox": {
+        "x0": 291.34,
+        "y0": 36.08,
+        "x1": 305.54,
+        "y1": 47.89
+      },
+      "score": 0.7309,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "12 ",
+          "bbox": {
+            "x0": 291.48,
+            "y0": 36.09,
+            "x1": 303.73,
+            "y1": 48.41
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r6",
+      "type": "text",
+      "bbox": {
+        "x0": 47.93,
+        "y0": 61.43,
+        "x1": 360.9,
+        "y1": 76.09
+      },
+      "score": 0.8973,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "31 ",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 62.49,
+            "x1": 64.85,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "A student connects two loudspeakers to a signal generator.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 62.49,
+            "x1": 362.48,
+            "y1": 74.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r1",
+      "type": "image",
+      "bbox": {
+        "x0": 181.2,
+        "y0": 86.01,
+        "x1": 414.0,
+        "y1": 261.44
+      },
+      "score": 0.9179,
+      "raw_label": "figure",
+      "content": [
+        {
+          "text": "Q",
+          "bbox": {
+            "x0": 398.1,
+            "y0": 89.52,
+            "x1": 406.65,
+            "y1": 100.52
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "signal",
+          "bbox": {
+            "x0": 197.78,
+            "y0": 163.82,
+            "x1": 226.5,
+            "y1": 174.82
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "generator  ",
+          "bbox": {
+            "x0": 188.61,
+            "y0": 177.02,
+            "x1": 235.67,
+            "y1": 188.01
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r10",
+      "type": "caption",
+      "bbox": {
+        "x0": 390.23,
+        "y0": 249.73,
+        "x1": 407.76,
+        "y1": 261.46
+      },
+      "score": 0.4226,
+      "raw_label": "figure_caption",
+      "content": [
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 398.71,
+            "y0": 251.45,
+            "x1": 406.04,
+            "y1": 262.44
+          },
+          "font": {
+            "name": "ArialMT",
+            "size": 10.99,
+            "color": 2301728,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r8",
+      "type": "text",
+      "bbox": {
+        "x0": 68.35,
+        "y0": 275.52,
+        "x1": 548.87,
+        "y1": 302.76
+      },
+      "score": 0.7645,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "As the student walks from P to Q, he notices that the loudness of the sound rises and falls ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 276.45,
+            "x1": 548.76,
+            "y1": 288.77
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "repeatedly.  ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 289.17,
+            "x1": 128.43,
+            "y1": 301.49
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r14",
+      "type": "text",
+      "bbox": {
+        "x0": 68.73,
+        "y0": 275.94,
+        "x1": 548.26,
+        "y1": 303.57
+      },
+      "score": 0.2698,
+      "raw_label": "plain text",
+      "content": [],
+      "images": []
+    },
+    {
+      "id": "p12_r7",
+      "type": "text",
+      "bbox": {
+        "x0": 69.14,
+        "y0": 313.72,
+        "x1": 307.08,
+        "y1": 327.91
+      },
+      "score": 0.8952,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "What causes the loudness of the sound to vary? ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 314.49,
+            "x1": 308.54,
+            "y1": 326.81
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r0",
+      "type": "text",
+      "bbox": {
+        "x0": 69.01,
+        "y0": 337.21,
+        "x1": 254.25,
+        "y1": 416.44
+      },
+      "score": 0.9722,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 338.01,
+            "x1": 81.9,
+            "y1": 350.33
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "diffraction of the sound waves ",
+          "bbox": {
+            "x0": 92.16,
+            "y0": 338.01,
+            "x1": 240.65,
+            "y1": 350.33
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 359.61,
+            "x1": 81.9,
+            "y1": 371.93
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "Doppler shift of the sound waves ",
+          "bbox": {
+            "x0": 92.16,
+            "y0": 359.61,
+            "x1": 254.71,
+            "y1": 371.93
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 381.33,
+            "x1": 81.9,
+            "y1": 393.65
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "interference of the sound waves ",
+          "bbox": {
+            "x0": 92.16,
+            "y0": 381.33,
+            "x1": 250.98,
+            "y1": 393.65
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 402.93,
+            "x1": 81.9,
+            "y1": 415.25
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "reflection of the sound waves   ",
+          "bbox": {
+            "x0": 92.16,
+            "y0": 402.93,
+            "x1": 237.73,
+            "y1": 415.25
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r2",
+      "type": "text",
+      "bbox": {
+        "x0": 48.38,
+        "y0": 439.74,
+        "x1": 547.56,
+        "y1": 467.13
+      },
+      "score": 0.908,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "32",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 440.85,
+            "x1": 61.81,
+            "y1": 453.17
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": " The current in a resistor of constant resistance is 8.0 ",
+          "bbox": {
+            "x0": 61.8,
+            "y0": 440.85,
+            "x1": 337.47,
+            "y1": 453.17
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "mA. The power dissipated by the resistor  ",
+          "bbox": {
+            "x0": 339.12,
+            "y0": 440.85,
+            "x1": 551.64,
+            "y1": 453.17
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "is ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 453.69,
+            "x1": 81.9,
+            "y1": 466.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P",
+          "bbox": {
+            "x0": 81.96,
+            "y0": 453.69,
+            "x1": 89.32,
+            "y1": 466.01
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": ".  ",
+          "bbox": {
+            "x0": 89.28,
+            "y0": 453.69,
+            "x1": 95.33,
+            "y1": 466.01
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r13",
+      "type": "text",
+      "bbox": {
+        "x0": 68.83,
+        "y0": 477.67,
+        "x1": 316.76,
+        "y1": 517.91
+      },
+      "score": 0.3743,
+      "raw_label": "plain text",
+      "content": [],
+      "images": []
+    },
+    {
+      "id": "p12_r12",
+      "type": "text",
+      "bbox": {
+        "x0": 69.41,
+        "y0": 477.85,
+        "x1": 316.76,
+        "y1": 492.61
+      },
+      "score": 0.402,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "The current in the resistor is increased to 12.0 ",
+          "bbox": {
+            "x0": 70.92,
+            "y0": 478.89,
+            "x1": 294.73,
+            "y1": 491.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "mA.  ",
+          "bbox": {
+            "x0": 296.28,
+            "y0": 478.89,
+            "x1": 318.76,
+            "y1": 491.21
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r11",
+      "type": "text",
+      "bbox": {
+        "x0": 68.93,
+        "y0": 503.07,
+        "x1": 315.8,
+        "y1": 517.6
+      },
+      "score": 0.4096,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "What is the new power dissipated by the resistor? ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 504.21,
+            "x1": 315.84,
+            "y1": 516.53
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r4",
+      "type": "text",
+      "bbox": {
+        "x0": 69.2,
+        "y0": 525.64,
+        "x1": 414.98,
+        "y1": 541.84
+      },
+      "score": 0.9035,
+      "raw_label": "plain text",
+      "content": [
+        {
+          "text": "A ",
+          "bbox": {
+            "x0": 70.8,
+            "y0": 527.73,
+            "x1": 78.77,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "0.44",
+          "bbox": {
+            "x0": 92.03,
+            "y0": 527.73,
+            "x1": 113.51,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P ",
+          "bbox": {
+            "x0": 113.52,
+            "y0": 527.73,
+            "x1": 120.88,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "B ",
+          "bbox": {
+            "x0": 170.04,
+            "y0": 527.73,
+            "x1": 178.01,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "0.67",
+          "bbox": {
+            "x0": 191.27,
+            "y0": 527.73,
+            "x1": 212.75,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P ",
+          "bbox": {
+            "x0": 212.76,
+            "y0": 527.73,
+            "x1": 220.12,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "C ",
+          "bbox": {
+            "x0": 269.28,
+            "y0": 527.73,
+            "x1": 277.25,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "1.5",
+          "bbox": {
+            "x0": 290.51,
+            "y0": 527.73,
+            "x1": 305.87,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P ",
+          "bbox": {
+            "x0": 305.88,
+            "y0": 527.73,
+            "x1": 313.24,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        },
+        {
+          "text": "D ",
+          "bbox": {
+            "x0": 368.52,
+            "y0": 527.73,
+            "x1": 376.49,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Bold",
+            "size": 11.04,
+            "color": 0,
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "2.3",
+          "bbox": {
+            "x0": 389.75,
+            "y0": 527.73,
+            "x1": 405.11,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        },
+        {
+          "text": "P   ",
+          "bbox": {
+            "x0": 405.12,
+            "y0": 527.73,
+            "x1": 412.48,
+            "y1": 540.05
+          },
+          "font": {
+            "name": "Arial,Italic",
+            "size": 11.04,
+            "color": 0,
+            "bold": false,
+            "italic": true
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r5",
+      "type": "other",
+      "bbox": {
+        "x0": 268.11,
+        "y0": 796.06,
+        "x1": 327.46,
+        "y1": 806.46
+      },
+      "score": 0.8993,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "9702/12/O/N/25  ",
+          "bbox": {
+            "x0": 269.37,
+            "y0": 796.84,
+            "x1": 328.05,
+            "y1": 805.82
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "p12_r3",
+      "type": "other",
+      "bbox": {
+        "x0": 47.94,
+        "y0": 796.16,
+        "x1": 105.74,
+        "y1": 806.26
+      },
+      "score": 0.9053,
+      "raw_label": "abandon",
+      "content": [
+        {
+          "text": "© UCLES 2025 ",
+          "bbox": {
+            "x0": 49.56,
+            "y0": 796.84,
+            "x1": 106.61,
+            "y1": 805.82
+          },
+          "font": {
+            "name": "Arial",
+            "size": 8.04,
+            "color": 0,
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "images": []
+    }
+  ]
+}

@@ -1,0 +1,1192 @@
+{
+  "page": 15,
+  "width": 595.0,
+  "height": 842.0,
+  "spans": [
+    {
+      "text": "15   ",
+      "bbox": {
+        "x0": 291.48,
+        "y0": 36.09,
+        "x1": 303.73,
+        "y1": 48.41
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "© UCLES 2025 ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 796.84,
+        "x1": 106.61,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "9702/12/O/N/25  ",
+      "bbox": {
+        "x0": 269.37,
+        "y0": 796.84,
+        "x1": 328.05,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "38",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 62.49,
+        "x1": 61.81,
+        "y1": 74.81
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " An up quark in a hadron changes to a down quark.  ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 62.49,
+        "x1": 320.3,
+        "y1": 74.81
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "The elementary charge is ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 87.81,
+        "x1": 198.12,
+        "y1": 100.13
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "e",
+      "bbox": {
+        "x0": 198.24,
+        "y0": 87.81,
+        "x1": 204.37,
+        "y1": 100.13
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": ".  ",
+      "bbox": {
+        "x0": 204.36,
+        "y0": 87.81,
+        "x1": 210.41,
+        "y1": 100.13
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "What is the magnitude of the change in the charge of the hadron? ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 113.13,
+        "x1": 393.77,
+        "y1": 125.45
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 138.57,
+        "x1": 78.77,
+        "y1": 150.89
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "e",
+      "bbox": {
+        "x0": 101.28,
+        "y0": 138.6,
+        "x1": 107.41,
+        "y1": 150.88
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₃",
+      "bbox": {
+        "x0": 94.68,
+        "y0": 145.46,
+        "x1": 98.58,
+        "y1": 153.28
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "¹ ",
+      "bbox": {
+        "x0": 95.04,
+        "y0": 138.39,
+        "x1": 98.94,
+        "y1": 146.2
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 170.04,
+        "y0": 138.57,
+        "x1": 178.01,
+        "y1": 150.89
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "e",
+      "bbox": {
+        "x0": 200.52,
+        "y0": 138.6,
+        "x1": 206.65,
+        "y1": 150.88
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "₃",
+      "bbox": {
+        "x0": 193.92,
+        "y0": 145.46,
+        "x1": 197.82,
+        "y1": 153.28
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "² ",
+      "bbox": {
+        "x0": 194.04,
+        "y0": 138.39,
+        "x1": 197.94,
+        "y1": 146.2
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.01,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 269.28,
+        "y0": 138.57,
+        "x1": 277.25,
+        "y1": 150.89
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "e ",
+      "bbox": {
+        "x0": 290.52,
+        "y0": 138.6,
+        "x1": 299.7,
+        "y1": 150.88
+      },
+      "font": {
+        "name": "Arial,Italic",
+        "size": 11.01,
+        "color": 0,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 368.52,
+        "y0": 138.57,
+        "x1": 376.49,
+        "y1": 150.89
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "zero   ",
+      "bbox": {
+        "x0": 389.75,
+        "y0": 138.57,
+        "x1": 414.16,
+        "y1": 150.89
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "39",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 180.81,
+        "x1": 61.81,
+        "y1": 193.13
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " A nucleus of magnesium-23 decays to form a nucleus of sodium-23, emitting a ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 180.81,
+        "x1": 471.84,
+        "y1": 193.13
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "β",
+      "bbox": {
+        "x0": 472.92,
+        "y0": 179.7,
+        "x1": 478.97,
+        "y1": 193.22
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁺",
+      "bbox": {
+        "x0": 479.28,
+        "y0": 179.46,
+        "x1": 483.34,
+        "y1": 187.23
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " particle and ",
+      "bbox": {
+        "x0": 483.36,
+        "y0": 180.81,
+        "x1": 548.78,
+        "y1": 193.13
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "particle X.  ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 193.53,
+        "x1": 122.9,
+        "y1": 205.85
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "What is particle X? ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 218.85,
+        "x1": 165.48,
+        "y1": 231.17
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 242.37,
+        "x1": 78.77,
+        "y1": 254.69
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "an antineutrino ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 242.37,
+        "x1": 167.9,
+        "y1": 254.69
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 264.09,
+        "x1": 78.77,
+        "y1": 276.41
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "an electron ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 264.09,
+        "x1": 149.54,
+        "y1": 276.41
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 285.69,
+        "x1": 78.77,
+        "y1": 298.01
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "a neutron ",
+      "bbox": {
+        "x0": 92.03,
+        "y0": 285.69,
+        "x1": 141.5,
+        "y1": 298.01
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 307.41,
+        "x1": 78.89,
+        "y1": 319.73
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "a neutrino   ",
+      "bbox": {
+        "x0": 92.15,
+        "y0": 307.41,
+        "x1": 144.15,
+        "y1": 319.73
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "40",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 348.21,
+        "x1": 61.81,
+        "y1": 360.53
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " A nucleus of ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 348.21,
+        "x1": 135.72,
+        "y1": 360.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "U",
+      "bbox": {
+        "x0": 150.72,
+        "y0": 348.27,
+        "x1": 158.66,
+        "y1": 360.52
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "²³⁸",
+      "bbox": {
+        "x0": 138.0,
+        "y0": 346.48,
+        "x1": 149.67,
+        "y1": 354.27
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₉₂",
+      "bbox": {
+        "x0": 141.96,
+        "y0": 354.88,
+        "x1": 149.74,
+        "y1": 362.67
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " decays in stages by emitting ",
+      "bbox": {
+        "x0": 160.2,
+        "y0": 348.27,
+        "x1": 307.29,
+        "y1": 360.52
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "α",
+      "bbox": {
+        "x0": 307.92,
+        "y0": 347.1,
+        "x1": 314.87,
+        "y1": 360.62
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "-particles and ",
+      "bbox": {
+        "x0": 314.76,
+        "y0": 348.27,
+        "x1": 384.36,
+        "y1": 360.52
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "β",
+      "bbox": {
+        "x0": 384.72,
+        "y0": 347.1,
+        "x1": 390.77,
+        "y1": 360.62
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻",
+      "bbox": {
+        "x0": 391.2,
+        "y0": 346.86,
+        "x1": 395.07,
+        "y1": 354.63
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " particles, eventually forming a ",
+      "bbox": {
+        "x0": 395.04,
+        "y0": 348.27,
+        "x1": 548.72,
+        "y1": 360.52
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "nucleus of ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 367.23,
+        "x1": 124.09,
+        "y1": 379.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 10.99,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Pb.",
+      "bbox": {
+        "x0": 138.6,
+        "y0": 367.2,
+        "x1": 155.08,
+        "y1": 379.48
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "²⁰⁶",
+      "bbox": {
+        "x0": 125.88,
+        "y0": 365.9,
+        "x1": 137.55,
+        "y1": 373.72
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "₈₂  ",
+      "bbox": {
+        "x0": 129.84,
+        "y0": 373.59,
+        "x1": 137.62,
+        "y1": 381.4
+      },
+      "font": {
+        "name": "Arial",
+        "size": 7.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "How many ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 395.89,
+        "x1": 125.79,
+        "y1": 408.16
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "α",
+      "bbox": {
+        "x0": 125.88,
+        "y0": 394.74,
+        "x1": 132.83,
+        "y1": 408.26
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "-particles and how many ",
+      "bbox": {
+        "x0": 132.72,
+        "y0": 395.88,
+        "x1": 255.09,
+        "y1": 408.16
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "β",
+      "bbox": {
+        "x0": 255.0,
+        "y0": 394.74,
+        "x1": 261.05,
+        "y1": 408.26
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻",
+      "bbox": {
+        "x0": 261.36,
+        "y0": 394.5,
+        "x1": 265.23,
+        "y1": 402.27
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " particles are emitted during the decay chain?   ",
+      "bbox": {
+        "x0": 265.2,
+        "y0": 395.88,
+        "x1": 489.92,
+        "y1": 408.16
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "α",
+      "bbox": {
+        "x0": 113.88,
+        "y0": 424.62,
+        "x1": 120.83,
+        "y1": 438.14
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "-particles ",
+      "bbox": {
+        "x0": 120.72,
+        "y0": 425.76,
+        "x1": 168.51,
+        "y1": 438.04
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "β",
+      "bbox": {
+        "x0": 193.56,
+        "y0": 424.62,
+        "x1": 199.61,
+        "y1": 438.14
+      },
+      "font": {
+        "name": "Symbol",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻",
+      "bbox": {
+        "x0": 199.92,
+        "y0": 424.38,
+        "x1": 203.79,
+        "y1": 432.15
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " particles ",
+      "bbox": {
+        "x0": 203.64,
+        "y0": 425.76,
+        "x1": 250.58,
+        "y1": 438.04
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 448.65,
+        "x1": 92.09,
+        "y1": 460.97
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "8 ",
+      "bbox": {
+        "x0": 139.32,
+        "y0": 448.68,
+        "x1": 148.48,
+        "y1": 460.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "6 ",
+      "bbox": {
+        "x0": 220.19,
+        "y0": 448.68,
+        "x1": 229.35,
+        "y1": 460.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 469.65,
+        "x1": 92.09,
+        "y1": 481.97
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "8 ",
+      "bbox": {
+        "x0": 139.32,
+        "y0": 469.68,
+        "x1": 148.48,
+        "y1": 481.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "10 ",
+      "bbox": {
+        "x0": 214.07,
+        "y0": 469.68,
+        "x1": 229.35,
+        "y1": 481.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 490.65,
+        "x1": 92.09,
+        "y1": 502.97
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "16 ",
+      "bbox": {
+        "x0": 133.2,
+        "y0": 490.68,
+        "x1": 148.48,
+        "y1": 502.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "6 ",
+      "bbox": {
+        "x0": 220.19,
+        "y0": 490.68,
+        "x1": 229.35,
+        "y1": 502.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 511.65,
+        "x1": 92.09,
+        "y1": 523.97
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "16 ",
+      "bbox": {
+        "x0": 133.2,
+        "y0": 511.68,
+        "x1": 148.48,
+        "y1": 523.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "22   ",
+      "bbox": {
+        "x0": 214.07,
+        "y0": 511.68,
+        "x1": 229.35,
+        "y1": 523.96
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.0,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    }
+  ],
+  "images": []
+}

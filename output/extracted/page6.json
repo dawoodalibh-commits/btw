@@ -1,0 +1,1176 @@
+{
+  "page": 6,
+  "width": 595.0,
+  "height": 842.0,
+  "spans": [
+    {
+      "text": "6 ",
+      "bbox": {
+        "x0": 294.6,
+        "y0": 36.09,
+        "x1": 300.73,
+        "y1": 48.41
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "© UCLES 2025 ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 796.84,
+        "x1": 106.61,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "9702/12/O/N/25  ",
+      "bbox": {
+        "x0": 269.37,
+        "y0": 796.84,
+        "x1": 328.05,
+        "y1": 805.82
+      },
+      "font": {
+        "name": "Arial",
+        "size": 8.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "12",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 62.49,
+        "x1": 61.81,
+        "y1": 74.81
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": " Two different blocks, P and Q, slide towards each other on a horizontal frictionless surface. The ",
+      "bbox": {
+        "x0": 61.8,
+        "y0": 62.49,
+        "x1": 548.7,
+        "y1": 74.81
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "blocks have an elastic collision.  ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 75.21,
+        "x1": 226.8,
+        "y1": 87.53
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "The diagram shows the velocities of the two blocks immediately after the collision.  ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 100.53,
+        "x1": 472.08,
+        "y1": 112.85
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "P",
+      "bbox": {
+        "x0": 243.19,
+        "y0": 163.32,
+        "x1": 250.52,
+        "y1": 174.31
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "70 ",
+      "bbox": {
+        "x0": 225.14,
+        "y0": 130.64,
+        "x1": 237.37,
+        "y1": 141.64
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 238.9,
+        "y0": 130.64,
+        "x1": 253.56,
+        "y1": 141.63
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 255.08,
+        "y0": 130.64,
+        "x1": 260.58,
+        "y1": 141.63
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 260.58,
+        "y0": 129.74,
+        "x1": 268.36,
+        "y1": 136.73
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 6.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Q",
+      "bbox": {
+        "x0": 343.94,
+        "y0": 163.32,
+        "x1": 352.49,
+        "y1": 174.31
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "20 ",
+      "bbox": {
+        "x0": 326.61,
+        "y0": 130.64,
+        "x1": 338.83,
+        "y1": 141.64
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 340.36,
+        "y0": 130.64,
+        "x1": 355.02,
+        "y1": 141.63
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 356.55,
+        "y0": 130.64,
+        "x1": 362.04,
+        "y1": 141.63
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹  ",
+      "bbox": {
+        "x0": 362.05,
+        "y0": 129.74,
+        "x1": 369.83,
+        "y1": 136.73
+      },
+      "font": {
+        "name": "ArialMT",
+        "size": 6.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "Which row gives possible velocities of the two blocks immediately before the collision?   ",
+      "bbox": {
+        "x0": 70.92,
+        "y0": 206.49,
+        "x1": 493.3,
+        "y1": 218.81
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "velocity of P ",
+      "bbox": {
+        "x0": 131.87,
+        "y0": 235.89,
+        "x1": 194.1,
+        "y1": 248.21
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "velocity of Q ",
+      "bbox": {
+        "x0": 255.72,
+        "y0": 235.89,
+        "x1": 319.22,
+        "y1": 248.21
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "A ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 259.17,
+        "x1": 92.09,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "10 ",
+      "bbox": {
+        "x0": 112.32,
+        "y0": 259.17,
+        "x1": 124.57,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 126.12,
+        "y0": 259.17,
+        "x1": 140.83,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 142.32,
+        "y0": 259.17,
+        "x1": 147.84,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 147.84,
+        "y0": 257.82,
+        "x1": 155.55,
+        "y1": 265.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the right ",
+      "bbox": {
+        "x0": 155.52,
+        "y0": 259.17,
+        "x1": 213.6,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "60 ",
+      "bbox": {
+        "x0": 240.18,
+        "y0": 259.17,
+        "x1": 252.4,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 254.04,
+        "y0": 259.17,
+        "x1": 268.75,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 270.24,
+        "y0": 259.17,
+        "x1": 275.76,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 275.76,
+        "y0": 257.82,
+        "x1": 283.47,
+        "y1": 265.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the left ",
+      "bbox": {
+        "x0": 283.44,
+        "y0": 259.17,
+        "x1": 334.78,
+        "y1": 271.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "B ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 280.17,
+        "x1": 92.09,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "50 ",
+      "bbox": {
+        "x0": 112.32,
+        "y0": 280.17,
+        "x1": 124.57,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 126.12,
+        "y0": 280.17,
+        "x1": 140.83,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 142.32,
+        "y0": 280.17,
+        "x1": 147.84,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 147.84,
+        "y0": 278.82,
+        "x1": 155.55,
+        "y1": 286.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the right ",
+      "bbox": {
+        "x0": 155.52,
+        "y0": 280.17,
+        "x1": 213.54,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "zero ",
+      "bbox": {
+        "x0": 275.28,
+        "y0": 280.17,
+        "x1": 299.71,
+        "y1": 292.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "C ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 301.17,
+        "x1": 92.09,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "20 ",
+      "bbox": {
+        "x0": 115.68,
+        "y0": 301.17,
+        "x1": 127.93,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 129.48,
+        "y0": 301.17,
+        "x1": 144.19,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 145.68,
+        "y0": 301.17,
+        "x1": 151.2,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 151.2,
+        "y0": 299.82,
+        "x1": 158.91,
+        "y1": 307.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the left ",
+      "bbox": {
+        "x0": 158.88,
+        "y0": 301.17,
+        "x1": 210.22,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "70 ",
+      "bbox": {
+        "x0": 236.79,
+        "y0": 301.17,
+        "x1": 249.05,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 250.68,
+        "y0": 301.17,
+        "x1": 265.39,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 266.88,
+        "y0": 301.17,
+        "x1": 272.4,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 272.4,
+        "y0": 299.82,
+        "x1": 280.11,
+        "y1": 307.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the right ",
+      "bbox": {
+        "x0": 280.08,
+        "y0": 301.17,
+        "x1": 338.12,
+        "y1": 313.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "D ",
+      "bbox": {
+        "x0": 81.12,
+        "y0": 322.17,
+        "x1": 92.09,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "60 ",
+      "bbox": {
+        "x0": 112.32,
+        "y0": 322.17,
+        "x1": 124.57,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 126.12,
+        "y0": 322.17,
+        "x1": 140.83,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 142.32,
+        "y0": 322.17,
+        "x1": 147.84,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 147.84,
+        "y0": 320.82,
+        "x1": 155.55,
+        "y1": 328.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the right ",
+      "bbox": {
+        "x0": 155.52,
+        "y0": 322.17,
+        "x1": 213.6,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "30 ",
+      "bbox": {
+        "x0": 240.18,
+        "y0": 322.17,
+        "x1": 252.4,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "cm ",
+      "bbox": {
+        "x0": 254.04,
+        "y0": 322.17,
+        "x1": 268.75,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "s",
+      "bbox": {
+        "x0": 270.24,
+        "y0": 322.17,
+        "x1": 275.76,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "⁻¹",
+      "bbox": {
+        "x0": 275.76,
+        "y0": 320.82,
+        "x1": 283.47,
+        "y1": 328.59
+      },
+      "font": {
+        "name": "Arial",
+        "size": 6.96,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": " to the left   ",
+      "bbox": {
+        "x0": 283.44,
+        "y0": 322.17,
+        "x1": 334.78,
+        "y1": 334.49
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "13 ",
+      "bbox": {
+        "x0": 49.56,
+        "y0": 362.25,
+        "x1": 64.85,
+        "y1": 374.57
+      },
+      "font": {
+        "name": "Arial,Bold",
+        "size": 11.04,
+        "color": 0,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "Which diagram shows a couple?  ",
+      "bbox": {
+        "x0": 70.8,
+        "y0": 362.25,
+        "x1": 232.21,
+        "y1": 374.57
+      },
+      "font": {
+        "name": "Arial",
+        "size": 11.04,
+        "color": 0,
+        "bold": false,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 84.6,
+        "y0": 542.33,
+        "x1": 91.32,
+        "y1": 553.31
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 258.29,
+        "y0": 484.01,
+        "x1": 265.01,
+        "y1": 495.0
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "A",
+      "bbox": {
+        "x0": 184.69,
+        "y0": 388.86,
+        "x1": 192.63,
+        "y1": 399.84
+      },
+      "font": {
+        "name": "Arial-BoldMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 356.26,
+        "y0": 402.59,
+        "x1": 362.98,
+        "y1": 413.58
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 112.33,
+        "y0": 402.59,
+        "x1": 119.05,
+        "y1": 413.58
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 502.22,
+        "y0": 402.59,
+        "x1": 508.94,
+        "y1": 413.58
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "B",
+      "bbox": {
+        "x0": 428.63,
+        "y0": 388.86,
+        "x1": 436.57,
+        "y1": 399.85
+      },
+      "font": {
+        "name": "Arial-BoldMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 258.29,
+        "y0": 611.88,
+        "x1": 265.01,
+        "y1": 622.87
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "C",
+      "bbox": {
+        "x0": 184.69,
+        "y0": 516.73,
+        "x1": 192.63,
+        "y1": 527.72
+      },
+      "font": {
+        "name": "Arial-BoldMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": true,
+        "italic": false
+      }
+    },
+    {
+      "text": "F",
+      "bbox": {
+        "x0": 356.26,
+        "y0": 530.46,
+        "x1": 362.98,
+        "y1": 541.45
+      },
+      "font": {
+        "name": "Arial-ItalicMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": false,
+        "italic": true
+      }
+    },
+    {
+      "text": "D   ",
+      "bbox": {
+        "x0": 428.63,
+        "y0": 516.73,
+        "x1": 436.57,
+        "y1": 527.72
+      },
+      "font": {
+        "name": "Arial-BoldMT",
+        "size": 10.99,
+        "color": 2301728,
+        "bold": true,
+        "italic": false
+      }
+    }
+  ],
+  "images": []
+}
