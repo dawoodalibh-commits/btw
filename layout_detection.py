@@ -33,12 +33,6 @@ from schemas import BBox, LayoutRegion, LayoutType, PageLayout, resolve_batch_jo
 DEFAULT_DPI = 200
 _POINTS_PER_INCH = 72.0
 
-# Pages per detector call. A single page image is too little work to keep a
-# GPU busy between calls -- batching several into one predict() call is what
-# actually raises utilization, since both backends natively accept a list of
-# images and infer them together.
-DEFAULT_BATCH_SIZE = 8
-
 # Accepted --device values. "auto" asks the backend to pick the best
 # accelerator it can actually use; the rest force a specific one.
 DEVICES = ("auto", "cpu", "cuda", "mps")
@@ -66,15 +60,8 @@ class LayoutDetector(ABC):
     device: str = "cpu"
 
     @abstractmethod
-    def detect_batch(
-        self, image_paths: list[Path], dpi: int
-    ) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
-        """Return, per image, a list of (raw_label, score, (x0, y0, x1, y1)) in *pixel* space.
-
-        Runs as a single batched inference call rather than looping the
-        images one at a time, so callers should pass as many pages as memory
-        allows instead of calling this once per page.
-        """
+    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
+        """Return (raw_label, score, (x0, y0, x1, y1)) in *pixel* space for one page image."""
 
     def label_map(self) -> dict[str, LayoutType]:
         """Backend label -> canonical LayoutType. Unmapped labels fall back to OTHER."""
@@ -124,14 +111,10 @@ class PPStructureLayoutDetector(LayoutDetector):
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
 
-    def detect_batch(
-        self, image_paths: list[Path], dpi: int
-    ) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
-        results = self._model.predict([str(p) for p in image_paths])
-        return [
-            [(b["label"], float(b["score"]), tuple(b["coordinate"])) for b in r.json["res"]["boxes"]]
-            for r in results
-        ]
+    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
+        results = self._model.predict(str(image_path))
+        boxes = results[0].json["res"]["boxes"]
+        return [(b["label"], float(b["score"]), tuple(b["coordinate"])) for b in boxes]
 
 
 class DocLayoutYOLODetector(LayoutDetector):
@@ -166,21 +149,17 @@ class DocLayoutYOLODetector(LayoutDetector):
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
 
-    def detect_batch(
-        self, image_paths: list[Path], dpi: int
-    ) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
+    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
         results = self._model.predict(
-            [str(p) for p in image_paths], imgsz=self._imgsz, conf=self._confidence, device=self.device, verbose=False
+            str(image_path), imgsz=self._imgsz, conf=self._confidence, device=self.device, verbose=False
         )
+        result = results[0]
         out = []
-        for result in results:
-            page_out = []
-            for box in result.boxes:
-                label = result.names[int(box.cls.item())]
-                score = float(box.conf.item())
-                x0, y0, x1, y1 = box.xyxy[0].tolist()
-                page_out.append((label, score, (x0, y0, x1, y1)))
-            out.append(page_out)
+        for box in result.boxes:
+            label = result.names[int(box.cls.item())]
+            score = float(box.conf.item())
+            x0, y0, x1, y1 = box.xyxy[0].tolist()
+            out.append((label, score, (x0, y0, x1, y1)))
         return out
 
 
@@ -206,7 +185,6 @@ def detect_layout(
     dpi: int = DEFAULT_DPI,
     device: str = "auto",
     detector: LayoutDetector | None = None,
-    batch_size: int = DEFAULT_BATCH_SIZE,
 ) -> list[PageLayout]:
     # An already-built detector can be passed in so a batch of PDFs pays the
     # model-load cost once instead of once per PDF.
@@ -217,29 +195,15 @@ def detect_layout(
     render_dir.mkdir(parents=True, exist_ok=True)
     scale = _POINTS_PER_INCH / dpi  # converts pixel coords at `dpi` back to PDF points
 
-    # Rasterize every page up front so the detector can be fed whole batches
-    # instead of one page at a time -- a lone page image is too little work
-    # to keep a GPU busy between calls.
     doc = pymupdf.open(pdf_path)
-    image_paths: list[Path] = []
-    dims: list[tuple[float, float]] = []
+    pages: list[PageLayout] = []
     try:
         for page_index, page in enumerate(doc):
             page_number = page_index + 1
             pix = page.get_pixmap(dpi=dpi)
             image_path = render_dir / f"page{page_number}.png"
             pix.save(image_path)
-            image_paths.append(image_path)
-            dims.append((round(page.rect.width, 2), round(page.rect.height, 2)))
-    finally:
-        doc.close()
 
-    pages: list[PageLayout] = []
-    for batch_start in range(0, len(image_paths), batch_size):
-        batch_paths = image_paths[batch_start : batch_start + batch_size]
-        for offset, raw_regions in enumerate(detector.detect_batch(batch_paths, dpi)):
-            page_number = batch_start + offset + 1
-            width, height = dims[batch_start + offset]
             regions = [
                 LayoutRegion(
                     id=f"p{page_number}_r{i}",
@@ -248,11 +212,18 @@ def detect_layout(
                     score=score,
                     raw_label=raw_label,
                 )
-                for i, (raw_label, score, xyxy) in enumerate(raw_regions)
+                for i, (raw_label, score, xyxy) in enumerate(detector.detect(image_path, dpi))
             ]
-            page_layout = PageLayout(page=page_number, width=width, height=height, regions=regions)
+            page_layout = PageLayout(
+                page=page_number,
+                width=round(page.rect.width, 2),
+                height=round(page.rect.height, 2),
+                regions=regions,
+            )
             pages.append(page_layout)
             write_json(page_layout.to_dict(), output_dir / f"page{page_number}_layout.json")
+    finally:
+        doc.close()
 
     write_json([p.to_dict() for p in pages], output_dir / "layout.json")
     return pages
@@ -271,12 +242,6 @@ def main() -> None:
         default="auto",
         help="Accelerator for the detector. 'auto' picks the best one the backend supports.",
     )
-    parser.add_argument(
-        "--batch-size",
-        type=int,
-        default=DEFAULT_BATCH_SIZE,
-        help="Pages per detector call. Higher keeps the GPU busier but uses more VRAM.",
-    )
     args = parser.parse_args()
     try:
         jobs = resolve_batch_jobs(args.pdf, args.output_root, ["layout"], [args.output_dir], ["output/layout"])
@@ -289,9 +254,7 @@ def main() -> None:
     failed = 0
     for pdf, out_dir in jobs:
         try:
-            pages = detect_layout(
-                pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector, batch_size=args.batch_size
-            )
+            pages = detect_layout(pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector)
         except Exception as exc:  # one bad PDF shouldn't abandon the rest of the batch
             failed += 1
             print(f"!!! FAILED layout for {pdf}: {exc}", file=sys.stderr)
