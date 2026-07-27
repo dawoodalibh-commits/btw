@@ -112,18 +112,14 @@ class PPStructureLayoutDetector(LayoutDetector):
     }
 
     def __init__(self, device: str = "auto") -> None:
-        import paddle
         from paddleocr import LayoutDetection  # local import: keep paddle out of the base module
 
         # Paddle has no Metal backend, so "mps" (and "auto" on a Mac) can only
         # mean CPU here; it spells CUDA "gpu". "auto" is left to paddle itself,
         # which picks a GPU when its GPU build is installed.
+        self.device = "cpu" if device == "mps" else device
         paddle_device = {"auto": None, "cpu": "cpu", "cuda": "gpu", "mps": "cpu"}[device]
         self._model = LayoutDetection() if paddle_device is None else LayoutDetection(device=paddle_device)
-        # Read back what paddle actually landed on rather than trusting the
-        # request: a CPU-only paddle build silently falls back even when
-        # "cuda" was requested, and "auto" needs resolving to a real value.
-        self.device = paddle.device.get_device()
 
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
