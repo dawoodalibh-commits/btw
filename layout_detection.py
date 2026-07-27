@@ -17,12 +17,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import sys
 from abc import ABC, abstractmethod
 from pathlib import Path
 
 import pymupdf
 
-from schemas import BBox, LayoutRegion, LayoutType, PageLayout, write_json
+from schemas import BBox, LayoutRegion, LayoutType, PageLayout, resolve_batch_jobs, write_json
 
 # Pages are rasterized at this resolution before being fed to a layout
 # detector (detectors work on images, not vector PDFs). Boxes returned by
@@ -183,9 +184,13 @@ def detect_layout(
     backend: str = "ppstructure",
     dpi: int = DEFAULT_DPI,
     device: str = "auto",
+    detector: LayoutDetector | None = None,
 ) -> list[PageLayout]:
-    detector = build_detector(backend, device)
-    print(f"[layout] backend={backend} device={detector.device}")
+    # An already-built detector can be passed in so a batch of PDFs pays the
+    # model-load cost once instead of once per PDF.
+    if detector is None:
+        detector = build_detector(backend, device)
+        print(f"[layout] backend={backend} device={detector.device}")
     render_dir = output_dir / "page_renders"
     render_dir.mkdir(parents=True, exist_ok=True)
     scale = _POINTS_PER_INCH / dpi  # converts pixel coords at `dpi` back to PDF points
@@ -226,8 +231,9 @@ def detect_layout(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Phase 2: detect page layout regions (no OCR).")
-    parser.add_argument("pdf", type=Path, help="Path to the input PDF")
-    parser.add_argument("--output-dir", type=Path, default=Path("output/layout"), help="Directory for JSON + page renders")
+    parser.add_argument("pdf", type=Path, nargs="+", help="One or more input PDFs")
+    parser.add_argument("--output-dir", type=Path, default=None, help="Directory for JSON + page renders (single PDF)")
+    parser.add_argument("--output-root", type=Path, default=None, help="Batch mode: write to <root>/<stem>/layout")
     parser.add_argument("--backend", choices=list(_BACKENDS), default="ppstructure")
     parser.add_argument("--dpi", type=int, default=DEFAULT_DPI, help="Rasterization DPI fed to the layout model")
     parser.add_argument(
@@ -237,10 +243,27 @@ def main() -> None:
         help="Accelerator for the detector. 'auto' picks the best one the backend supports.",
     )
     args = parser.parse_args()
+    try:
+        jobs = resolve_batch_jobs(args.pdf, args.output_root, ["layout"], [args.output_dir], ["output/layout"])
+    except ValueError as exc:
+        parser.error(str(exc))
 
-    pages = detect_layout(args.pdf, args.output_dir, backend=args.backend, dpi=args.dpi, device=args.device)
-    n_regions = sum(len(p.regions) for p in pages)
-    print(f"Detected layout on {len(pages)} pages, {n_regions} regions (backend={args.backend}) -> {args.output_dir}")
+    detector = build_detector(args.backend, args.device)
+    print(f"[layout] backend={args.backend} device={detector.device}")
+
+    failed = 0
+    for pdf, out_dir in jobs:
+        try:
+            pages = detect_layout(pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector)
+        except Exception as exc:  # one bad PDF shouldn't abandon the rest of the batch
+            failed += 1
+            print(f"!!! FAILED layout for {pdf}: {exc}", file=sys.stderr)
+            continue
+        n_regions = sum(len(p.regions) for p in pages)
+        print(f"Detected layout on {len(pages)} pages, {n_regions} regions (backend={args.backend}) -> {out_dir}")
+
+    if failed == len(jobs):
+        sys.exit(1)
 
 
 if __name__ == "__main__":

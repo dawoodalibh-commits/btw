@@ -183,3 +183,27 @@ def write_json(obj: Any, path: Path) -> None:
 def read_json(path: Path) -> Any:
     with open(path) as f:
         return json.load(f)
+
+
+def resolve_batch_jobs(
+    pdfs: Sequence[Path],
+    output_root: Path | None,
+    subdirs: Sequence[str],
+    singles: Sequence[Path | None],
+    defaults: Sequence[str],
+) -> list[tuple[Path, ...]]:
+    """Pairs each PDF with the directories a phase reads from and writes to.
+
+    The model-loading phases (2, 5, 7) can sweep a whole batch in one process
+    so the model is loaded once rather than once per paper. In that mode
+    (`--output-root`) every directory is derived as <root>/<stem>/<subdir>, so
+    papers can't clobber each other. Without it the phase keeps its original
+    single-PDF behaviour and uses the explicitly passed directories.
+
+    Returns one (pdf, *dirs) tuple per PDF, with dirs in `subdirs` order.
+    """
+    if output_root is not None:
+        return [tuple([pdf, *(output_root / pdf.stem / sub for sub in subdirs)]) for pdf in pdfs]
+    if len(pdfs) > 1:
+        raise ValueError("--output-root is required when passing more than one PDF")
+    return [tuple([pdfs[0], *(single or Path(default) for single, default in zip(singles, defaults))])]

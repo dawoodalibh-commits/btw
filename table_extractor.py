@@ -17,12 +17,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 from typing import Any
 
 import pymupdf
 
-from schemas import BBox, read_json, write_json
+from schemas import BBox, read_json, resolve_batch_jobs, write_json
 
 _CROP_DPI = 300
 _ROW_TOLERANCE_FRAC = 0.6  # fraction of median token height that still counts as "same row"
@@ -55,10 +56,39 @@ def _cluster_into_rows(tokens: list[tuple[str, float, float, float]]) -> list[li
     return [[text for text, *_ in sorted(row, key=lambda t: t[1])] for row in rows]
 
 
-def extract_tables(pdf_path: Path, merged_dir: Path, output_dir: Path, dpi: int = _CROP_DPI) -> list[dict[str, Any]]:
+def _build_ocr(device: str):
+    """Loads PaddleOCR (detection + recognition only) on `device`."""
+    import paddle
     from paddleocr import PaddleOCR
 
-    ocr = PaddleOCR(use_doc_orientation_classify=False, use_doc_unwarping=False, use_textline_orientation=False)
+    # Paddle spells CUDA "gpu" and has no Metal backend, so mps can only mean
+    # cpu here. "auto" is left to paddle, which uses a GPU when its GPU build
+    # is the one installed.
+    paddle_device = {"auto": None, "cpu": "cpu", "cuda": "gpu", "mps": "cpu"}[device]
+    ocr_kwargs: dict[str, Any] = {
+        "use_doc_orientation_classify": False,
+        "use_doc_unwarping": False,
+        "use_textline_orientation": False,
+    }
+    if paddle_device is not None:
+        ocr_kwargs["device"] = paddle_device
+    ocr = PaddleOCR(**ocr_kwargs)
+    print(f"[tables] device={paddle.device.get_device()}")
+    return ocr
+
+
+def extract_tables(
+    pdf_path: Path,
+    merged_dir: Path,
+    output_dir: Path,
+    dpi: int = _CROP_DPI,
+    device: str = "auto",
+    ocr=None,
+) -> list[dict[str, Any]]:
+    # An already-loaded OCR model can be passed in so a batch of PDFs pays the
+    # model-load cost once instead of once per PDF.
+    if ocr is None:
+        ocr = _build_ocr(device)
     pages_data = read_json(merged_dir / "merged.json")
     crops_dir = output_dir / "crops"
     crops_dir.mkdir(parents=True, exist_ok=True)
@@ -98,14 +128,43 @@ def extract_tables(pdf_path: Path, merged_dir: Path, output_dir: Path, dpi: int 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Phase 7: reconstruct table regions into headers/rows.")
-    parser.add_argument("pdf", type=Path, help="Path to the input PDF")
-    parser.add_argument("--merged", type=Path, default=Path("output/merged"), help="Phase 3 output directory")
-    parser.add_argument("--output-dir", type=Path, default=Path("output/tables"))
+    parser.add_argument("pdf", type=Path, nargs="+", help="One or more input PDFs")
+    parser.add_argument("--merged", type=Path, default=None, help="Phase 3 output directory (single PDF)")
+    parser.add_argument("--output-dir", type=Path, default=None, help="Output directory (single PDF)")
+    parser.add_argument("--output-root", type=Path, default=None, help="Batch mode: <root>/<stem>/{merged,tables}")
     parser.add_argument("--dpi", type=int, default=_CROP_DPI)
+    parser.add_argument(
+        "--device",
+        choices=("auto", "cpu", "cuda", "mps"),
+        default="auto",
+        help="Accelerator for PaddleOCR. Needs the paddlepaddle-gpu build for cuda.",
+    )
     args = parser.parse_args()
+    try:
+        jobs = resolve_batch_jobs(
+            args.pdf,
+            args.output_root,
+            ["merged", "tables"],
+            [args.merged, args.output_dir],
+            ["output/merged", "output/tables"],
+        )
+    except ValueError as exc:
+        parser.error(str(exc))
 
-    results = extract_tables(args.pdf, args.merged, args.output_dir, dpi=args.dpi)
-    print(f"Extracted {len(results)} tables -> {args.output_dir}")
+    ocr = _build_ocr(args.device)
+
+    failed = 0
+    for pdf, merged_dir, out_dir in jobs:
+        try:
+            results = extract_tables(pdf, merged_dir, out_dir, dpi=args.dpi, ocr=ocr)
+        except Exception as exc:  # one bad PDF shouldn't abandon the rest of the batch
+            failed += 1
+            print(f"!!! FAILED tables for {pdf}: {exc}", file=sys.stderr)
+            continue
+        print(f"Extracted {len(results)} tables -> {out_dir}")
+
+    if failed == len(jobs):
+        sys.exit(1)
 
 
 if __name__ == "__main__":

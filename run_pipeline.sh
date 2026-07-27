@@ -71,9 +71,9 @@ run_one() {
     run layout_detection.py "$pdf" --output-dir "$out/layout" --backend "$BACKEND" --device "$DEVICE" "${DPI_ARGS[@]}" &&
     run merge_layout.py --extracted "$out/extracted" --layout "$out/layout" --output-dir "$out/merged" &&
     run question_parser.py --merged "$out/merged" --output-dir "$out/questions" &&
-    run formula_extractor.py "$pdf" --merged "$out/merged" --output-dir "$out/formulas" "${DPI_ARGS[@]}" &&
+    run formula_extractor.py "$pdf" --merged "$out/merged" --output-dir "$out/formulas" --device "$DEVICE" "${DPI_ARGS[@]}" &&
     run image_exporter.py "$pdf" --merged "$out/merged" --extracted "$out/extracted" --output-dir "$out/images" "${DPI_ARGS[@]}" &&
-    run table_extractor.py "$pdf" --merged "$out/merged" --output-dir "$out/tables" "${DPI_ARGS[@]}" &&
+    run table_extractor.py "$pdf" --merged "$out/merged" --output-dir "$out/tables" --device "$DEVICE" "${DPI_ARGS[@]}" &&
     run question_image_exporter.py "$pdf" --merged "$out/merged" --questions "$out/questions" --output-dir "$out/question_images" "${DPI_ARGS[@]}" &&
     run build_questions.py \
         --extracted "$out/extracted" \
