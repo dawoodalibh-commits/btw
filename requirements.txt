@@ -1,0 +1,19 @@
+# Phase 1 — PDF extraction
+pymupdf>=1.24
+
+# Phase 2 — layout detection, "ppstructure" backend
+paddlepaddle>=3.0
+paddleocr>=3.0
+
+# Phase 2 — layout detection, "doclayout_yolo" backend (only needed if you
+# select --backend doclayout_yolo; pulls in torch/torchvision)
+doclayout-yolo>=0.0.4
+huggingface_hub>=0.24
+
+# Phase 12 — LLM tutoring/grading
+anthropic>=0.69  # --provider anthropic (default)
+openai>=1.50     # --provider groq / openrouter (both OpenAI-compatible chat APIs)
+google-genai>=1.0  # --provider gemini
+
+# Phase 13 — web UI
+flask>=3.0
