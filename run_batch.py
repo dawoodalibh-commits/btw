@@ -124,6 +124,10 @@ def main() -> None:
     parser.add_argument("--device", default="auto", choices=("auto", "cpu", "cuda", "mps"))
     parser.add_argument("--dpi", type=int, default=None, help="Override rasterization DPI for every phase")
     parser.add_argument(
+        "--layout-batch-size", type=int, default=None,
+        help="Pages per phase-2 detector call (default: layout_detection.py's own default). Higher keeps the GPU busier but uses more VRAM.",
+    )
+    parser.add_argument(
         "--jobs",
         type=int,
         default=max(1, (os.cpu_count() or 4) // 2),
@@ -149,6 +153,7 @@ def main() -> None:
     root.mkdir(parents=True, exist_ok=True)
     db_path = root / "questions.db"
     dpi = ["--dpi", str(args.dpi)] if args.dpi else []
+    layout_batch_size = ["--batch-size", str(args.layout_batch_size)] if args.layout_batch_size else []
 
     live = list(pdfs)  # papers still healthy; failures drop out as we go
     failed: dict[Path, str] = {}
@@ -173,7 +178,7 @@ def main() -> None:
     if live:
         drop(run_batched("phase 2 layout_detection", [
             "layout_detection.py", *[str(p) for p in live],
-            "--output-root", str(root), "--backend", args.backend, "--device", args.device, *dpi,
+            "--output-root", str(root), "--backend", args.backend, "--device", args.device, *dpi, *layout_batch_size,
         ], live), "layout_detection")
 
     # Phase 3 — merge (CPU, parallel)
