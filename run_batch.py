@@ -52,8 +52,18 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 
 
 def find_pdfs(target: Path) -> list[Path]:
+    """Resolves a PDF or a folder of PDFs to the list of papers to process.
+
+    The walk is recursive because download_papers.sh --all files papers one
+    subfolder per subject (<out-dir>/<code>/*.pdf), so a top-level-only scan
+    would come back empty on exactly the layout the batch runner is for.
+    """
+    if not target.exists():
+        sys.exit(f"No such file or directory: {target}")
     if target.is_dir():
-        return sorted(p for p in target.iterdir() if p.suffix.lower() == ".pdf")
+        return sorted(p for p in target.rglob("*") if p.suffix.lower() == ".pdf")
+    if target.suffix.lower() != ".pdf":
+        sys.exit(f"Not a PDF: {target}")
     return [target]
 
 
@@ -124,6 +134,16 @@ def main() -> None:
     pdfs = find_pdfs(args.input)
     if not pdfs:
         sys.exit(f"No PDFs found in {args.input}")
+
+    # Output lives at <root>/<stem>/<phase>, so two same-named PDFs in
+    # different subfolders would write over each other's phase output.
+    by_stem: dict[str, list[Path]] = {}
+    for pdf in pdfs:
+        by_stem.setdefault(pdf.stem, []).append(pdf)
+    clashes = {stem: paths for stem, paths in by_stem.items() if len(paths) > 1}
+    if clashes:
+        detail = "\n".join(f"  {stem}: " + ", ".join(str(p) for p in paths) for stem, paths in sorted(clashes.items()))
+        sys.exit(f"Duplicate PDF names would share one output folder:\n{detail}")
 
     root = args.output_dir.resolve()
     root.mkdir(parents=True, exist_ok=True)
