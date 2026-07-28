@@ -1,6 +1,9 @@
 # Phase 1 — PDF extraction
 pymupdf>=1.24
 
+# Phases 2/5 — page and crop rasters are handed to the models as arrays
+numpy>=1.24
+
 # Phase 2 — layout detection, "ppstructure" backend; also phase 7 (tables),
 # which uses PaddleOCR regardless of which layout backend is selected.
 #
@@ -21,8 +24,11 @@ munch>=4.0
 pillow>=10.0
 
 # Phase 2 — layout detection, "doclayout_yolo" backend (only needed if you
-# select --backend doclayout_yolo; pulls in torch/torchvision)
+# select --backend doclayout_yolo). torchvision is listed explicitly because
+# doclayout-yolo imports it but declares no dependencies at all, so without
+# this line the backend installs cleanly and then fails on first import.
 doclayout-yolo>=0.0.4
+torchvision>=0.15
 huggingface_hub>=0.24
 
 # Phase 12 — LLM tutoring/grading

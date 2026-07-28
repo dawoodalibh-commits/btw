@@ -16,10 +16,18 @@ compared directly (e.g. in Phase 3's merge step) without unit conversion.
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from pathlib import Path
 from typing import Any, Sequence
+
+# Printed on stdout by a batched phase when one paper in its batch fails.
+# The batch driver watches for this: a phase that sweeps many papers in one
+# process still exits 0 when only some of them broke, so its exit code can't
+# say which papers are still healthy, and a paper whose layout failed has to
+# be dropped before it reaches the phases that read that layout.
+PAPER_FAILED_PREFIX = "!!! PAPER-FAILED"
 
 
 @dataclass(frozen=True)
@@ -183,6 +191,17 @@ def write_json(obj: Any, path: Path) -> None:
 def read_json(path: Path) -> Any:
     with open(path) as f:
         return json.load(f)
+
+
+def report_paper_failure(phase: str, pdf: Path, exc: BaseException) -> None:
+    """Announce that one paper failed, without abandoning the rest of the batch.
+
+    Two lines on purpose: a machine-readable one on stdout for the batch
+    driver to parse, and the human-readable reason on stderr where the rest
+    of the phase's diagnostics go.
+    """
+    print(f"{PAPER_FAILED_PREFIX}\t{phase}\t{pdf}", flush=True)
+    print(f"!!! FAILED {phase} for {pdf}: {exc}", file=sys.stderr, flush=True)
 
 
 def resolve_batch_jobs(

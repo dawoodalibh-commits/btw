@@ -1,0 +1,17 @@
+# Bytecode caches are currently tracked; `git rm -r --cached __pycache__` once
+# to stop every run from showing up as a diff.
+__pycache__/
+*.py[cod]
+
+# Virtualenvs
+.venv/
+venv/
+
+# Pipeline artifacts: every phase writes here, and the papers themselves are
+# fetched with download_papers.sh rather than committed.
+output/
+output-*/
+papers/
+papers2/
+
+.DS_Store

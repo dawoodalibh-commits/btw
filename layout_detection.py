@@ -10,6 +10,12 @@ DocLayout-YOLO, but any future model just needs a new subclass that maps its
 own labels onto `schemas.LayoutType` and returns `LayoutRegion`s in PDF
 point space. Nothing outside this file needs to know which backend ran.
 
+Pages are fed to the detector in batches rather than one at a time: a single
+page image is nowhere near enough work to saturate a GPU, so per-page calls
+spend most of their time in launch overhead with the card mostly idle. Both
+backends infer a whole list of images in one call, and rasterization for the
+next batch runs on a background thread while the current one is on the GPU.
+
 Usage:
     python layout_detection.py 9709_s24_qp_12.pdf --backend ppstructure
     python layout_detection.py 9709_s24_qp_12.pdf --backend doclayout_yolo --device mps
@@ -19,11 +25,22 @@ from __future__ import annotations
 import argparse
 import sys
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any, Iterator
 
 import pymupdf
 
-from schemas import BBox, LayoutRegion, LayoutType, PageLayout, resolve_batch_jobs, write_json
+from accel import DEVICES, describe_torch_device, prefetch, resolve_paddle_device, resolve_torch_device
+from schemas import (
+    BBox,
+    LayoutRegion,
+    LayoutType,
+    PageLayout,
+    report_paper_failure,
+    resolve_batch_jobs,
+    write_json,
+)
 
 # Pages are rasterized at this resolution before being fed to a layout
 # detector (detectors work on images, not vector PDFs). Boxes returned by
@@ -33,35 +50,48 @@ from schemas import BBox, LayoutRegion, LayoutType, PageLayout, resolve_batch_jo
 DEFAULT_DPI = 200
 _POINTS_PER_INCH = 72.0
 
-# Accepted --device values. "auto" asks the backend to pick the best
-# accelerator it can actually use; the rest force a specific one.
-DEVICES = ("auto", "cpu", "cuda", "mps")
+# Pages per detector call. Eight 200-dpi pages is a few hundred MB of
+# activations at most, which fits comfortably on any card worth running this
+# on, while being enough work per launch that the GPU stops idling between
+# calls. Raise it for more headroom, lower it if VRAM is tight.
+DEFAULT_BATCH_SIZE = 8
 
 
-def _best_torch_device() -> str:
-    """Best torch device available here: CUDA > Apple MPS > CPU."""
-    import torch
+@dataclass(frozen=True)
+class PageImage:
+    """One rasterized page, offered to detectors as both a file and an array.
 
-    if torch.cuda.is_available():
-        return "cuda"
-    if torch.backends.mps.is_available():
-        return "mps"
-    return "cpu"
+    Backends take whichever costs them less: DocLayout-YOLO reads the decoded
+    BGR array directly, which skips a PNG round trip on the critical path,
+    while PaddleOCR gets the path because its own loader is what its
+    preprocessing chain expects. The PNG is written either way -- it's the
+    phase's debugging artifact.
+    """
+
+    page: int
+    width: float
+    height: float
+    path: Path
+    array: Any  # np.ndarray, BGR — typed loosely to keep numpy out of import time
 
 
 class LayoutDetector(ABC):
     """Common interface every layout-detection backend must implement.
 
     Subclasses set `self.device` to the accelerator they actually ended up
-    running on, which is not always what was requested — a backend that
-    can't use the requested device falls back rather than failing.
+    running on, read back from the framework rather than echoed from the
+    request, so the banner each phase prints can't claim a GPU it never got.
     """
 
     device: str = "cpu"
 
     @abstractmethod
-    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
-        """Return (raw_label, score, (x0, y0, x1, y1)) in *pixel* space for one page image."""
+    def detect_batch(self, pages: list[PageImage]) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
+        """Detect on several pages in one call.
+
+        Returns one list of (raw_label, score, (x0, y0, x1, y1)) per input
+        page, in input order, with coordinates in *pixel* space.
+        """
 
     def label_map(self) -> dict[str, LayoutType]:
         """Backend label -> canonical LayoutType. Unmapped labels fall back to OTHER."""
@@ -101,20 +131,22 @@ class PPStructureLayoutDetector(LayoutDetector):
     def __init__(self, device: str = "auto") -> None:
         from paddleocr import LayoutDetection  # local import: keep paddle out of the base module
 
-        # Paddle has no Metal backend, so "mps" (and "auto" on a Mac) can only
-        # mean CPU here; it spells CUDA "gpu". "auto" is left to paddle itself,
-        # which picks a GPU when its GPU build is installed.
-        self.device = "cpu" if device == "mps" else device
-        paddle_device = {"auto": None, "cpu": "cpu", "cuda": "gpu", "mps": "cpu"}[device]
-        self._model = LayoutDetection() if paddle_device is None else LayoutDetection(device=paddle_device)
+        self.device = resolve_paddle_device(device)
+        self._model = LayoutDetection(device=self.device)
 
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
 
-    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
-        results = self._model.predict(str(image_path))
-        boxes = results[0].json["res"]["boxes"]
-        return [(b["label"], float(b["score"]), tuple(b["coordinate"])) for b in boxes]
+    def detect_batch(self, pages: list[PageImage]) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
+        # batch_size is not optional here: paddlex's predictors default their
+        # batch sampler to 1, so handing predict() a list without it walks the
+        # list one image per forward pass and looks like batching while
+        # leaving the GPU exactly as idle as before.
+        results = self._model.predict([str(p.path) for p in pages], batch_size=len(pages))
+        return [
+            [(b["label"], float(b["score"]), tuple(b["coordinate"])) for b in r.json["res"]["boxes"]]
+            for r in results
+        ]
 
 
 class DocLayoutYOLODetector(LayoutDetector):
@@ -136,7 +168,7 @@ class DocLayoutYOLODetector(LayoutDetector):
     _HF_REPO = "juliozhao/DocLayout-YOLO-DocStructBench"
     _HF_FILENAME = "doclayout_yolo_docstructbench_imgsz1024.pt"
 
-    def __init__(self, device: str = "auto", confidence: float = 0.2, imgsz: int = 1024) -> None:
+    def __init__(self, device: str = "auto", confidence: float = 0.2, imgsz: int = 1024, half: bool | None = None) -> None:
         from doclayout_yolo import YOLOv10
         from huggingface_hub import hf_hub_download
 
@@ -144,22 +176,37 @@ class DocLayoutYOLODetector(LayoutDetector):
         self._model = YOLOv10(weights_path)
         self._confidence = confidence
         self._imgsz = imgsz
-        self.device = _best_torch_device() if device == "auto" else device
+        self.device = resolve_torch_device(device)
+        # fp16 roughly halves the weight/activation traffic this model is
+        # bound by, for a detector whose scores move in the third decimal.
+        # CUDA only: CPU fp16 is emulated and slower, and MPS gains nothing.
+        self._half = (self.device == "cuda") if half is None else half
 
     def label_map(self) -> dict[str, LayoutType]:
         return self._LABEL_MAP
 
-    def detect(self, image_path: Path, dpi: int) -> list[tuple[str, float, tuple[float, float, float, float]]]:
+    def detect_batch(self, pages: list[PageImage]) -> list[list[tuple[str, float, tuple[float, float, float, float]]]]:
+        # Arrays rather than paths: a list of ndarrays is loaded as one batch
+        # and skips re-decoding the PNGs we just encoded. Verified to give
+        # bit-identical boxes to the per-path calls this replaced.
         results = self._model.predict(
-            str(image_path), imgsz=self._imgsz, conf=self._confidence, device=self.device, verbose=False
+            [p.array for p in pages],
+            imgsz=self._imgsz,
+            conf=self._confidence,
+            device=self.device,
+            half=self._half,
+            verbose=False,
         )
-        result = results[0]
         out = []
-        for box in result.boxes:
-            label = result.names[int(box.cls.item())]
-            score = float(box.conf.item())
-            x0, y0, x1, y1 = box.xyxy[0].tolist()
-            out.append((label, score, (x0, y0, x1, y1)))
+        for result in results:
+            page_out = []
+            # One .tolist() for the whole page beats three .item() calls per
+            # box: each of those is a separate device-to-host sync.
+            for (x0, y0, x1, y1), cls, conf in zip(
+                result.boxes.xyxy.tolist(), result.boxes.cls.tolist(), result.boxes.conf.tolist()
+            ):
+                page_out.append((result.names[int(cls)], float(conf), (x0, y0, x1, y1)))
+            out.append(page_out)
         return out
 
 
@@ -170,12 +217,49 @@ _BACKENDS = {
 
 
 def build_detector(backend: str, device: str = "auto") -> LayoutDetector:
-    if device not in DEVICES:
-        raise ValueError(f"Unknown device {device!r}. Choose from {list(DEVICES)}")
-    try:
-        return _BACKENDS[backend](device=device)
-    except KeyError:
+    if backend not in _BACKENDS:
         raise ValueError(f"Unknown backend {backend!r}. Choose from {list(_BACKENDS)}")
+    return _BACKENDS[backend](device=device)
+
+
+def _render_batches(pdf_path: Path, render_dir: Path, dpi: int, batch_size: int) -> Iterator[list[PageImage]]:
+    """Rasterize the PDF, yielding one batch of pages at a time.
+
+    Runs on `prefetch`'s background thread, so the encode-and-write cost of
+    the next batch overlaps the GPU's work on the current one. A single
+    pymupdf Document is not safe to share between threads, so it's opened and
+    closed entirely inside this generator, which only ever runs on one.
+    """
+    import numpy as np
+
+    doc = pymupdf.open(pdf_path)
+    try:
+        batch: list[PageImage] = []
+        for page_index, page in enumerate(doc):
+            page_number = page_index + 1
+            pix = page.get_pixmap(dpi=dpi)
+            image_path = render_dir / f"page{page_number}.png"
+            pix.save(image_path)
+            # Straight from the pixmap's own buffer rather than re-reading the
+            # PNG we just wrote. Pixmaps are RGB; the detectors' array path
+            # follows OpenCV's BGR convention, hence the channel reverse.
+            rgb = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)
+            batch.append(
+                PageImage(
+                    page=page_number,
+                    width=round(page.rect.width, 2),
+                    height=round(page.rect.height, 2),
+                    path=image_path,
+                    array=np.ascontiguousarray(rgb[:, :, 2::-1]),
+                )
+            )
+            if len(batch) == batch_size:
+                yield batch
+                batch = []
+        if batch:
+            yield batch
+    finally:
+        doc.close()
 
 
 def detect_layout(
@@ -185,45 +269,38 @@ def detect_layout(
     dpi: int = DEFAULT_DPI,
     device: str = "auto",
     detector: LayoutDetector | None = None,
+    batch_size: int = DEFAULT_BATCH_SIZE,
 ) -> list[PageLayout]:
     # An already-built detector can be passed in so a batch of PDFs pays the
     # model-load cost once instead of once per PDF.
     if detector is None:
         detector = build_detector(backend, device)
-        print(f"[layout] backend={backend} device={detector.device}")
+        print(f"[layout] backend={backend} device={describe_torch_device(detector.device)}")
     render_dir = output_dir / "page_renders"
     render_dir.mkdir(parents=True, exist_ok=True)
     scale = _POINTS_PER_INCH / dpi  # converts pixel coords at `dpi` back to PDF points
 
-    doc = pymupdf.open(pdf_path)
     pages: list[PageLayout] = []
-    try:
-        for page_index, page in enumerate(doc):
-            page_number = page_index + 1
-            pix = page.get_pixmap(dpi=dpi)
-            image_path = render_dir / f"page{page_number}.png"
-            pix.save(image_path)
-
+    for batch in prefetch(lambda: _render_batches(pdf_path, render_dir, dpi, batch_size)):
+        for page_image, raw_regions in zip(batch, detector.detect_batch(batch)):
             regions = [
                 LayoutRegion(
-                    id=f"p{page_number}_r{i}",
+                    id=f"p{page_image.page}_r{i}",
                     type=detector.canonicalize(raw_label),
                     bbox=BBox.from_xyxy(xyxy).scaled(scale),
                     score=score,
                     raw_label=raw_label,
                 )
-                for i, (raw_label, score, xyxy) in enumerate(detector.detect(image_path, dpi))
+                for i, (raw_label, score, xyxy) in enumerate(raw_regions)
             ]
             page_layout = PageLayout(
-                page=page_number,
-                width=round(page.rect.width, 2),
-                height=round(page.rect.height, 2),
+                page=page_image.page,
+                width=page_image.width,
+                height=page_image.height,
                 regions=regions,
             )
             pages.append(page_layout)
-            write_json(page_layout.to_dict(), output_dir / f"page{page_number}_layout.json")
-    finally:
-        doc.close()
+            write_json(page_layout.to_dict(), output_dir / f"page{page_image.page}_layout.json")
 
     write_json([p.to_dict() for p in pages], output_dir / "layout.json")
     return pages
@@ -242,22 +319,38 @@ def main() -> None:
         default="auto",
         help="Accelerator for the detector. 'auto' picks the best one the backend supports.",
     )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=DEFAULT_BATCH_SIZE,
+        help="Pages per detector call. Higher keeps the GPU busier but uses more VRAM.",
+    )
     args = parser.parse_args()
+    if args.batch_size < 1:
+        parser.error("--batch-size must be at least 1")
     try:
         jobs = resolve_batch_jobs(args.pdf, args.output_root, ["layout"], [args.output_dir], ["output/layout"])
     except ValueError as exc:
         parser.error(str(exc))
 
-    detector = build_detector(args.backend, args.device)
-    print(f"[layout] backend={args.backend} device={detector.device}")
+    try:
+        detector = build_detector(args.backend, args.device)
+    except (RuntimeError, ValueError) as exc:  # unusable device/backend: nothing to salvage
+        sys.exit(str(exc))
+    print(
+        f"[layout] backend={args.backend} device={describe_torch_device(detector.device)} "
+        f"batch_size={args.batch_size}"
+    )
 
     failed = 0
     for pdf, out_dir in jobs:
         try:
-            pages = detect_layout(pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector)
+            pages = detect_layout(
+                pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector, batch_size=args.batch_size
+            )
         except Exception as exc:  # one bad PDF shouldn't abandon the rest of the batch
             failed += 1
-            print(f"!!! FAILED layout for {pdf}: {exc}", file=sys.stderr)
+            report_paper_failure("layout", pdf, exc)
             continue
         n_regions = sum(len(p.regions) for p in pages)
         print(f"Detected layout on {len(pages)} pages, {n_regions} regions (backend={args.backend}) -> {out_dir}")

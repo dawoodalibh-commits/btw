@@ -70,6 +70,21 @@ cd "$SCRIPT_DIR"
 
 step() { echo; echo "=== $* ==="; }
 
+# cu12 and cu13 nvidia-* wheels are separate distributions that install to
+# identical paths, so pip reports no conflict while their files overwrite each
+# other. Every --cuda value here is a cu12 one, so any cu13 wheel left behind
+# by an earlier run has to go before Torch's own pins land on top of it.
+purge_foreign_cuda_wheels() {
+    local stale
+    stale="$($PIP list --format=freeze 2>/dev/null | grep -iE '^nvidia[-_].*[-_]cu13' | cut -d= -f1 || true)"
+    if [ -n "$stale" ]; then
+        echo "Removing cu13 wheels that would overwrite the cu${CUDA} ones:"
+        echo "$stale" | sed 's/^/  /'
+        # shellcheck disable=SC2086
+        $PIP uninstall -y -q $stale 2>/dev/null || true
+    fi
+}
+
 # --- GPU / driver sanity -----------------------------------------------------
 step "Checking GPU"
 if ! command -v nvidia-smi >/dev/null 2>&1; then
@@ -164,8 +179,19 @@ step "Installing paddlepaddle-gpu (cu${CUDA})"
 $PIP install -q paddlepaddle-gpu -i "$PADDLE_INDEX"
 
 # Last, so its stricter nvidia-* pins win the resolution.
+#
+# The uninstall is not optional. requirements.txt pulls torch in as a pix2tex
+# dependency, from default PyPI, whose Linux wheel bundles whatever CUDA
+# generation upstream currently ships. A plain `pip install torch` against
+# this index then reports "Requirement already satisfied" and leaves that
+# build in place -- while still installing torchvision from the index, because
+# nothing has pulled *that* in yet. The result is the two halves of Torch on
+# two CUDA generations, which is rule 2 at the top of this file breaking, and
+# it looks from the outside like a clean install.
 step "Installing torch (cu${CUDA})"
-$PIP install -q torch torchvision --index-url "$TORCH_INDEX"
+$PIP uninstall -y -q torch torchvision 2>/dev/null || true
+purge_foreign_cuda_wheels
+$PIP install torch torchvision --index-url "$TORCH_INDEX"
 
 # --- Model weights -----------------------------------------------------------
 # Prefetched serially so the first batch doesn't stall on three downloads, and
@@ -180,12 +206,28 @@ print("doclayout-yolo:", hf_hub_download(
     "doclayout_yolo_docstructbench_imgsz1024.pt"))
 PY
     python -c "from pix2tex.cli import LatexOCR; LatexOCR(); print('pix2tex: ok')"
-    python -c "from paddleocr import PaddleOCR, LayoutDetection; PaddleOCR(); LayoutDetection(); print('paddleocr: ok')"
+    python - <<'PY'
+from paddleocr import PaddleOCR, LayoutDetection
+# Constructed exactly as table_extractor.py does: the orientation and
+# unwarping sub-models are switched off there, and prefetching the bare
+# defaults would download three models the pipeline never loads.
+PaddleOCR(
+    use_doc_orientation_classify=False,
+    use_doc_unwarping=False,
+    use_textline_orientation=False,
+)
+LayoutDetection()
+print("paddleocr: ok")
+PY
 fi
 
 # --- Verification ------------------------------------------------------------
-# pip list will happily report a healthy GPU install that cannot import, so the
-# only check worth running is the import itself.
+# pip list will happily report a healthy GPU install that cannot import, and an
+# import that succeeds still says nothing about whether a kernel will launch:
+# a build whose kernels don't cover this card imports fine, reports
+# cuda=True, and only dies at the first real launch with "no kernel image is
+# available for execution on the device". So each framework actually runs
+# something on the GPU here.
 step "Verifying GPU access"
 python - <<'PY'
 import sys
@@ -196,6 +238,8 @@ try:
     import torch
     cuda = torch.cuda.is_available()
     name = torch.cuda.get_device_name(0) if cuda else "-"
+    if cuda:
+        (torch.randn(64, 64, device="cuda") @ torch.randn(64, 64, device="cuda")).sum().item()
     print(f"torch  {torch.__version__:<16} cuda={cuda}  {name}")
     ok &= cuda
 except Exception as exc:
@@ -205,16 +249,21 @@ except Exception as exc:
 try:
     import paddle
     device = paddle.device.get_device()
+    on_gpu = device.startswith("gpu")
+    if on_gpu:
+        float(paddle.matmul(paddle.randn([64, 64]), paddle.randn([64, 64])).sum())
     print(f"paddle {paddle.__version__:<16} device={device}  compiled_with_cuda={paddle.is_compiled_with_cuda()}")
-    ok &= device.startswith("gpu")
+    ok &= on_gpu
 except Exception as exc:
     print(f"paddle FAILED: {exc}")
     ok = False
 
 if not ok:
     print("\nOne or both frameworks are not on the GPU.")
-    print("If this is an 'undefined symbol' error, the cu12/cu13 wheels have")
-    print("overwritten each other -- re-run with --clean.")
+    print("'undefined symbol': the cu12/cu13 wheels have overwritten each")
+    print("  other -- re-run with --clean.")
+    print("'no kernel image is available': this build has no kernels for this")
+    print("  card -- re-run with --cuda 128.")
     sys.exit(1)
 
 print("\nBoth frameworks are on the GPU.")
@@ -228,4 +277,8 @@ Smoke test one paper:
 Then fetch papers and run the batch (--jobs = physical cores, not threads):
   ./download_papers.sh --start-year 15 --end-year 24 --subject 9702 --out-dir papers
   ./run_batch.py papers/ --output-dir output --device cuda --backend doclayout_yolo --jobs \$(nproc)
+
+The GPU phases (2 layout, 5 formulas, 7 tables) batch their work; if
+\`nvidia-smi\` shows the card idling during a run, raise the batch sizes:
+  --layout-batch-size 16 --formula-batch-size 32 --rec-batch-size 32
 EOF

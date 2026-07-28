@@ -147,6 +147,71 @@ python3 database.py --classified output/topics/classified_questions.json --db ou
 
 Save that as `run_pipeline.sh`, `chmod +x run_pipeline.sh`, then `./run_pipeline.sh`.
 
+## Running many papers on a GPU box
+
+`run_pipeline.sh` is paper-major: all phases for one paper, then all phases
+for the next, reloading three models every time. `run_batch.py` flips the
+loop and runs one phase across every paper before moving to the next, which
+is what you want for anything past a handful of PDFs.
+
+```bash
+./setup_vm.sh                      # CUDA 12.6; --cuda 128 for Blackwell
+./run_batch.py papers/ --output-dir output --device cuda --jobs $(nproc)
+```
+
+Three of the eleven phases run on the GPU — 2 (layout), 5 (formula OCR) and
+7 (table OCR). The rest are PDF rasterization and JSON joining, which have no
+GPU work in them, so they fan out across cores instead.
+
+### Which layout backend
+
+Use `ppstructure` (the default). It's the only one that gives phase 5
+anything to do: DocStructBench's `isolate_formula` label means a display
+equation set on its own line, and exam papers are mostly inline math and
+short fragments, so DocLayout-YOLO tags none of it. Measured on one 9702
+paper, same 40 questions out the far end:
+
+| | formula regions | questions with formulas | images | tables |
+| --- | --- | --- | --- | --- |
+| `ppstructure` | 59 across 8 pages | 12 | 14 | 8 |
+| `doclayout_yolo` | 0 | 0 | 14 | 8 |
+
+Both need Torch *and* Paddle installed either way, so there's no dependency
+saving in picking one — with `ppstructure` phases 2 and 7 are Paddle and
+phase 5 is Torch; with `doclayout_yolo` it's 2 and 5 on Torch, 7 on Paddle.
+`--backend doclayout_yolo` is still there and is the faster detector per
+page; it's the right choice only if you don't care about formulas.
+
+What keeps the card busy:
+
+- **Batched inference.** Each GPU phase infers a group at a time rather than
+  one page or crop per call. Phase 5 matters most here: Pix2Tex is
+  autoregressive, so at batch 1 every generated token is its own kernel
+  launch and the run is bound by launch latency, not arithmetic. Its crops
+  are pooled *across papers* to fill those batches.
+- **Overlap.** Rasterization for the next batch runs on a background thread
+  while the current one is on the GPU, and phases 5–8 run as two concurrent
+  lanes (GPU: 5 and 7, CPU: 6 and 8) since none of the four depends on
+  another.
+- **fp16** on CUDA for phases 2 and 5.
+
+Tuning knobs, all of which trade VRAM for throughput:
+
+| Flag | Phase | Default |
+| --- | --- | --- |
+| `--layout-batch-size` | 2 | 8 pages per call |
+| `--formula-batch-size` | 5 | 16 crops per decode |
+| `--rec-batch-size` | 7 | 16 text lines per pass |
+| `--jobs` | CPU phases | half the cores |
+
+Raise them until `nvidia-smi` shows the card saturated or you hit an
+out-of-memory error; phase 5 retries a batch that doesn't fit one crop at a
+time, so overshooting there costs throughput rather than results.
+`--no-overlap` runs phases 5–8 strictly in order,
+which is worth trying if the CPU lane is starving the GPU lane of cores.
+`--device cuda` fails loudly when CUDA isn't reachable rather than quietly
+finishing the batch on CPU.
+
 ## Known limitations
 
 - Formula OCR (Pix2Tex) is accurate on question content, noisier on dense
