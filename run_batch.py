@@ -92,6 +92,13 @@ def run(cmd: list[str], log_prefix: str, extra_env: dict[str, str] | None = None
     stay buffered, since a dozen workers writing at once is unreadable.
     """
     env = {**os.environ, **_CHILD_ENV, **(extra_env or {})}
+    # Phase 5 decodes crops in ~40 different tensor shapes, so the caching
+    # allocator churns through as many block sizes and fragments badly: it
+    # OOMs asking for 180 MB on a 16 GB card with most of it cached but
+    # unusable. Expandable segments let it grow a block instead of needing a
+    # contiguous free one. Not forced -- an explicit setting from the caller
+    # is theirs to keep.
+    env.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
     proc = subprocess.Popen(
         [sys.executable, *cmd],
         cwd=SCRIPT_DIR,
@@ -116,6 +123,47 @@ def run(cmd: list[str], log_prefix: str, extra_env: dict[str, str] | None = None
     return ok, output
 
 
+def preflight(backend: str) -> None:
+    """Fail now if the interpreter that runs the phases can't import their deps.
+
+    Every phase is a child process launched with this interpreter, so a
+    missing package doesn't surface until that phase starts -- which, for the
+    model phases, is after phase 1 has already ground through the whole
+    corpus. The usual cause is running from a different environment than the
+    one setup_vm.sh installed into, and the traceback that eventually appears
+    names the module without naming the interpreter, which is the half that
+    actually tells you what went wrong.
+
+    Uses find_spec rather than a real import: importing torch and paddle here
+    would cost seconds and load two CUDA runtimes just to throw them away.
+    """
+    needed = ["pymupdf", "paddleocr", "pix2tex"]  # phases 1/7, and 5
+    if backend == "doclayout_yolo":
+        needed += ["doclayout_yolo", "huggingface_hub", "torchvision"]
+    probe = (
+        "import importlib.util, sys\n"
+        "missing = []\n"
+        "for name in sys.argv[1:]:\n"
+        "    try:\n"
+        "        if importlib.util.find_spec(name) is None:\n"
+        "            missing.append(name)\n"
+        "    except Exception:\n"
+        "        missing.append(name)\n"
+        "print(' '.join(missing))\n"
+    )
+    proc = subprocess.run(
+        [sys.executable, "-c", probe, *needed], capture_output=True, text=True, cwd=SCRIPT_DIR
+    )
+    missing = proc.stdout.split()
+    if missing:
+        sys.exit(
+            f"Missing phase dependencies: {', '.join(missing)}\n"
+            f"The phases run under: {sys.executable}\n"
+            "If setup_vm.sh installed into a different environment, activate that one first "
+            "(it prints its path at the end), or re-run setup_vm.sh from this one."
+        )
+
+
 def parse_paper_failures(output: str) -> set[Path]:
     """Pull the per-paper failures a batched phase reported on its stdout."""
     failed: set[Path] = set()
@@ -129,6 +177,8 @@ def parse_paper_failures(output: str) -> set[Path]:
 
 def run_parallel(name: str, cmds: dict[Path, list[str]], jobs: int) -> set[Path]:
     """Runs one CPU phase across papers in a pool. Returns the papers that failed."""
+    if not cmds:  # every paper already dropped; saying "0/0 ok" just buries the real failure
+        return set()
     start = time.monotonic()
     failed: set[Path] = set()
     with ThreadPoolExecutor(max_workers=jobs) as pool:
@@ -198,6 +248,12 @@ def main() -> None:
         help="Crops per phase-5 decode call. Higher keeps the GPU busier but uses more VRAM.",
     )
     parser.add_argument(
+        "--save-renders",
+        action="store_true",
+        help="Keep phase 2's full-page PNG renders. Debugging only -- nothing downstream reads them "
+             "and encoding them is what starves the GPU in that phase.",
+    )
+    parser.add_argument(
         "--formula-queue-size",
         type=int,
         default=None,
@@ -242,6 +298,7 @@ def main() -> None:
     db_path = root / "questions.db"
     dpi = ["--dpi", str(args.dpi)] if args.dpi else []
     layout_batch = ["--batch-size", str(args.layout_batch_size)] if args.layout_batch_size else []
+    layout_batch += ["--save-renders"] if args.save_renders else []
     formula_batch = ["--batch-size", str(args.formula_batch_size)] if args.formula_batch_size else []
     formula_batch += ["--queue-size", str(args.formula_queue_size)] if args.formula_queue_size else []
     formula_batch += ["--no-resize"] if args.formula_no_resize else []
@@ -258,7 +315,9 @@ def main() -> None:
             failed.setdefault(pdf, phase)
         live[:] = [p for p in live if p not in newly_failed]
 
+    preflight(args.backend)
     print(f"=== {len(pdfs)} papers | {args.jobs} parallel workers | backend={args.backend} device={args.device} ===")
+    print(f"=== interpreter: {sys.executable} ===")
     started = time.monotonic()
 
     # Phase 1 — PDF extraction (CPU, parallel)
@@ -354,7 +413,8 @@ def main() -> None:
         if not ok:
             db_failed.add(pdf)
     drop(db_failed, "database")
-    print(f"=== phase 11 database: {len(live)} papers -> {db_path} ===")
+    if live:
+        print(f"=== phase 11 database: {len(live)} papers -> {db_path} ===")
 
     elapsed = time.monotonic() - started
     print(f"\n=== Batch complete: {len(live)}/{len(pdfs)} papers in {elapsed:.1f}s -> {root} ===")

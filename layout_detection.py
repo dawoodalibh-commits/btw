@@ -59,20 +59,22 @@ DEFAULT_BATCH_SIZE = 8
 
 @dataclass(frozen=True)
 class PageImage:
-    """One rasterized page, offered to detectors as both a file and an array.
+    """One rasterized page, handed to detectors as a decoded BGR array.
 
-    Backends take whichever costs them less: DocLayout-YOLO reads the decoded
-    BGR array directly, which skips a PNG round trip on the critical path,
-    while PaddleOCR gets the path because its own loader is what its
-    preprocessing chain expects. The PNG is written either way -- it's the
-    phase's debugging artifact.
+    Both backends take the array rather than a file path. That isn't a
+    micro-optimization: at 200 dpi, encoding the PNG costs ~46 ms/page
+    against ~5 ms to rasterize it, and handing back a path makes the detector
+    spend another ~16 ms decoding what was just written. Skipping the round
+    trip cuts the CPU cost of feeding the GPU from ~68 ms/page to ~14 ms,
+    which is the difference between the detector waiting on the card and the
+    card waiting on the detector.
     """
 
     page: int
     width: float
     height: float
-    path: Path
     array: Any  # np.ndarray, BGR — typed loosely to keep numpy out of import time
+    path: Path | None = None  # only set when --save-renders asked for the PNG
 
 
 class LayoutDetector(ABC):
@@ -142,7 +144,11 @@ class PPStructureLayoutDetector(LayoutDetector):
         # batch sampler to 1, so handing predict() a list without it walks the
         # list one image per forward pass and looks like batching while
         # leaving the GPU exactly as idle as before.
-        results = self._model.predict([str(p.path) for p in pages], batch_size=len(pages))
+        #
+        # Arrays must be BGR. Feeding RGB is not an error paddle reports -- it
+        # returns the same number of boxes with quietly different scores and
+        # coordinates. BGR was verified byte-identical to passing file paths.
+        results = self._model.predict([p.array for p in pages], batch_size=len(pages))
         return [
             [(b["label"], float(b["score"]), tuple(b["coordinate"])) for b in r.json["res"]["boxes"]]
             for r in results
@@ -222,13 +228,19 @@ def build_detector(backend: str, device: str = "auto") -> LayoutDetector:
     return _BACKENDS[backend](device=device)
 
 
-def _render_batches(pdf_path: Path, render_dir: Path, dpi: int, batch_size: int) -> Iterator[list[PageImage]]:
+def _render_batches(
+    pdf_path: Path, render_dir: Path, dpi: int, batch_size: int, save_renders: bool
+) -> Iterator[list[PageImage]]:
     """Rasterize the PDF, yielding one batch of pages at a time.
 
-    Runs on `prefetch`'s background thread, so the encode-and-write cost of
-    the next batch overlaps the GPU's work on the current one. A single
-    pymupdf Document is not safe to share between threads, so it's opened and
-    closed entirely inside this generator, which only ever runs on one.
+    Runs on `prefetch`'s background thread, so rasterizing the next batch
+    overlaps the GPU's work on the current one. A single pymupdf Document is
+    not safe to share between threads, so it's opened and closed entirely
+    inside this generator, which only ever runs on one.
+
+    This generator is what has to keep ahead of the GPU, which is why the PNG
+    write is off by default: at ~46 ms/page it is nine times the cost of the
+    rasterization itself and dominates everything else here.
     """
     import numpy as np
 
@@ -238,19 +250,20 @@ def _render_batches(pdf_path: Path, render_dir: Path, dpi: int, batch_size: int)
         for page_index, page in enumerate(doc):
             page_number = page_index + 1
             pix = page.get_pixmap(dpi=dpi)
-            image_path = render_dir / f"page{page_number}.png"
-            pix.save(image_path)
-            # Straight from the pixmap's own buffer rather than re-reading the
-            # PNG we just wrote. Pixmaps are RGB; the detectors' array path
-            # follows OpenCV's BGR convention, hence the channel reverse.
+            image_path = None
+            if save_renders:
+                image_path = render_dir / f"page{page_number}.png"
+                pix.save(image_path)
+            # Straight from the pixmap's own buffer. Pixmaps are RGB; both
+            # detectors follow OpenCV's BGR convention, hence the reverse.
             rgb = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)
             batch.append(
                 PageImage(
                     page=page_number,
                     width=round(page.rect.width, 2),
                     height=round(page.rect.height, 2),
-                    path=image_path,
                     array=np.ascontiguousarray(rgb[:, :, 2::-1]),
+                    path=image_path,
                 )
             )
             if len(batch) == batch_size:
@@ -270,6 +283,7 @@ def detect_layout(
     device: str = "auto",
     detector: LayoutDetector | None = None,
     batch_size: int = DEFAULT_BATCH_SIZE,
+    save_renders: bool = False,
 ) -> list[PageLayout]:
     # An already-built detector can be passed in so a batch of PDFs pays the
     # model-load cost once instead of once per PDF.
@@ -277,11 +291,12 @@ def detect_layout(
         detector = build_detector(backend, device)
         print(f"[layout] backend={backend} device={describe_torch_device(detector.device)}")
     render_dir = output_dir / "page_renders"
-    render_dir.mkdir(parents=True, exist_ok=True)
+    if save_renders:
+        render_dir.mkdir(parents=True, exist_ok=True)
     scale = _POINTS_PER_INCH / dpi  # converts pixel coords at `dpi` back to PDF points
 
     pages: list[PageLayout] = []
-    for batch in prefetch(lambda: _render_batches(pdf_path, render_dir, dpi, batch_size)):
+    for batch in prefetch(lambda: _render_batches(pdf_path, render_dir, dpi, batch_size, save_renders)):
         for page_image, raw_regions in zip(batch, detector.detect_batch(batch)):
             regions = [
                 LayoutRegion(
@@ -325,6 +340,12 @@ def main() -> None:
         default=DEFAULT_BATCH_SIZE,
         help="Pages per detector call. Higher keeps the GPU busier but uses more VRAM.",
     )
+    parser.add_argument(
+        "--save-renders",
+        action="store_true",
+        help="Also write each page render to <output>/page_renders/. Debugging only -- no later "
+             "phase reads them, and the PNG encode is ~9x the cost of the rasterization.",
+    )
     args = parser.parse_args()
     if args.batch_size < 1:
         parser.error("--batch-size must be at least 1")
@@ -346,7 +367,13 @@ def main() -> None:
     for pdf, out_dir in jobs:
         try:
             pages = detect_layout(
-                pdf, out_dir, backend=args.backend, dpi=args.dpi, detector=detector, batch_size=args.batch_size
+                pdf,
+                out_dir,
+                backend=args.backend,
+                dpi=args.dpi,
+                detector=detector,
+                batch_size=args.batch_size,
+                save_renders=args.save_renders,
             )
         except Exception as exc:  # one bad PDF shouldn't abandon the rest of the batch
             failed += 1

@@ -403,6 +403,15 @@ def main() -> None:
         pending_records.extend(records)
         pending_tensors.extend(tensors)
         in_flight.append((out_dir, records))
+        # Pooling is silent by nature -- nothing is written until the pool is
+        # full enough to decode -- and with a large --queue-size that silence
+        # runs long enough to look like a hang, especially since preprocessing
+        # is where pix2tex's per-crop resizer spends its time. Say so.
+        print(
+            f"[formulas] pooled {len(records)} crops from {pdf.name} "
+            f"({len(pending_tensors)}/{args.queue_size} before decode)",
+            flush=True,
+        )
         if len(pending_tensors) >= args.queue_size:
             flush()
     flush()
