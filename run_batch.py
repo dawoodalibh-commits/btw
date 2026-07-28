@@ -261,6 +261,13 @@ def main() -> None:
              "crop shapes (~126) or its batches never fill; this matters more than --formula-batch-size.",
     )
     parser.add_argument(
+        "--formula-max-tokens",
+        type=int,
+        default=None,
+        help="Cap LaTeX tokens per crop in phase 5 (model default 256). Its decoder has no KV cache, "
+             "so cost grows with the square of this; 128 is ample for exam formulas.",
+    )
+    parser.add_argument(
         "--formula-no-resize",
         action="store_true",
         help="Skip phase 5's per-crop image resizer. It can't be batched, so it's pure launch "
@@ -302,6 +309,7 @@ def main() -> None:
     formula_batch = ["--batch-size", str(args.formula_batch_size)] if args.formula_batch_size else []
     formula_batch += ["--queue-size", str(args.formula_queue_size)] if args.formula_queue_size else []
     formula_batch += ["--no-resize"] if args.formula_no_resize else []
+    formula_batch += ["--max-tokens", str(args.formula_max_tokens)] if args.formula_max_tokens else []
     rec_batch = ["--rec-batch-size", str(args.rec_batch_size)] if args.rec_batch_size else []
 
     live = list(pdfs)  # papers still healthy; failures drop out as we go

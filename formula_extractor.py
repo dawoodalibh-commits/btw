@@ -77,7 +77,9 @@ class Pix2TexBatchOCR:
     has always accepted a batch -- over groups of crops at once.
     """
 
-    def __init__(self, device: str = "auto", precision: str = "auto", resize: bool = True) -> None:
+    def __init__(
+        self, device: str = "auto", precision: str = "auto", resize: bool = True, max_tokens: int | None = None
+    ) -> None:
         from munch import Munch
         from pix2tex.cli import LatexOCR
 
@@ -112,6 +114,15 @@ class Pix2TexBatchOCR:
         )
         # What pix2tex itself settled on, not what we asked for.
         self.device = self._ocr.args.device
+        # The token budget every batch is charged for in the worst case.
+        # Without a KV cache the decoder's cost grows with the square of this,
+        # and a batch runs until its *slowest* row emits EOS -- so a single
+        # crop that never terminates costs the whole batch the full budget.
+        # Exam formulas are short; halving 256 to 128 quarters that worst case
+        # and only truncates genuinely long expressions.
+        if max_tokens:
+            self._ocr.args.max_seq_len = max_tokens
+        self.max_tokens = self._ocr.args.max_seq_len
         # fp16 on the encoder and decoder roughly halves the memory traffic
         # this model is bound by. CUDA only -- CPU fp16 is emulated.
         self.half = self.device == "cuda" if precision == "auto" else precision == "fp16"
@@ -185,12 +196,25 @@ class Pix2TexBatchOCR:
         time. A crop that fails is reported as None rather than taking the
         rest of the batch down with it.
         """
+        import time
+
         import torch
 
         results: list[str | None] = [None] * len(tensors)
         buckets: dict[tuple[int, ...], list[int]] = {}
         for index, tensor in enumerate(tensors):
             buckets.setdefault(tuple(tensor.shape), []).append(index)
+
+        # Decoding a full pool is the longest single stretch in the pipeline
+        # and used to print nothing until it finished, which is
+        # indistinguishable from a hang. pix2tex's decoder keeps no KV cache,
+        # so it re-runs the whole sequence per token, and a batch only stops
+        # once *every* row has emitted EOS -- one crop that never does drags
+        # the rest through the full token budget. Report as we go.
+        planned = sum(len(chunked_indices) for indices in buckets.values()
+                      for chunked_indices in [list(chunked(indices, batch_size))])
+        started = time.monotonic()
+        done = 0
 
         batches = 0
         for indices in buckets.values():
@@ -209,6 +233,15 @@ class Pix2TexBatchOCR:
                             self._decode_chunk(tensors, [index], results)
                         except Exception:
                             results[index] = None
+                done += len(chunk)
+                if batches % 10 == 0 or batches == planned:
+                    rate = done / max(1e-9, time.monotonic() - started)
+                    remaining = (len(tensors) - done) / rate if rate else 0
+                    print(
+                        f"[formulas] decoding {done}/{len(tensors)} crops "
+                        f"({batches}/{planned} batches, {rate:.1f} crops/s, ~{remaining / 60:.0f} min left)",
+                        flush=True,
+                    )
         # The number that decides this phase's GPU utilization. Crops only
         # batch with others of the same shape, so the average here lands well
         # under --batch-size whenever --queue-size is too small to fill the
@@ -345,6 +378,13 @@ def main() -> None:
         help="Skip pix2tex's per-crop iterative image resizer. Much less launch overhead (it cannot "
              "be batched), at some accuracy cost on oddly-scaled crops.",
     )
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        default=None,
+        help="Cap the LaTeX tokens generated per crop (model default 256). The decoder has no KV "
+             "cache, so its cost grows with the square of this; 128 is ample for exam formulas.",
+    )
     args = parser.parse_args()
     if args.batch_size < 1 or args.queue_size < 1:
         parser.error("--batch-size and --queue-size must be at least 1")
@@ -360,12 +400,15 @@ def main() -> None:
         parser.error(str(exc))
 
     try:
-        ocr = Pix2TexBatchOCR(args.device, args.precision, resize=not args.no_resize)
+        ocr = Pix2TexBatchOCR(
+            args.device, args.precision, resize=not args.no_resize, max_tokens=args.max_tokens
+        )
     except (RuntimeError, ValueError) as exc:  # unusable device: nothing to salvage
         sys.exit(str(exc))
     print(
         f"[formulas] device={describe_torch_device(ocr.device)} precision={'fp16' if ocr.half else 'fp32'} "
-        f"batch_size={args.batch_size} queue_size={args.queue_size} resizer={not args.no_resize}"
+        f"batch_size={args.batch_size} queue_size={args.queue_size} resizer={not args.no_resize} "
+        f"max_tokens={ocr.max_tokens}"
     )
 
     # Crops waiting on the GPU, and the papers they belong to. A paper's
