@@ -198,6 +198,19 @@ def main() -> None:
         help="Crops per phase-5 decode call. Higher keeps the GPU busier but uses more VRAM.",
     )
     parser.add_argument(
+        "--formula-queue-size",
+        type=int,
+        default=None,
+        help="Crops phase 5 pools across papers before decoding. Must exceed the number of distinct "
+             "crop shapes (~126) or its batches never fill; this matters more than --formula-batch-size.",
+    )
+    parser.add_argument(
+        "--formula-no-resize",
+        action="store_true",
+        help="Skip phase 5's per-crop image resizer. It can't be batched, so it's pure launch "
+             "overhead; skipping trades accuracy on oddly-scaled crops for speed.",
+    )
+    parser.add_argument(
         "--rec-batch-size",
         type=int,
         default=None,
@@ -230,6 +243,8 @@ def main() -> None:
     dpi = ["--dpi", str(args.dpi)] if args.dpi else []
     layout_batch = ["--batch-size", str(args.layout_batch_size)] if args.layout_batch_size else []
     formula_batch = ["--batch-size", str(args.formula_batch_size)] if args.formula_batch_size else []
+    formula_batch += ["--queue-size", str(args.formula_queue_size)] if args.formula_queue_size else []
+    formula_batch += ["--no-resize"] if args.formula_no_resize else []
     rec_batch = ["--rec-batch-size", str(args.rec_batch_size)] if args.rec_batch_size else []
 
     live = list(pdfs)  # papers still healthy; failures drop out as we go

@@ -193,6 +193,21 @@ $PIP uninstall -y -q torch torchvision 2>/dev/null || true
 purge_foreign_cuda_wheels
 $PIP install torch torchvision --index-url "$TORCH_INDEX"
 
+cat <<'EOF'
+
+Note: pip has probably just complained that paddlepaddle-gpu requires older
+nvidia-cudnn / nvidia-nccl / nvidia-cusparselt / nvidia-cuda-nvrtc than the
+ones Torch pulled in. That is this step working as intended -- both frameworks
+pin those wheels exactly, their pins disagree, and rule 3 above is the
+decision that Torch wins. Paddle loads those libraries by soname
+(libcudnn.so.9, libnccl.so.2, libcusparseLt.so.0), which the version bumps
+don't change, so it keeps working against the newer ones.
+
+Do not "fix" it by reinstalling Paddle afterwards -- that drags the older
+wheels back over Torch's, which is the direction that actually breaks. The
+GPU check at the end of this script is what decides whether this held.
+EOF
+
 # --- Model weights -----------------------------------------------------------
 # Prefetched serially so the first batch doesn't stall on three downloads, and
 # so parallel workers can't race on a half-written cache entry.
@@ -231,6 +246,13 @@ fi
 step "Verifying GPU access"
 python - <<'PY'
 import sys
+
+# Which interpreter this all landed in. Worth printing because everything
+# below passes here and then fails in your shell if the two disagree --
+# which is what happens when this script isn't run from the venv you later
+# work in (a sudo/non-login invocation drops VIRTUAL_ENV, so the venv block
+# above quietly builds ./.venv instead of reusing the active one).
+print(f"python {sys.version.split()[0]:<16} at {sys.prefix}\n")
 
 ok = True
 
@@ -271,6 +293,12 @@ PY
 
 step "Setup complete"
 cat <<EOF
+Everything above went into: $(python -c 'import sys; print(sys.prefix)')
+If that is not the environment your shell is in, activate it first --
+otherwise the pipeline reports "No module named 'paddle'" despite this
+script having just verified paddle on the GPU:
+  source $(python -c 'import sys; print(sys.prefix)')/bin/activate
+
 Smoke test one paper:
   ./run_batch.py 9702_w25_qp_12.pdf --output-dir output-smoke --device cuda --backend doclayout_yolo
 

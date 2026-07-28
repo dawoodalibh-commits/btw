@@ -43,10 +43,15 @@ DEFAULT_BATCH_SIZE = 16
 
 # How many crops to pool before decoding. Pooling across papers is what makes
 # the shape buckets big enough to fill a batch -- a single paper rarely has
-# enough same-shaped formulas. Bounded so a long run can't hold the whole
-# corpus in memory: at the model's maximum input size a crop's tensor is
-# ~0.5 MB, so the default caps this at a couple of hundred MB.
-DEFAULT_QUEUE_SIZE = 256
+# enough same-shaped formulas.
+#
+# This has to stay well above the number of distinct shapes or the buckets
+# never fill and the effective batch collapses towards 1: pix2tex pads crops
+# to multiples of 32 within its 672x192 maximum, so there are ~126 shapes a
+# crop can land in. At 256 that averaged two crops per bucket and measured
+# ~15% GPU utilization. Memory is not the constraint it looks like -- a crop
+# tensor is ~0.5 MB at the model's largest input and far less in practice.
+DEFAULT_QUEUE_SIZE = 1024
 
 
 def _crop_region(page: pymupdf.Page, bbox: BBox, dpi: int) -> pymupdf.Pixmap:
@@ -72,7 +77,7 @@ class Pix2TexBatchOCR:
     has always accepted a batch -- over groups of crops at once.
     """
 
-    def __init__(self, device: str = "auto", precision: str = "auto") -> None:
+    def __init__(self, device: str = "auto", precision: str = "auto", resize: bool = True) -> None:
         from munch import Munch
         from pix2tex.cli import LatexOCR
 
@@ -82,13 +87,26 @@ class Pix2TexBatchOCR:
         # Mirrors pix2tex's own defaults (paths are relative to the package
         # dir, which its @in_model_path decorator cd's into) with no_cuda
         # made explicit.
+        #
+        # resize=False drops pix2tex's iterative image-resizer, the one part of
+        # this phase batching cannot help: it re-renders each crop at whatever
+        # width a small ResNet asks for next, up to ten times, one crop at a
+        # time -- up to ten batch-of-one launches per crop however large the
+        # decode batch is.
+        #
+        # Measure before reaching for this. The resizer also converges crops
+        # onto common widths, so it is what makes the shape buckets in
+        # decode() fill: on one 9702 paper, turning it off took the crops from
+        # 15 distinct shapes (avg 3.9 per batch) to 35 (avg 1.7). It removes
+        # per-crop launches and fragments the decode batches at the same time,
+        # and which wins depends on the papers.
         self._ocr = LatexOCR(
             Munch(
                 {
                     "config": "settings/config.yaml",
                     "checkpoint": "checkpoints/weights.pth",
                     "no_cuda": not use_cuda,
-                    "no_resize": False,
+                    "no_resize": not resize,
                 }
             )
         )
@@ -174,8 +192,10 @@ class Pix2TexBatchOCR:
         for index, tensor in enumerate(tensors):
             buckets.setdefault(tuple(tensor.shape), []).append(index)
 
+        batches = 0
         for indices in buckets.values():
             for chunk in chunked(indices, batch_size):
+                batches += 1
                 try:
                     self._decode_chunk(tensors, chunk, results)
                 except Exception:
@@ -189,6 +209,17 @@ class Pix2TexBatchOCR:
                             self._decode_chunk(tensors, [index], results)
                         except Exception:
                             results[index] = None
+        # The number that decides this phase's GPU utilization. Crops only
+        # batch with others of the same shape, so the average here lands well
+        # under --batch-size whenever --queue-size is too small to fill the
+        # buckets, and that gap is invisible from the outside otherwise.
+        if tensors:
+            print(
+                f"[formulas] decoded {len(tensors)} crops in {batches} batches "
+                f"(avg {len(tensors) / max(1, batches):.1f}/batch, cap {batch_size}, "
+                f"{len(buckets)} distinct shapes)",
+                flush=True,
+            )
         return results
 
     def _decode_chunk(self, tensors: list, chunk: list[int], results: list[str | None]) -> None:
@@ -308,6 +339,12 @@ def main() -> None:
         default=DEFAULT_QUEUE_SIZE,
         help="Crops pooled across papers before decoding. Higher fills batches better, costs memory.",
     )
+    parser.add_argument(
+        "--no-resize",
+        action="store_true",
+        help="Skip pix2tex's per-crop iterative image resizer. Much less launch overhead (it cannot "
+             "be batched), at some accuracy cost on oddly-scaled crops.",
+    )
     args = parser.parse_args()
     if args.batch_size < 1 or args.queue_size < 1:
         parser.error("--batch-size and --queue-size must be at least 1")
@@ -323,12 +360,12 @@ def main() -> None:
         parser.error(str(exc))
 
     try:
-        ocr = Pix2TexBatchOCR(args.device, args.precision)
+        ocr = Pix2TexBatchOCR(args.device, args.precision, resize=not args.no_resize)
     except (RuntimeError, ValueError) as exc:  # unusable device: nothing to salvage
         sys.exit(str(exc))
     print(
         f"[formulas] device={describe_torch_device(ocr.device)} precision={'fp16' if ocr.half else 'fp32'} "
-        f"batch_size={args.batch_size} queue_size={args.queue_size}"
+        f"batch_size={args.batch_size} queue_size={args.queue_size} resizer={not args.no_resize}"
     )
 
     # Crops waiting on the GPU, and the papers they belong to. A paper's
