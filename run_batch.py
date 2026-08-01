@@ -39,7 +39,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from schemas import PAPER_FAILED_PREFIX
+from schemas import PAPER_FAILED_PREFIX, paper_code_from_stem
 
 # Import-time settings for every child process. Albumentations otherwise makes
 # a blocking "is there a new version?" HTTPS call on each import, which on a
@@ -402,7 +402,11 @@ def main() -> None:
         p: ["build_questions.py", "--extracted", out(p, "extracted"), "--questions", out(p, "questions"),
             "--formulas", out(p, "formulas"), "--images", out(p, "images"), "--tables", out(p, "tables"),
             "--question-images", out(p, "question_images"), "--output-dir", out(p, "built"),
-            "--paper", args.paper] for p in live
+            # Per-paper fallback, derived from each filename. A single shared
+            # --paper here would make every paper whose code can't be read from
+            # its own text collide on the papers table's UNIQUE(paper_code) and
+            # silently overwrite one another.
+            "--paper", paper_code_from_stem(p.stem) or args.paper] for p in live
     }, args.jobs), "build_questions")
 
     # Phase 10 — topic classification (CPU, parallel)

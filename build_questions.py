@@ -20,7 +20,12 @@ from typing import Any
 
 from schemas import read_json, write_json
 
-_PAPER_CODE_RE = re.compile(r"\b\d{4}/\d{2}/[A-Z]/[A-Z]/\d{2}\b")
+# The paper component is \d{1,2}, not \d{2}: Cambridge only moved to
+# two-digit paper+variant numbers around 2009, and papers before that print
+# "9702/1/M/J/02". Requiring two digits silently dropped every one of them to
+# the --paper fallback, and since that fallback is one constant for a whole
+# batch they then all collided on the papers table's UNIQUE(paper_code).
+_PAPER_CODE_RE = re.compile(r"\b\d{4}/\d{1,2}/[A-Z]/[A-Z]/\d{2}\b")
 _MARKS_RE = re.compile(r"\[(\d{1,2})\]")
 _DEFAULT_MCQ_MARKS = 1  # used only when no "[n]" mark allocation appears anywhere in the question
 _OPTION_LABELS = ["A", "B", "C", "D"]

@@ -29,6 +29,13 @@ _BOILERPLATE_RE = re.compile(r"©\s*UCLES|\bturn over\b|\d{4}/\d{2}/[A-Z]/[A-Z]/
 # match every sentence of a notice that can be reworded year to year.
 _COLOPHON_START_RE = re.compile(r"permission to reproduce items", re.I)
 
+# The right-hand "For Examiner's Use" column on pre-2010 papers. Matched on
+# the two words alone so the curly vs straight apostrophe never matters.
+_EXAMINER_COLUMN_RE = re.compile(r"For\s+Examiner", re.I)
+# Letters that must survive removal of that phrase before a block counts as
+# real content rather than the column.
+_EXAMINER_REMAINDER_LETTERS = 15
+
 # Block types whose text reads naturally as part of the question stem.
 _TEXT_BEARING_TYPES = {LayoutType.TEXT, LayoutType.TITLE, LayoutType.CAPTION, LayoutType.FORMULA}
 
@@ -103,24 +110,100 @@ def _is_boilerplate_block(block: dict) -> bool:
     if block["type"] in (LayoutType.HEADER.value, LayoutType.FOOTER.value):
         return True
     text = " ".join(s["text"] for s in block.get("content", []))
-    return bool(_BOILERPLATE_RE.search(text))
+    if _BOILERPLATE_RE.search(text):
+        return True
+    # Never discard a block that opens with a question number, whatever else
+    # it contains: the examiner column sometimes shares a block with the
+    # marker, and dropping that doesn't just leave the label in, it deletes
+    # the question boundary and folds the whole question into the previous
+    # one. Keeping a stray label is much the lesser cost.
+    if _leading_number(block) is not None:
+        return False
+    return _is_examiner_column(text)
+
+
+def _is_examiner_column(text: str) -> bool:
+    """True for the "For Examiner's Use" margin column, false for real content.
+
+    Papers before ~2010 run that label down a narrow right-hand column beside
+    every question, and it lands in reading order in the middle of the
+    question's own text -- it was showing up in 14% of extracted questions.
+    The column is almost always its own block, but not reliably enough to
+    drop every block that mentions it: a handful genuinely mix the label in
+    with question text, and dropping those loses the question.
+
+    So the test is whether the block is *mostly* the label. What's left after
+    removing the phrase is measured in letters, which ignores the rows of
+    dotted answer lines and the mark-grid digits that otherwise look like
+    content.
+    """
+    if not _EXAMINER_COLUMN_RE.search(text):
+        return False
+    remainder = _EXAMINER_COLUMN_RE.sub(" ", text)
+    remainder = re.sub(r"['’]s|\bUse\b|\bTotal\b", " ", remainder)
+    return len(re.findall(r"[A-Za-z]", remainder)) < _EXAMINER_REMAINDER_LETTERS
+
+
+# Region types whose leading number may be a question marker. OTHER is in
+# the list because it's each backend's catch-all -- DocStructBench's
+# "abandon", PP-DocLayout's "number" -- and layout detection drops a real
+# question marker into it often enough that excluding it cost 35 of 60
+# sampled papers some of their questions, MCQ papers included (37 detected
+# where the paper plainly has 40). The centred page numbers OTHER also
+# carries are what `_detect_margin_x` filters out by position.
+_MARKER_BEARING_TYPES = (LayoutType.TEXT.value, LayoutType.TITLE.value, LayoutType.OTHER.value)
 
 
 def _leading_number(block: dict) -> int | None:
-    """If a text/title block's first (leftmost) span is a bare 1-2 digit
-    number, treat it as a question marker -- this is how the question number
-    and its stem end up in the same merged line block."""
+    """If a block's first (leftmost) span is a bare 1-2 digit number, treat it
+    as a question marker -- this is how the question number and its stem end
+    up in the same merged line block."""
     spans = block.get("content", [])
-    if not spans or block["type"] not in (LayoutType.TEXT.value, LayoutType.TITLE.value):
+    if not spans or block["type"] not in _MARKER_BEARING_TYPES:
         return None
     first = min(spans, key=lambda s: s["bbox"]["x0"])
     m = _QUESTION_NUMBER_RE.fullmatch(first["text"].strip())
     return int(m.group(1)) if m else None
 
 
+# Fraction of a cluster's markers that must equal their own page number
+# before the cluster is judged to be page numbering rather than questions.
+_PAGE_NUMBER_MATCH_FRAC = 0.6
+
+
 def _detect_margin_x(candidates: list[tuple[int, dict, int]]) -> float:
-    buckets = Counter(round(min(b["content"], key=lambda s: s["bbox"]["x0"])["bbox"]["x0"]) for _, b, _ in candidates)
-    return float(buckets.most_common(1)[0][0])
+    """The x0 that the question-number column sits at.
+
+    Bare numbers elsewhere on the page form their own x0 clusters -- axis
+    ticks, mark allocations, and above all the centred page number -- so the
+    most populated cluster is not on its own a safe answer. A structured
+    paper has about as many pages as it has questions, and when layout
+    detection drops a couple of real markers into unclassified blocks (which
+    `_leading_number` skips) the two clusters tie outright. Counter.most_common
+    then breaks the tie on insertion order, handing the paper to whichever
+    appears first -- normally the page numbers, since page 2 precedes the
+    first question. The result is a paper whose questions are numbered by the
+    pages they happen to start on.
+
+    Page numbers give themselves away by equalling the page they sit on, so
+    clusters that mostly do that are dropped before counting. Remaining ties
+    go to the leftmost cluster: the question column is the leftmost thing on
+    the page, and everything competing with it sits further right.
+    """
+    buckets: dict[int, list[tuple[int, int]]] = {}
+    for page, block, num in candidates:
+        x0 = round(min(block["content"], key=lambda s: s["bbox"]["x0"])["bbox"]["x0"])
+        buckets.setdefault(x0, []).append((page, num))
+
+    def is_page_numbering(entries: list[tuple[int, int]]) -> bool:
+        # Needs a few entries to be worth judging: one question that happens
+        # to start on its own page number proves nothing.
+        if len(entries) < 3:
+            return False
+        return sum(1 for page, num in entries if page == num) >= len(entries) * _PAGE_NUMBER_MATCH_FRAC
+
+    usable = {x0: e for x0, e in buckets.items() if not is_page_numbering(e)} or buckets
+    return float(max(usable.items(), key=lambda kv: (len(kv[1]), -kv[0]))[0])
 
 
 def parse_questions(pages: list[dict]) -> list[ParsedQuestion]:

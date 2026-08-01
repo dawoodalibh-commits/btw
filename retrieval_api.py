@@ -62,7 +62,15 @@ def _row_to_question(conn: sqlite3.Connection, row: sqlite3.Row) -> dict[str, An
 
 
 def _connect(db_path: Path) -> sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
+    # Opened read-write-but-must-exist rather than plain connect(): sqlite
+    # treats a missing path as "create an empty database here", so a typo in
+    # --db silently yields a valid connection with no tables in it, and the
+    # first query fails with "no such table: questions" pointing at the schema
+    # instead of at the path.
+    try:
+        conn = sqlite3.connect(f"file:{db_path}?mode=rw", uri=True)
+    except sqlite3.OperationalError as exc:
+        raise sqlite3.OperationalError(f"Cannot open database {db_path}: {exc}") from exc
     conn.row_factory = sqlite3.Row
     return conn
 

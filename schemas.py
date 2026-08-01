@@ -16,6 +16,7 @@ compared directly (e.g. in Phase 3's merge step) without unit conversion.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from dataclasses import asdict, dataclass, field
 from enum import Enum
@@ -191,6 +192,29 @@ def write_json(obj: Any, path: Path) -> None:
 def read_json(path: Path) -> Any:
     with open(path) as f:
         return json.load(f)
+
+
+# Cambridge's own filename convention: <subject>_<season><yy>_qp_<paper>.
+_PDF_STEM_RE = re.compile(r"^(\d{4})_([smw])(\d{2})_qp_(\d{1,2})$")
+_STEM_SEASON = {"s": ("M", "J"), "w": ("O", "N"), "m": ("F", "M")}
+
+
+def paper_code_from_stem(stem: str) -> str | None:
+    """Rebuild a paper's board code from its filename, or None if it doesn't fit.
+
+    Phase 9 prefers the code printed inside the paper, but a fair number of
+    older papers don't print one anywhere their text layer can be read. The
+    filename still identifies them, and it has to be used rather than a shared
+    default: `papers.paper_code` is UNIQUE, so one constant fallback across a
+    batch makes every un-detected paper collide into a single row and
+    overwrite each other's questions.
+    """
+    match = _PDF_STEM_RE.match(stem)
+    if not match:
+        return None
+    subject, season, yy, paper = match.groups()
+    first, second = _STEM_SEASON[season]
+    return f"{subject}/{paper}/{first}/{second}/{yy}"
 
 
 def report_paper_failure(phase: str, pdf: Path, exc: BaseException) -> None:

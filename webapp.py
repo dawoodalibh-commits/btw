@@ -19,6 +19,8 @@ from __future__ import annotations
 
 import argparse
 import re
+import sqlite3
+import sys
 from pathlib import Path
 
 from flask import Flask, jsonify, render_template_string, request, send_from_directory
@@ -50,13 +52,45 @@ _SEASON_CODE = {"F/M": "m", "M/J": "s", "O/N": "w"}
 
 
 def _guess_asset_dirs(root: Path, paper_code: str, subfolder: str) -> list[Path]:
+    """Where this paper's assets might live, best guess first.
+
+    Batch runs file assets per paper under <batch-root>/<pdf-stem>/<subfolder>,
+    which the paper's own code can be turned back into. The awkward part is
+    that --images may point at either level: at the batch root ("output"), or
+    at a single paper's own folder ("output/images"), which is what the
+    single-PDF pipeline produces and what the flag's default still assumes.
+    Both are tried rather than making the caller know which convention the run
+    used -- guessing wrong just means blank image panels with nothing in the
+    log to say why.
+    """
     dirs = [root]
     m = _PAPER_CODE_RE.match(paper_code)
     if m:
         subject, variant, m1, m2, yy = m.groups()
         season = _SEASON_CODE.get(f"{m1}/{m2}")
         if season:
-            dirs.append(root.parent / f"{subject}_{season}{yy}_qp_{variant}" / subfolder)
+            # Every spelling of the paper number this code might have been
+            # filed under, because the code a paper prints and the name its
+            # file arrived with disagree in two different eras:
+            #   * older papers print it zero-padded ("9702/05/O/N/03") while
+            #     the file is named unpadded (9702_w03_qp_5), and
+            #   * Cambridge split papers into variants around 2009 (paper 2
+            #     became 21/22/23), but downloads from that year are still
+            #     commonly filed under the pre-split number, so a paper
+            #     printing "9702/21/O/N/09" lives in 9702_w09_qp_2.
+            # Extra candidates cost a stat() and nothing else; a missing one
+            # costs a silently blank image panel.
+            variants = [variant]
+            unpadded = variant.lstrip("0")
+            if unpadded and unpadded not in variants:
+                variants.append(unpadded)
+            if len(variant) == 2 and not variant.startswith("0") and variant[0] not in variants:
+                variants.append(variant[0])
+            for base in (root, root.parent):
+                for number in variants:
+                    candidate = base / f"{subject}_{season}{yy}_qp_{number}" / subfolder
+                    if candidate not in dirs:
+                        dirs.append(candidate)
     return dirs
 
 
@@ -1241,6 +1275,34 @@ def api_chat():
         return jsonify({"error": str(e)}), 400
 
 
+def _check_db(db_path: Path) -> None:
+    """Refuse to start against a database that has nothing to serve.
+
+    Every page here opens the DB lazily per request, so an unusable --db used
+    to surface as a 500 on the first page load with a SQL error naming the
+    table rather than the file. Checking once at startup puts the path -- the
+    thing that's actually wrong -- in front of the person who typed it.
+    """
+    if not db_path.exists():
+        sys.exit(
+            f"No database at {db_path.resolve()}\n"
+            "Pass --db pointing at the questions.db your batch produced "
+            "(run_batch.py writes it to <output-dir>/questions.db)."
+        )
+    try:
+        conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+        count = conn.execute("SELECT count(*) FROM questions").fetchone()[0]
+        papers = conn.execute("SELECT count(*) FROM papers").fetchone()[0]
+        conn.close()
+    except sqlite3.DatabaseError as exc:
+        size = db_path.stat().st_size
+        hint = " It is 0 bytes -- sqlite creates an empty file for a path that doesn't exist, so this is\nmost likely the wrong path." if size == 0 else ""
+        sys.exit(f"{db_path.resolve()} is not a usable question database ({exc}).{hint}")
+    if not count:
+        sys.exit(f"{db_path.resolve()} has no questions in it. Did phase 11 run?")
+    print(f"Serving {count} questions from {papers} papers out of {db_path.resolve()}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Phase 13: minimal web UI over the question database.")
     parser.add_argument("--db", type=Path, default=Path("output/questions.db"))
@@ -1249,6 +1311,7 @@ def main() -> None:
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=5000)
     args = parser.parse_args()
+    _check_db(args.db)
 
     app.config["DB_PATH"] = str(args.db)
     app.config["IMAGES_DIR"] = str(args.images)
