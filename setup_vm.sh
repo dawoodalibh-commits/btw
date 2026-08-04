@@ -111,8 +111,17 @@ fi
 # download_papers.sh uses for its PDF mime check.
 if [ "$SKIP_APT" = "0" ] && command -v apt-get >/dev/null 2>&1; then
     step "Installing system packages"
+    # -E so the noninteractive settings below survive into the sudo
+    # environment; already-root needs no sudo and keeps them by inheritance.
     SUDO=""
-    [ "$(id -u)" = "0" ] || SUDO="sudo"
+    [ "$(id -u)" = "0" ] || SUDO="sudo -E"
+    # -y answers apt's own prompts but not debconf's. Without these two a
+    # minimal image can stop dead on tzdata's timezone menu, or on 22.04's
+    # needrestart "which services should be restarted?" dialog -- and -qq
+    # hides the prompt, so it presents as a hang with no output rather than
+    # as a question. Neither is recoverable over a detached SSH session.
+    export DEBIAN_FRONTEND=noninteractive
+    export NEEDRESTART_MODE=a
     $SUDO apt-get update -qq
     $SUDO apt-get install -y -qq python3-venv python3-pip git curl file libglib2.0-0
     # Renamed between Ubuntu releases; whichever exists is the one we want.
@@ -136,6 +145,13 @@ else
 fi
 
 PIP="python -m pip"
+# Two of the wheels below are ~1-2 GB and one of them comes from Baidu object
+# storage in Beijing, which from a rented box in the US or EU routinely drops
+# to a crawl or stalls outright mid-transfer. pip's stock 15s timeout / 5
+# retries gives up on a big slow download that would have finished; these
+# survive the stall instead. Set as env vars so every pip call inherits them.
+export PIP_DEFAULT_TIMEOUT=60
+export PIP_RETRIES=10
 $PIP install -q -U pip wheel
 python -c "import sys; print('python', sys.version.split()[0], 'at', sys.prefix)"
 
@@ -175,8 +191,14 @@ if $PIP show paddlepaddle >/dev/null 2>&1; then
     $PIP uninstall -y -q paddlepaddle
 fi
 
+# Deliberately not -q. This wheel is ~2 GB and is served from Baidu object
+# storage in Beijing; at the 1-5 MB/s a rented box outside China typically
+# gets, it is 7-30 minutes of work. Quiet, that is half an hour of a script
+# that looks wedged, and the reflex is to Ctrl-C it -- so let pip draw its
+# progress bar and be visibly alive.
 step "Installing paddlepaddle-gpu (cu${CUDA})"
-$PIP install -q paddlepaddle-gpu -i "$PADDLE_INDEX"
+echo "~2 GB from paddlepaddle.org.cn -- expect 7-30 min depending on distance."
+$PIP install --progress-bar on paddlepaddle-gpu -i "$PADDLE_INDEX"
 
 # Last, so its stricter nvidia-* pins win the resolution.
 #
